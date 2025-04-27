@@ -1,0 +1,3767 @@
+Question_num,hint_num,metric,score
+1,1,Accuracy,0.92
+1,1,Calibration Confidence,0.85
+1,1,Clarity,0.88
+1,1,Coherence Score,0.95
+1,1,Comp Efficiency,0.6
+1,1,Correctness,0.92
+1,1,Efficiency,0.7
+1,1,Final Accuracy,1.0
+1,1,Pass Rate,1.0
+1,1,Redundancy,0.6
+1,1,Robustness Consistency,0.9
+1,1,Similarity,0.9
+1,1,Stepwise Correctness,0.9
+1,1,Validity Rate,1.0
+1,2,Accuracy,0.9
+1,2,Calibration Confidence,0.8
+1,2,Clarity,0.85
+1,2,Coherence Score,0.94
+1,2,Comp Efficiency,0.62
+1,2,Correctness,0.9
+1,2,Efficiency,0.75
+1,2,Final Accuracy,1.0
+1,2,Pass Rate,1.0
+1,2,Redundancy,0.58
+1,2,Robustness Consistency,0.92
+1,2,Similarity,0.88
+1,2,Stepwise Correctness,0.88
+1,2,Validity Rate,1.0
+1,3,Accuracy,0.91
+1,3,Calibration Confidence,0.83
+1,3,Clarity,0.87
+1,3,Coherence Score,0.96
+1,3,Comp Efficiency,0.65
+1,3,Correctness,0.91
+1,3,Efficiency,0.72
+1,3,Final Accuracy,1.0
+1,3,Pass Rate,1.0
+1,3,Redundancy,0.55
+1,3,Robustness Consistency,0.93
+1,3,Similarity,0.89
+1,3,Stepwise Correctness,0.89
+1,3,Validity Rate,1.0
+1,4,Accuracy,0.88
+1,4,Calibration Confidence,0.78
+1,4,Clarity,0.75
+1,4,Coherence Score,0.9
+1,4,Comp Efficiency,0.55
+1,4,Correctness,0.88
+1,4,Efficiency,0.6
+1,4,Final Accuracy,1.0
+1,4,Pass Rate,1.0
+1,4,Redundancy,0.8
+1,4,Robustness Consistency,0.85
+1,4,Similarity,0.85
+1,4,Stepwise Correctness,0.85
+1,4,Validity Rate,1.0
+1,5,Accuracy,0.9
+1,5,Calibration Confidence,0.82
+1,5,Clarity,0.86
+1,5,Coherence Score,0.95
+1,5,Comp Efficiency,0.63
+1,5,Correctness,0.9
+1,5,Efficiency,0.73
+1,5,Final Accuracy,1.0
+1,5,Pass Rate,1.0
+1,5,Redundancy,0.57
+1,5,Robustness Consistency,0.91
+1,5,Similarity,0.88
+1,5,Stepwise Correctness,0.87
+1,5,Validity Rate,1.0
+1,6,Accuracy,0.2
+1,6,Calibration Confidence,0.3
+1,6,Clarity,0.65
+1,6,Coherence Score,0.8
+1,6,Comp Efficiency,0.3
+1,6,Correctness,0.2
+1,6,Efficiency,0.4
+1,6,Final Accuracy,0.0
+1,6,Pass Rate,0.0
+1,6,Redundancy,0.75
+1,6,Robustness Consistency,0.5
+1,6,Similarity,0.5
+1,6,Stepwise Correctness,0.3
+1,6,Validity Rate,1.0
+1,7,Accuracy,0.9
+1,7,Calibration Confidence,0.81
+1,7,Clarity,0.85
+1,7,Coherence Score,0.94
+1,7,Comp Efficiency,0.62
+1,7,Correctness,0.9
+1,7,Efficiency,0.74
+1,7,Final Accuracy,1.0
+1,7,Pass Rate,1.0
+1,7,Redundancy,0.58
+1,7,Robustness Consistency,0.92
+1,7,Similarity,0.88
+1,7,Stepwise Correctness,0.88
+1,7,Validity Rate,1.0
+1,8,Accuracy,0.3
+1,8,Calibration Confidence,0.4
+1,8,Clarity,0.7
+1,8,Coherence Score,0.85
+1,8,Comp Efficiency,0.6
+1,8,Correctness,0.3
+1,8,Efficiency,0.6
+1,8,Final Accuracy,0.0
+1,8,Pass Rate,0.0
+1,8,Redundancy,0.7
+1,8,Robustness Consistency,0.6
+1,8,Similarity,0.4
+1,8,Stepwise Correctness,0.35
+1,8,Validity Rate,1.0
+1,9,Accuracy,0.92
+1,9,Calibration Confidence,0.84
+1,9,Clarity,0.88
+1,9,Coherence Score,0.96
+1,9,Comp Efficiency,0.64
+1,9,Correctness,0.92
+1,9,Efficiency,0.75
+1,9,Final Accuracy,1.0
+1,9,Pass Rate,1.0
+1,9,Redundancy,0.56
+1,9,Robustness Consistency,0.93
+1,9,Similarity,0.9
+1,9,Stepwise Correctness,0.9
+1,9,Validity Rate,1.0
+2,1,Accuracy,0.92
+2,1,Calibration Confidence,0.85
+2,1,Clarity,0.9
+2,1,Coherence Score,0.95
+2,1,Comp Efficiency,0.65
+2,1,Correctness,0.92
+2,1,Efficiency,0.75
+2,1,Final Accuracy,1.0
+2,1,Pass Rate,1.0
+2,1,Redundancy,0.6
+2,1,Robustness Consistency,0.92
+2,1,Similarity,0.9
+2,1,Stepwise Correctness,0.9
+2,1,Validity Rate,1.0
+2,2,Accuracy,0.92
+2,2,Calibration Confidence,0.85
+2,2,Clarity,0.9
+2,2,Coherence Score,0.95
+2,2,Comp Efficiency,0.65
+2,2,Correctness,0.92
+2,2,Efficiency,0.75
+2,2,Final Accuracy,1.0
+2,2,Pass Rate,1.0
+2,2,Redundancy,0.6
+2,2,Robustness Consistency,0.92
+2,2,Similarity,0.9
+2,2,Stepwise Correctness,0.9
+2,2,Validity Rate,1.0
+2,3,Accuracy,0.92
+2,3,Calibration Confidence,0.86
+2,3,Clarity,0.9
+2,3,Coherence Score,0.95
+2,3,Comp Efficiency,0.65
+2,3,Correctness,0.92
+2,3,Efficiency,0.75
+2,3,Final Accuracy,1.0
+2,3,Pass Rate,1.0
+2,3,Redundancy,0.6
+2,3,Robustness Consistency,0.93
+2,3,Similarity,0.9
+2,3,Stepwise Correctness,0.9
+2,3,Validity Rate,1.0
+2,4,Accuracy,0.92
+2,4,Calibration Confidence,0.8
+2,4,Clarity,0.88
+2,4,Coherence Score,0.94
+2,4,Comp Efficiency,0.6
+2,4,Correctness,0.92
+2,4,Efficiency,0.7
+2,4,Final Accuracy,1.0
+2,4,Pass Rate,1.0
+2,4,Redundancy,0.7
+2,4,Robustness Consistency,0.9
+2,4,Similarity,0.9
+2,4,Stepwise Correctness,0.9
+2,4,Validity Rate,1.0
+2,5,Accuracy,0.92
+2,5,Calibration Confidence,0.84
+2,5,Clarity,0.9
+2,5,Coherence Score,0.95
+2,5,Comp Efficiency,0.65
+2,5,Correctness,0.92
+2,5,Efficiency,0.75
+2,5,Final Accuracy,1.0
+2,5,Pass Rate,1.0
+2,5,Redundancy,0.6
+2,5,Robustness Consistency,0.91
+2,5,Similarity,0.9
+2,5,Stepwise Correctness,0.9
+2,5,Validity Rate,1.0
+2,6,Accuracy,0.92
+2,6,Calibration Confidence,0.85
+2,6,Clarity,0.9
+2,6,Coherence Score,0.93
+2,6,Comp Efficiency,0.65
+2,6,Correctness,0.92
+2,6,Efficiency,0.75
+2,6,Final Accuracy,1.0
+2,6,Pass Rate,1.0
+2,6,Redundancy,0.6
+2,6,Robustness Consistency,0.92
+2,6,Similarity,0.9
+2,6,Stepwise Correctness,0.9
+2,6,Validity Rate,1.0
+2,7,Accuracy,0.92
+2,7,Calibration Confidence,0.75
+2,7,Clarity,0.8
+2,7,Coherence Score,0.9
+2,7,Comp Efficiency,0.6
+2,7,Correctness,0.92
+2,7,Efficiency,0.65
+2,7,Final Accuracy,1.0
+2,7,Pass Rate,1.0
+2,7,Redundancy,0.75
+2,7,Robustness Consistency,0.85
+2,7,Similarity,0.85
+2,7,Stepwise Correctness,0.85
+2,7,Validity Rate,1.0
+2,8,Accuracy,0.92
+2,8,Calibration Confidence,0.78
+2,8,Clarity,0.85
+2,8,Coherence Score,0.92
+2,8,Comp Efficiency,0.6
+2,8,Correctness,0.92
+2,8,Efficiency,0.7
+2,8,Final Accuracy,1.0
+2,8,Pass Rate,1.0
+2,8,Redundancy,0.7
+2,8,Robustness Consistency,0.88
+2,8,Similarity,0.88
+2,8,Stepwise Correctness,0.88
+2,8,Validity Rate,1.0
+2,9,Accuracy,0.92
+2,9,Calibration Confidence,0.87
+2,9,Clarity,0.92
+2,9,Coherence Score,0.96
+2,9,Comp Efficiency,0.65
+2,9,Correctness,0.92
+2,9,Efficiency,0.75
+2,9,Final Accuracy,1.0
+2,9,Pass Rate,1.0
+2,9,Redundancy,0.6
+2,9,Robustness Consistency,0.93
+2,9,Similarity,0.9
+2,9,Stepwise Correctness,0.9
+2,9,Validity Rate,1.0
+3,1,Accuracy,1.0
+3,1,Calibration Confidence,0.85
+3,1,Clarity,0.9
+3,1,Coherence Score,0.95
+3,1,Comp Efficiency,0.7
+3,1,Correctness,0.92
+3,1,Efficiency,0.75
+3,1,Final Accuracy,1.0
+3,1,Pass Rate,1.0
+3,1,Redundancy,0.6
+3,1,Robustness Consistency,0.92
+3,1,Similarity,0.9
+3,1,Stepwise Correctness,0.9
+3,1,Validity Rate,1.0
+3,2,Accuracy,0.0
+3,2,Calibration Confidence,0.4
+3,2,Clarity,0.88
+3,2,Coherence Score,0.9
+3,2,Comp Efficiency,0.68
+3,2,Correctness,0.3
+3,2,Efficiency,0.75
+3,2,Final Accuracy,0.0
+3,2,Pass Rate,0.0
+3,2,Redundancy,0.6
+3,2,Robustness Consistency,0.85
+3,2,Similarity,0.5
+3,2,Stepwise Correctness,0.5
+3,2,Validity Rate,1.0
+3,3,Accuracy,1.0
+3,3,Calibration Confidence,0.85
+3,3,Clarity,0.9
+3,3,Coherence Score,0.95
+3,3,Comp Efficiency,0.7
+3,3,Correctness,0.92
+3,3,Efficiency,0.75
+3,3,Final Accuracy,1.0
+3,3,Pass Rate,1.0
+3,3,Redundancy,0.6
+3,3,Robustness Consistency,0.92
+3,3,Similarity,0.9
+3,3,Stepwise Correctness,0.9
+3,3,Validity Rate,1.0
+3,4,Accuracy,1.0
+3,4,Calibration Confidence,0.85
+3,4,Clarity,0.9
+3,4,Coherence Score,0.95
+3,4,Comp Efficiency,0.7
+3,4,Correctness,0.92
+3,4,Efficiency,0.75
+3,4,Final Accuracy,1.0
+3,4,Pass Rate,1.0
+3,4,Redundancy,0.65
+3,4,Robustness Consistency,0.92
+3,4,Similarity,0.9
+3,4,Stepwise Correctness,0.9
+3,4,Validity Rate,1.0
+3,5,Accuracy,1.0
+3,5,Calibration Confidence,0.82
+3,5,Clarity,0.88
+3,5,Coherence Score,0.94
+3,5,Comp Efficiency,0.7
+3,5,Correctness,0.9
+3,5,Efficiency,0.75
+3,5,Final Accuracy,1.0
+3,5,Pass Rate,1.0
+3,5,Redundancy,0.6
+3,5,Robustness Consistency,0.9
+3,5,Similarity,0.9
+3,5,Stepwise Correctness,0.9
+3,5,Validity Rate,1.0
+3,6,Accuracy,1.0
+3,6,Calibration Confidence,0.85
+3,6,Clarity,0.9
+3,6,Coherence Score,0.93
+3,6,Comp Efficiency,0.68
+3,6,Correctness,0.92
+3,6,Efficiency,0.7
+3,6,Final Accuracy,1.0
+3,6,Pass Rate,1.0
+3,6,Redundancy,0.65
+3,6,Robustness Consistency,0.91
+3,6,Similarity,0.9
+3,6,Stepwise Correctness,0.9
+3,6,Validity Rate,1.0
+3,7,Accuracy,1.0
+3,7,Calibration Confidence,0.83
+3,7,Clarity,0.9
+3,7,Coherence Score,0.93
+3,7,Comp Efficiency,0.68
+3,7,Correctness,0.92
+3,7,Efficiency,0.7
+3,7,Final Accuracy,1.0
+3,7,Pass Rate,1.0
+3,7,Redundancy,0.6
+3,7,Robustness Consistency,0.91
+3,7,Similarity,0.9
+3,7,Stepwise Correctness,0.9
+3,7,Validity Rate,1.0
+3,8,Accuracy,1.0
+3,8,Calibration Confidence,0.8
+3,8,Clarity,0.88
+3,8,Coherence Score,0.92
+3,8,Comp Efficiency,0.68
+3,8,Correctness,0.9
+3,8,Efficiency,0.7
+3,8,Final Accuracy,1.0
+3,8,Pass Rate,1.0
+3,8,Redundancy,0.65
+3,8,Robustness Consistency,0.89
+3,8,Similarity,0.9
+3,8,Stepwise Correctness,0.9
+3,8,Validity Rate,1.0
+3,9,Accuracy,1.0
+3,9,Calibration Confidence,0.88
+3,9,Clarity,0.9
+3,9,Coherence Score,0.95
+3,9,Comp Efficiency,0.7
+3,9,Correctness,0.92
+3,9,Efficiency,0.75
+3,9,Final Accuracy,1.0
+3,9,Pass Rate,1.0
+3,9,Redundancy,0.6
+3,9,Robustness Consistency,0.93
+3,9,Similarity,0.9
+3,9,Stepwise Correctness,0.9
+3,9,Validity Rate,1.0
+4,1,Accuracy,0.0
+4,1,Calibration Confidence,0.4
+4,1,Clarity,0.6
+4,1,Coherence Score,0.85
+4,1,Comp Efficiency,0.6
+4,1,Correctness,0.2
+4,1,Efficiency,0.6
+4,1,Final Accuracy,0.0
+4,1,Pass Rate,0.0
+4,1,Redundancy,0.6
+4,1,Robustness Consistency,0.5
+4,1,Similarity,0.2
+4,1,Stepwise Correctness,0.2
+4,1,Validity Rate,1.0
+4,2,Accuracy,1.0
+4,2,Calibration Confidence,0.9
+4,2,Clarity,0.9
+4,2,Coherence Score,0.97
+4,2,Comp Efficiency,0.8
+4,2,Correctness,0.95
+4,2,Efficiency,0.8
+4,2,Final Accuracy,1.0
+4,2,Pass Rate,1.0
+4,2,Redundancy,0.4
+4,2,Robustness Consistency,0.95
+4,2,Similarity,1.0
+4,2,Stepwise Correctness,0.95
+4,2,Validity Rate,1.0
+4,3,Accuracy,1.0
+4,3,Calibration Confidence,0.9
+4,3,Clarity,0.9
+4,3,Coherence Score,0.97
+4,3,Comp Efficiency,0.8
+4,3,Correctness,0.95
+4,3,Efficiency,0.8
+4,3,Final Accuracy,1.0
+4,3,Pass Rate,1.0
+4,3,Redundancy,0.4
+4,3,Robustness Consistency,0.95
+4,3,Similarity,1.0
+4,3,Stepwise Correctness,0.95
+4,3,Validity Rate,1.0
+4,4,Accuracy,1.0
+4,4,Calibration Confidence,0.9
+4,4,Clarity,0.9
+4,4,Coherence Score,0.96
+4,4,Comp Efficiency,0.8
+4,4,Correctness,0.95
+4,4,Efficiency,0.8
+4,4,Final Accuracy,1.0
+4,4,Pass Rate,1.0
+4,4,Redundancy,0.4
+4,4,Robustness Consistency,0.95
+4,4,Similarity,1.0
+4,4,Stepwise Correctness,0.95
+4,4,Validity Rate,1.0
+4,5,Accuracy,1.0
+4,5,Calibration Confidence,0.88
+4,5,Clarity,0.88
+4,5,Coherence Score,0.96
+4,5,Comp Efficiency,0.75
+4,5,Correctness,0.95
+4,5,Efficiency,0.75
+4,5,Final Accuracy,1.0
+4,5,Pass Rate,1.0
+4,5,Redundancy,0.4
+4,5,Robustness Consistency,0.94
+4,5,Similarity,1.0
+4,5,Stepwise Correctness,0.95
+4,5,Validity Rate,1.0
+4,6,Accuracy,1.0
+4,6,Calibration Confidence,0.88
+4,6,Clarity,0.88
+4,6,Coherence Score,0.96
+4,6,Comp Efficiency,0.75
+4,6,Correctness,0.95
+4,6,Efficiency,0.75
+4,6,Final Accuracy,1.0
+4,6,Pass Rate,1.0
+4,6,Redundancy,0.4
+4,6,Robustness Consistency,0.94
+4,6,Similarity,1.0
+4,6,Stepwise Correctness,0.95
+4,6,Validity Rate,1.0
+4,7,Accuracy,1.0
+4,7,Calibration Confidence,0.87
+4,7,Clarity,0.88
+4,7,Coherence Score,0.95
+4,7,Comp Efficiency,0.75
+4,7,Correctness,0.95
+4,7,Efficiency,0.75
+4,7,Final Accuracy,1.0
+4,7,Pass Rate,1.0
+4,7,Redundancy,0.4
+4,7,Robustness Consistency,0.93
+4,7,Similarity,1.0
+4,7,Stepwise Correctness,0.95
+4,7,Validity Rate,1.0
+4,8,Accuracy,1.0
+4,8,Calibration Confidence,0.87
+4,8,Clarity,0.88
+4,8,Coherence Score,0.95
+4,8,Comp Efficiency,0.75
+4,8,Correctness,0.95
+4,8,Efficiency,0.75
+4,8,Final Accuracy,1.0
+4,8,Pass Rate,1.0
+4,8,Redundancy,0.4
+4,8,Robustness Consistency,0.93
+4,8,Similarity,1.0
+4,8,Stepwise Correctness,0.95
+4,8,Validity Rate,1.0
+4,9,Accuracy,1.0
+4,9,Calibration Confidence,0.88
+4,9,Clarity,0.9
+4,9,Coherence Score,0.96
+4,9,Comp Efficiency,0.8
+4,9,Correctness,0.95
+4,9,Efficiency,0.8
+4,9,Final Accuracy,1.0
+4,9,Pass Rate,1.0
+4,9,Redundancy,0.4
+4,9,Robustness Consistency,0.94
+4,9,Similarity,1.0
+4,9,Stepwise Correctness,0.95
+4,9,Validity Rate,1.0
+5,1,Accuracy,1.0
+5,1,Calibration Confidence,0.9
+5,1,Clarity,0.9
+5,1,Coherence Score,0.95
+5,1,Comp Efficiency,0.9
+5,1,Correctness,1.0
+5,1,Efficiency,0.8
+5,1,Final Accuracy,1.0
+5,1,Pass Rate,1.0
+5,1,Redundancy,0.3
+5,1,Robustness Consistency,0.9
+5,1,Similarity,0.9
+5,1,Stepwise Correctness,1.0
+5,1,Validity Rate,1.0
+5,2,Accuracy,1.0
+5,2,Calibration Confidence,0.85
+5,2,Clarity,0.9
+5,2,Coherence Score,0.9
+5,2,Comp Efficiency,0.9
+5,2,Correctness,1.0
+5,2,Efficiency,0.7
+5,2,Final Accuracy,1.0
+5,2,Pass Rate,1.0
+5,2,Redundancy,0.3
+5,2,Robustness Consistency,0.9
+5,2,Similarity,0.9
+5,2,Stepwise Correctness,1.0
+5,2,Validity Rate,1.0
+5,3,Accuracy,1.0
+5,3,Calibration Confidence,0.85
+5,3,Clarity,0.9
+5,3,Coherence Score,0.9
+5,3,Comp Efficiency,0.9
+5,3,Correctness,1.0
+5,3,Efficiency,0.7
+5,3,Final Accuracy,1.0
+5,3,Pass Rate,1.0
+5,3,Redundancy,0.3
+5,3,Robustness Consistency,0.9
+5,3,Similarity,0.9
+5,3,Stepwise Correctness,1.0
+5,3,Validity Rate,1.0
+5,4,Accuracy,1.0
+5,4,Calibration Confidence,0.85
+5,4,Clarity,0.85
+5,4,Coherence Score,0.85
+5,4,Comp Efficiency,0.9
+5,4,Correctness,1.0
+5,4,Efficiency,0.6
+5,4,Final Accuracy,1.0
+5,4,Pass Rate,1.0
+5,4,Redundancy,0.3
+5,4,Robustness Consistency,0.85
+5,4,Similarity,0.9
+5,4,Stepwise Correctness,1.0
+5,4,Validity Rate,1.0
+5,5,Accuracy,0.0
+5,5,Calibration Confidence,0.3
+5,5,Clarity,0.4
+5,5,Coherence Score,0.4
+5,5,Comp Efficiency,0.3
+5,5,Correctness,0.0
+5,5,Efficiency,0.2
+5,5,Final Accuracy,0.0
+5,5,Pass Rate,0.0
+5,5,Redundancy,0.9
+5,5,Robustness Consistency,0.4
+5,5,Similarity,0.2
+5,5,Stepwise Correctness,0.0
+5,5,Validity Rate,0.0
+5,6,Accuracy,1.0
+5,6,Calibration Confidence,0.9
+5,6,Clarity,0.9
+5,6,Coherence Score,0.95
+5,6,Comp Efficiency,0.9
+5,6,Correctness,1.0
+5,6,Efficiency,0.8
+5,6,Final Accuracy,1.0
+5,6,Pass Rate,1.0
+5,6,Redundancy,0.3
+5,6,Robustness Consistency,0.9
+5,6,Similarity,0.9
+5,6,Stepwise Correctness,1.0
+5,6,Validity Rate,1.0
+5,7,Accuracy,1.0
+5,7,Calibration Confidence,0.85
+5,7,Clarity,0.9
+5,7,Coherence Score,0.9
+5,7,Comp Efficiency,0.9
+5,7,Correctness,1.0
+5,7,Efficiency,0.8
+5,7,Final Accuracy,1.0
+5,7,Pass Rate,1.0
+5,7,Redundancy,0.3
+5,7,Robustness Consistency,0.9
+5,7,Similarity,0.9
+5,7,Stepwise Correctness,1.0
+5,7,Validity Rate,1.0
+5,8,Accuracy,1.0
+5,8,Calibration Confidence,0.85
+5,8,Clarity,0.9
+5,8,Coherence Score,0.9
+5,8,Comp Efficiency,0.9
+5,8,Correctness,1.0
+5,8,Efficiency,0.8
+5,8,Final Accuracy,1.0
+5,8,Pass Rate,1.0
+5,8,Redundancy,0.3
+5,8,Robustness Consistency,0.9
+5,8,Similarity,0.9
+5,8,Stepwise Correctness,1.0
+5,8,Validity Rate,1.0
+5,9,Accuracy,1.0
+5,9,Calibration Confidence,0.85
+5,9,Clarity,0.9
+5,9,Coherence Score,0.9
+5,9,Comp Efficiency,0.9
+5,9,Correctness,1.0
+5,9,Efficiency,0.7
+5,9,Final Accuracy,1.0
+5,9,Pass Rate,1.0
+5,9,Redundancy,0.3
+5,9,Robustness Consistency,0.9
+5,9,Similarity,0.9
+5,9,Stepwise Correctness,1.0
+5,9,Validity Rate,1.0
+6,1,Accuracy,1.0
+6,1,Calibration Confidence,0.7
+6,1,Clarity,0.9
+6,1,Coherence Score,0.9
+6,1,Comp Efficiency,1.0
+6,1,Correctness,1.0
+6,1,Efficiency,1.0
+6,1,Final Accuracy,1.0
+6,1,Pass Rate,1.0
+6,1,Redundancy,0.1
+6,1,Robustness Consistency,1.0
+6,1,Similarity,1.0
+6,1,Stepwise Correctness,1.0
+6,1,Validity Rate,1.0
+6,2,Accuracy,1.0
+6,2,Calibration Confidence,0.75
+6,2,Clarity,0.95
+6,2,Coherence Score,0.95
+6,2,Comp Efficiency,0.9
+6,2,Correctness,1.0
+6,2,Efficiency,0.8
+6,2,Final Accuracy,1.0
+6,2,Pass Rate,1.0
+6,2,Redundancy,0.2
+6,2,Robustness Consistency,1.0
+6,2,Similarity,1.0
+6,2,Stepwise Correctness,1.0
+6,2,Validity Rate,1.0
+6,3,Accuracy,1.0
+6,3,Calibration Confidence,0.8
+6,3,Clarity,0.9
+6,3,Coherence Score,0.95
+6,3,Comp Efficiency,0.8
+6,3,Correctness,1.0
+6,3,Efficiency,0.9
+6,3,Final Accuracy,1.0
+6,3,Pass Rate,1.0
+6,3,Redundancy,0.3
+6,3,Robustness Consistency,1.0
+6,3,Similarity,1.0
+6,3,Stepwise Correctness,1.0
+6,3,Validity Rate,1.0
+6,4,Accuracy,1.0
+6,4,Calibration Confidence,0.85
+6,4,Clarity,0.9
+6,4,Coherence Score,0.95
+6,4,Comp Efficiency,0.9
+6,4,Correctness,1.0
+6,4,Efficiency,0.85
+6,4,Final Accuracy,1.0
+6,4,Pass Rate,1.0
+6,4,Redundancy,0.2
+6,4,Robustness Consistency,1.0
+6,4,Similarity,1.0
+6,4,Stepwise Correctness,1.0
+6,4,Validity Rate,1.0
+6,5,Accuracy,1.0
+6,5,Calibration Confidence,0.8
+6,5,Clarity,0.85
+6,5,Coherence Score,0.85
+6,5,Comp Efficiency,0.8
+6,5,Correctness,1.0
+6,5,Efficiency,0.8
+6,5,Final Accuracy,1.0
+6,5,Pass Rate,1.0
+6,5,Redundancy,0.4
+6,5,Robustness Consistency,0.9
+6,5,Similarity,1.0
+6,5,Stepwise Correctness,1.0
+6,5,Validity Rate,1.0
+6,6,Accuracy,1.0
+6,6,Calibration Confidence,0.8
+6,6,Clarity,0.9
+6,6,Coherence Score,0.95
+6,6,Comp Efficiency,1.0
+6,6,Correctness,1.0
+6,6,Efficiency,0.9
+6,6,Final Accuracy,1.0
+6,6,Pass Rate,1.0
+6,6,Redundancy,0.1
+6,6,Robustness Consistency,1.0
+6,6,Similarity,0.9
+6,6,Stepwise Correctness,1.0
+6,6,Validity Rate,1.0
+6,7,Accuracy,1.0
+6,7,Calibration Confidence,0.85
+6,7,Clarity,0.95
+6,7,Coherence Score,0.95
+6,7,Comp Efficiency,0.9
+6,7,Correctness,1.0
+6,7,Efficiency,0.9
+6,7,Final Accuracy,1.0
+6,7,Pass Rate,1.0
+6,7,Redundancy,0.2
+6,7,Robustness Consistency,1.0
+6,7,Similarity,1.0
+6,7,Stepwise Correctness,1.0
+6,7,Validity Rate,1.0
+6,8,Accuracy,1.0
+6,8,Calibration Confidence,0.9
+6,8,Clarity,0.85
+6,8,Coherence Score,0.85
+6,8,Comp Efficiency,0.7
+6,8,Correctness,1.0
+6,8,Efficiency,0.75
+6,8,Final Accuracy,1.0
+6,8,Pass Rate,1.0
+6,8,Redundancy,0.5
+6,8,Robustness Consistency,0.9
+6,8,Similarity,1.0
+6,8,Stepwise Correctness,1.0
+6,8,Validity Rate,1.0
+6,9,Accuracy,1.0
+6,9,Calibration Confidence,0.9
+6,9,Clarity,0.95
+6,9,Coherence Score,0.9
+6,9,Comp Efficiency,0.95
+6,9,Correctness,1.0
+6,9,Efficiency,0.85
+6,9,Final Accuracy,1.0
+6,9,Pass Rate,1.0
+6,9,Redundancy,0.3
+6,9,Robustness Consistency,0.95
+6,9,Similarity,1.0
+6,9,Stepwise Correctness,1.0
+6,9,Validity Rate,1.0
+7,1,Accuracy,1.0
+7,1,Calibration Confidence,0.75
+7,1,Clarity,0.95
+7,1,Coherence Score,0.9
+7,1,Comp Efficiency,1.0
+7,1,Correctness,1.0
+7,1,Efficiency,1.0
+7,1,Final Accuracy,1.0
+7,1,Pass Rate,1.0
+7,1,Redundancy,0.1
+7,1,Robustness Consistency,1.0
+7,1,Similarity,1.0
+7,1,Stepwise Correctness,1.0
+7,1,Validity Rate,1.0
+7,2,Accuracy,1.0
+7,2,Calibration Confidence,0.8
+7,2,Clarity,0.95
+7,2,Coherence Score,0.95
+7,2,Comp Efficiency,0.85
+7,2,Correctness,1.0
+7,2,Efficiency,0.85
+7,2,Final Accuracy,1.0
+7,2,Pass Rate,1.0
+7,2,Redundancy,0.2
+7,2,Robustness Consistency,1.0
+7,2,Similarity,1.0
+7,2,Stepwise Correctness,1.0
+7,2,Validity Rate,1.0
+7,3,Accuracy,1.0
+7,3,Calibration Confidence,0.8
+7,3,Clarity,0.9
+7,3,Coherence Score,0.92
+7,3,Comp Efficiency,0.9
+7,3,Correctness,1.0
+7,3,Efficiency,0.9
+7,3,Final Accuracy,1.0
+7,3,Pass Rate,1.0
+7,3,Redundancy,0.3
+7,3,Robustness Consistency,1.0
+7,3,Similarity,1.0
+7,3,Stepwise Correctness,1.0
+7,3,Validity Rate,1.0
+7,4,Accuracy,1.0
+7,4,Calibration Confidence,0.85
+7,4,Clarity,0.85
+7,4,Coherence Score,0.85
+7,4,Comp Efficiency,0.8
+7,4,Correctness,1.0
+7,4,Efficiency,0.8
+7,4,Final Accuracy,1.0
+7,4,Pass Rate,1.0
+7,4,Redundancy,0.4
+7,4,Robustness Consistency,0.95
+7,4,Similarity,1.0
+7,4,Stepwise Correctness,1.0
+7,4,Validity Rate,1.0
+7,5,Accuracy,1.0
+7,5,Calibration Confidence,0.8
+7,5,Clarity,0.9
+7,5,Coherence Score,0.9
+7,5,Comp Efficiency,0.88
+7,5,Correctness,1.0
+7,5,Efficiency,0.88
+7,5,Final Accuracy,1.0
+7,5,Pass Rate,1.0
+7,5,Redundancy,0.3
+7,5,Robustness Consistency,0.98
+7,5,Similarity,1.0
+7,5,Stepwise Correctness,1.0
+7,5,Validity Rate,1.0
+7,6,Accuracy,1.0
+7,6,Calibration Confidence,0.8
+7,6,Clarity,0.9
+7,6,Coherence Score,0.9
+7,6,Comp Efficiency,0.9
+7,6,Correctness,1.0
+7,6,Efficiency,0.9
+7,6,Final Accuracy,1.0
+7,6,Pass Rate,1.0
+7,6,Redundancy,0.2
+7,6,Robustness Consistency,1.0
+7,6,Similarity,1.0
+7,6,Stepwise Correctness,1.0
+7,6,Validity Rate,1.0
+7,7,Accuracy,1.0
+7,7,Calibration Confidence,0.85
+7,7,Clarity,0.95
+7,7,Coherence Score,0.9
+7,7,Comp Efficiency,0.9
+7,7,Correctness,1.0
+7,7,Efficiency,0.9
+7,7,Final Accuracy,1.0
+7,7,Pass Rate,1.0
+7,7,Redundancy,0.2
+7,7,Robustness Consistency,1.0
+7,7,Similarity,1.0
+7,7,Stepwise Correctness,1.0
+7,7,Validity Rate,1.0
+7,8,Accuracy,1.0
+7,8,Calibration Confidence,0.9
+7,8,Clarity,0.9
+7,8,Coherence Score,0.88
+7,8,Comp Efficiency,0.85
+7,8,Correctness,1.0
+7,8,Efficiency,0.85
+7,8,Final Accuracy,1.0
+7,8,Pass Rate,1.0
+7,8,Redundancy,0.5
+7,8,Robustness Consistency,0.97
+7,8,Similarity,1.0
+7,8,Stepwise Correctness,1.0
+7,8,Validity Rate,1.0
+7,9,Accuracy,1.0
+7,9,Calibration Confidence,0.9
+7,9,Clarity,0.98
+7,9,Coherence Score,0.95
+7,9,Comp Efficiency,0.95
+7,9,Correctness,1.0
+7,9,Efficiency,0.95
+7,9,Final Accuracy,1.0
+7,9,Pass Rate,1.0
+7,9,Redundancy,0.1
+7,9,Robustness Consistency,1.0
+7,9,Similarity,1.0
+7,9,Stepwise Correctness,1.0
+7,9,Validity Rate,1.0
+8,1,Accuracy,0.9
+8,1,Calibration Confidence,0.8
+8,1,Clarity,0.9
+8,1,Coherence Score,0.85
+8,1,Comp Efficiency,0.85
+8,1,Correctness,1.0
+8,1,Efficiency,0.9
+8,1,Final Accuracy,1.0
+8,1,Pass Rate,1.0
+8,1,Redundancy,0.3
+8,1,Robustness Consistency,0.9
+8,1,Similarity,0.9
+8,1,Stepwise Correctness,0.85
+8,1,Validity Rate,1.0
+8,2,Accuracy,0.2
+8,2,Calibration Confidence,0.3
+8,2,Clarity,0.5
+8,2,Coherence Score,0.5
+8,2,Comp Efficiency,0.4
+8,2,Correctness,0.2
+8,2,Efficiency,0.4
+8,2,Final Accuracy,0.0
+8,2,Pass Rate,0.0
+8,2,Redundancy,0.7
+8,2,Robustness Consistency,0.4
+8,2,Similarity,0.5
+8,2,Stepwise Correctness,0.3
+8,2,Validity Rate,0.4
+8,3,Accuracy,1.0
+8,3,Calibration Confidence,0.8
+8,3,Clarity,0.9
+8,3,Coherence Score,0.9
+8,3,Comp Efficiency,0.9
+8,3,Correctness,1.0
+8,3,Efficiency,0.9
+8,3,Final Accuracy,1.0
+8,3,Pass Rate,1.0
+8,3,Redundancy,0.2
+8,3,Robustness Consistency,0.9
+8,3,Similarity,1.0
+8,3,Stepwise Correctness,1.0
+8,3,Validity Rate,1.0
+8,4,Accuracy,1.0
+8,4,Calibration Confidence,0.85
+8,4,Clarity,0.8
+8,4,Coherence Score,0.8
+8,4,Comp Efficiency,0.8
+8,4,Correctness,1.0
+8,4,Efficiency,0.8
+8,4,Final Accuracy,1.0
+8,4,Pass Rate,1.0
+8,4,Redundancy,0.3
+8,4,Robustness Consistency,0.9
+8,4,Similarity,0.9
+8,4,Stepwise Correctness,0.9
+8,4,Validity Rate,1.0
+8,5,Accuracy,0.9
+8,5,Calibration Confidence,0.8
+8,5,Clarity,0.85
+8,5,Coherence Score,0.85
+8,5,Comp Efficiency,0.85
+8,5,Correctness,0.9
+8,5,Efficiency,0.85
+8,5,Final Accuracy,1.0
+8,5,Pass Rate,1.0
+8,5,Redundancy,0.3
+8,5,Robustness Consistency,0.95
+8,5,Similarity,0.9
+8,5,Stepwise Correctness,0.9
+8,5,Validity Rate,1.0
+8,6,Accuracy,0.5
+8,6,Calibration Confidence,0.4
+8,6,Clarity,0.5
+8,6,Coherence Score,0.6
+8,6,Comp Efficiency,0.4
+8,6,Correctness,0.5
+8,6,Efficiency,0.3
+8,6,Final Accuracy,0.5
+8,6,Pass Rate,0.5
+8,6,Redundancy,0.8
+8,6,Robustness Consistency,0.5
+8,6,Similarity,0.6
+8,6,Stepwise Correctness,0.6
+8,6,Validity Rate,0.5
+8,7,Accuracy,1.0
+8,7,Calibration Confidence,0.9
+8,7,Clarity,0.95
+8,7,Coherence Score,0.95
+8,7,Comp Efficiency,0.9
+8,7,Correctness,1.0
+8,7,Efficiency,0.9
+8,7,Final Accuracy,1.0
+8,7,Pass Rate,1.0
+8,7,Redundancy,0.2
+8,7,Robustness Consistency,0.95
+8,7,Similarity,1.0
+8,7,Stepwise Correctness,1.0
+8,7,Validity Rate,1.0
+8,8,Accuracy,1.0
+8,8,Calibration Confidence,0.9
+8,8,Clarity,0.9
+8,8,Coherence Score,0.9
+8,8,Comp Efficiency,0.9
+8,8,Correctness,1.0
+8,8,Efficiency,0.9
+8,8,Final Accuracy,1.0
+8,8,Pass Rate,1.0
+8,8,Redundancy,0.2
+8,8,Robustness Consistency,0.9
+8,8,Similarity,1.0
+8,8,Stepwise Correctness,0.9
+8,8,Validity Rate,1.0
+8,9,Accuracy,1.0
+8,9,Calibration Confidence,0.8
+8,9,Clarity,0.85
+8,9,Coherence Score,0.85
+8,9,Comp Efficiency,0.8
+8,9,Correctness,0.9
+8,9,Efficiency,0.8
+8,9,Final Accuracy,1.0
+8,9,Pass Rate,1.0
+8,9,Redundancy,0.6
+8,9,Robustness Consistency,0.9
+8,9,Similarity,0.9
+8,9,Stepwise Correctness,0.8
+8,9,Validity Rate,0.9
+9,1,Accuracy,1.0
+9,1,Calibration Confidence,0.8
+9,1,Clarity,1.0
+9,1,Coherence Score,1.0
+9,1,Comp Efficiency,1.0
+9,1,Correctness,1.0
+9,1,Efficiency,1.0
+9,1,Final Accuracy,1.0
+9,1,Pass Rate,1.0
+9,1,Redundancy,0.1
+9,1,Robustness Consistency,1.0
+9,1,Similarity,1.0
+9,1,Stepwise Correctness,1.0
+9,1,Validity Rate,1.0
+9,2,Accuracy,1.0
+9,2,Calibration Confidence,0.8
+9,2,Clarity,0.95
+9,2,Coherence Score,0.95
+9,2,Comp Efficiency,0.9
+9,2,Correctness,1.0
+9,2,Efficiency,0.9
+9,2,Final Accuracy,1.0
+9,2,Pass Rate,1.0
+9,2,Redundancy,0.2
+9,2,Robustness Consistency,1.0
+9,2,Similarity,1.0
+9,2,Stepwise Correctness,1.0
+9,2,Validity Rate,1.0
+9,3,Accuracy,1.0
+9,3,Calibration Confidence,0.8
+9,3,Clarity,1.0
+9,3,Coherence Score,1.0
+9,3,Comp Efficiency,1.0
+9,3,Correctness,1.0
+9,3,Efficiency,1.0
+9,3,Final Accuracy,1.0
+9,3,Pass Rate,1.0
+9,3,Redundancy,0.1
+9,3,Robustness Consistency,1.0
+9,3,Similarity,1.0
+9,3,Stepwise Correctness,1.0
+9,3,Validity Rate,1.0
+9,4,Accuracy,1.0
+9,4,Calibration Confidence,0.85
+9,4,Clarity,0.95
+9,4,Coherence Score,0.95
+9,4,Comp Efficiency,1.0
+9,4,Correctness,1.0
+9,4,Efficiency,1.0
+9,4,Final Accuracy,1.0
+9,4,Pass Rate,1.0
+9,4,Redundancy,0.1
+9,4,Robustness Consistency,1.0
+9,4,Similarity,1.0
+9,4,Stepwise Correctness,1.0
+9,4,Validity Rate,1.0
+9,5,Accuracy,1.0
+9,5,Calibration Confidence,0.8
+9,5,Clarity,0.95
+9,5,Coherence Score,0.95
+9,5,Comp Efficiency,0.9
+9,5,Correctness,1.0
+9,5,Efficiency,0.9
+9,5,Final Accuracy,1.0
+9,5,Pass Rate,1.0
+9,5,Redundancy,0.2
+9,5,Robustness Consistency,1.0
+9,5,Similarity,1.0
+9,5,Stepwise Correctness,1.0
+9,5,Validity Rate,1.0
+9,6,Accuracy,1.0
+9,6,Calibration Confidence,0.8
+9,6,Clarity,1.0
+9,6,Coherence Score,1.0
+9,6,Comp Efficiency,1.0
+9,6,Correctness,1.0
+9,6,Efficiency,1.0
+9,6,Final Accuracy,1.0
+9,6,Pass Rate,1.0
+9,6,Redundancy,0.1
+9,6,Robustness Consistency,1.0
+9,6,Similarity,1.0
+9,6,Stepwise Correctness,1.0
+9,6,Validity Rate,1.0
+9,7,Accuracy,1.0
+9,7,Calibration Confidence,0.85
+9,7,Clarity,0.95
+9,7,Coherence Score,0.95
+9,7,Comp Efficiency,1.0
+9,7,Correctness,1.0
+9,7,Efficiency,1.0
+9,7,Final Accuracy,1.0
+9,7,Pass Rate,1.0
+9,7,Redundancy,0.1
+9,7,Robustness Consistency,1.0
+9,7,Similarity,1.0
+9,7,Stepwise Correctness,1.0
+9,7,Validity Rate,1.0
+9,8,Accuracy,1.0
+9,8,Calibration Confidence,0.85
+9,8,Clarity,0.95
+9,8,Coherence Score,0.95
+9,8,Comp Efficiency,1.0
+9,8,Correctness,1.0
+9,8,Efficiency,1.0
+9,8,Final Accuracy,1.0
+9,8,Pass Rate,1.0
+9,8,Redundancy,0.1
+9,8,Robustness Consistency,1.0
+9,8,Similarity,1.0
+9,8,Stepwise Correctness,1.0
+9,8,Validity Rate,1.0
+9,9,Accuracy,1.0
+9,9,Calibration Confidence,0.85
+9,9,Clarity,0.95
+9,9,Coherence Score,0.95
+9,9,Comp Efficiency,1.0
+9,9,Correctness,1.0
+9,9,Efficiency,1.0
+9,9,Final Accuracy,1.0
+9,9,Pass Rate,1.0
+9,9,Redundancy,0.1
+9,9,Robustness Consistency,1.0
+9,9,Similarity,1.0
+9,9,Stepwise Correctness,1.0
+9,9,Validity Rate,1.0
+10,1,Accuracy,1.0
+10,1,Calibration Confidence,0.8
+10,1,Clarity,0.85
+10,1,Coherence Score,0.9
+10,1,Comp Efficiency,0.9
+10,1,Correctness,1.0
+10,1,Efficiency,0.7
+10,1,Final Accuracy,1.0
+10,1,Pass Rate,1.0
+10,1,Redundancy,0.1
+10,1,Robustness Consistency,1.0
+10,1,Similarity,1.0
+10,1,Stepwise Correctness,0.95
+10,1,Validity Rate,1.0
+10,2,Accuracy,0.0
+10,2,Calibration Confidence,0.3
+10,2,Clarity,0.6
+10,2,Coherence Score,0.5
+10,2,Comp Efficiency,0.5
+10,2,Correctness,0.0
+10,2,Efficiency,0.6
+10,2,Final Accuracy,0.0
+10,2,Pass Rate,0.0
+10,2,Redundancy,0.8
+10,2,Robustness Consistency,0.0
+10,2,Similarity,0.1
+10,2,Stepwise Correctness,0.2
+10,2,Validity Rate,0.1
+10,3,Accuracy,0.0
+10,3,Calibration Confidence,0.2
+10,3,Clarity,0.7
+10,3,Coherence Score,0.6
+10,3,Comp Efficiency,0.4
+10,3,Correctness,0.0
+10,3,Efficiency,0.5
+10,3,Final Accuracy,0.0
+10,3,Pass Rate,0.0
+10,3,Redundancy,0.7
+10,3,Robustness Consistency,0.0
+10,3,Similarity,0.2
+10,3,Stepwise Correctness,0.25
+10,3,Validity Rate,0.3
+10,4,Accuracy,0.0
+10,4,Calibration Confidence,0.25
+10,4,Clarity,0.75
+10,4,Coherence Score,0.7
+10,4,Comp Efficiency,0.55
+10,4,Correctness,0.0
+10,4,Efficiency,0.65
+10,4,Final Accuracy,0.0
+10,4,Pass Rate,0.0
+10,4,Redundancy,0.6
+10,4,Robustness Consistency,0.0
+10,4,Similarity,0.3
+10,4,Stepwise Correctness,0.3
+10,4,Validity Rate,0.4
+10,5,Accuracy,0.0
+10,5,Calibration Confidence,0.25
+10,5,Clarity,0.7
+10,5,Coherence Score,0.65
+10,5,Comp Efficiency,0.5
+10,5,Correctness,0.0
+10,5,Efficiency,0.55
+10,5,Final Accuracy,0.0
+10,5,Pass Rate,0.0
+10,5,Redundancy,0.65
+10,5,Robustness Consistency,0.0
+10,5,Similarity,0.25
+10,5,Stepwise Correctness,0.28
+10,5,Validity Rate,0.35
+10,6,Accuracy,0.0
+10,6,Calibration Confidence,0.35
+10,6,Clarity,0.8
+10,6,Coherence Score,0.75
+10,6,Comp Efficiency,0.6
+10,6,Correctness,0.0
+10,6,Efficiency,0.6
+10,6,Final Accuracy,0.0
+10,6,Pass Rate,0.0
+10,6,Redundancy,0.55
+10,6,Robustness Consistency,0.0
+10,6,Similarity,0.4
+10,6,Stepwise Correctness,0.35
+10,6,Validity Rate,0.5
+10,7,Accuracy,0.0
+10,7,Calibration Confidence,0.3
+10,7,Clarity,0.78
+10,7,Coherence Score,0.7
+10,7,Comp Efficiency,0.58
+10,7,Correctness,0.0
+10,7,Efficiency,0.58
+10,7,Final Accuracy,0.0
+10,7,Pass Rate,0.0
+10,7,Redundancy,0.6
+10,7,Robustness Consistency,0.0
+10,7,Similarity,0.35
+10,7,Stepwise Correctness,0.32
+10,7,Validity Rate,0.45
+10,8,Accuracy,1.0
+10,8,Calibration Confidence,0.85
+10,8,Clarity,0.95
+10,8,Coherence Score,0.95
+10,8,Comp Efficiency,0.85
+10,8,Correctness,1.0
+10,8,Efficiency,0.75
+10,8,Final Accuracy,1.0
+10,8,Pass Rate,1.0
+10,8,Redundancy,0.05
+10,8,Robustness Consistency,1.0
+10,8,Similarity,0.95
+10,8,Stepwise Correctness,0.9
+10,8,Validity Rate,0.9
+10,9,Accuracy,0.0
+10,9,Calibration Confidence,0.15
+10,9,Clarity,0.6
+10,9,Coherence Score,0.55
+10,9,Comp Efficiency,0.35
+10,9,Correctness,0.0
+10,9,Efficiency,0.45
+10,9,Final Accuracy,0.0
+10,9,Pass Rate,0.0
+10,9,Redundancy,0.75
+10,9,Robustness Consistency,0.0
+10,9,Similarity,0.05
+10,9,Stepwise Correctness,0.18
+10,9,Validity Rate,0.2
+11,1,Accuracy,1.0
+11,1,Calibration Confidence,0.85
+11,1,Clarity,0.9
+11,1,Coherence Score,0.9
+11,1,Comp Efficiency,0.85
+11,1,Correctness,1.0
+11,1,Efficiency,0.8
+11,1,Final Accuracy,1.0
+11,1,Pass Rate,1.0
+11,1,Redundancy,0.2
+11,1,Robustness Consistency,1.0
+11,1,Similarity,1.0
+11,1,Stepwise Correctness,0.95
+11,1,Validity Rate,1.0
+11,2,Accuracy,1.0
+11,2,Calibration Confidence,0.8
+11,2,Clarity,0.85
+11,2,Coherence Score,0.85
+11,2,Comp Efficiency,0.8
+11,2,Correctness,1.0
+11,2,Efficiency,0.75
+11,2,Final Accuracy,1.0
+11,2,Pass Rate,1.0
+11,2,Redundancy,0.3
+11,2,Robustness Consistency,1.0
+11,2,Similarity,1.0
+11,2,Stepwise Correctness,0.9
+11,2,Validity Rate,1.0
+11,3,Accuracy,1.0
+11,3,Calibration Confidence,0.75
+11,3,Clarity,0.8
+11,3,Coherence Score,0.8
+11,3,Comp Efficiency,0.75
+11,3,Correctness,1.0
+11,3,Efficiency,0.7
+11,3,Final Accuracy,1.0
+11,3,Pass Rate,1.0
+11,3,Redundancy,0.4
+11,3,Robustness Consistency,1.0
+11,3,Similarity,1.0
+11,3,Stepwise Correctness,0.85
+11,3,Validity Rate,1.0
+11,4,Accuracy,1.0
+11,4,Calibration Confidence,0.75
+11,4,Clarity,0.8
+11,4,Coherence Score,0.85
+11,4,Comp Efficiency,0.75
+11,4,Correctness,1.0
+11,4,Efficiency,0.7
+11,4,Final Accuracy,1.0
+11,4,Pass Rate,1.0
+11,4,Redundancy,0.35
+11,4,Robustness Consistency,1.0
+11,4,Similarity,1.0
+11,4,Stepwise Correctness,0.85
+11,4,Validity Rate,1.0
+11,5,Accuracy,1.0
+11,5,Calibration Confidence,0.8
+11,5,Clarity,0.9
+11,5,Coherence Score,0.85
+11,5,Comp Efficiency,0.8
+11,5,Correctness,1.0
+11,5,Efficiency,0.75
+11,5,Final Accuracy,1.0
+11,5,Pass Rate,1.0
+11,5,Redundancy,0.25
+11,5,Robustness Consistency,1.0
+11,5,Similarity,1.0
+11,5,Stepwise Correctness,0.9
+11,5,Validity Rate,1.0
+11,6,Accuracy,1.0
+11,6,Calibration Confidence,0.3
+11,6,Clarity,0.7
+11,6,Coherence Score,0.6
+11,6,Comp Efficiency,0.7
+11,6,Correctness,1.0
+11,6,Efficiency,0.7
+11,6,Final Accuracy,1.0
+11,6,Pass Rate,1.0
+11,6,Redundancy,0.5
+11,6,Robustness Consistency,0.2
+11,6,Similarity,0.8
+11,6,Stepwise Correctness,0.3
+11,6,Validity Rate,0.2
+11,7,Accuracy,1.0
+11,7,Calibration Confidence,0.8
+11,7,Clarity,0.85
+11,7,Coherence Score,0.8
+11,7,Comp Efficiency,0.8
+11,7,Correctness,1.0
+11,7,Efficiency,0.75
+11,7,Final Accuracy,1.0
+11,7,Pass Rate,1.0
+11,7,Redundancy,0.3
+11,7,Robustness Consistency,1.0
+11,7,Similarity,1.0
+11,7,Stepwise Correctness,0.85
+11,7,Validity Rate,1.0
+11,8,Accuracy,1.0
+11,8,Calibration Confidence,0.85
+11,8,Clarity,0.9
+11,8,Coherence Score,0.9
+11,8,Comp Efficiency,0.85
+11,8,Correctness,1.0
+11,8,Efficiency,0.8
+11,8,Final Accuracy,1.0
+11,8,Pass Rate,1.0
+11,8,Redundancy,0.2
+11,8,Robustness Consistency,1.0
+11,8,Similarity,1.0
+11,8,Stepwise Correctness,0.9
+11,8,Validity Rate,1.0
+11,9,Accuracy,1.0
+11,9,Calibration Confidence,0.85
+11,9,Clarity,0.9
+11,9,Coherence Score,0.9
+11,9,Comp Efficiency,0.8
+11,9,Correctness,1.0
+11,9,Efficiency,0.75
+11,9,Final Accuracy,1.0
+11,9,Pass Rate,1.0
+11,9,Redundancy,0.25
+11,9,Robustness Consistency,1.0
+11,9,Similarity,1.0
+11,9,Stepwise Correctness,0.85
+11,9,Validity Rate,1.0
+12,1,Accuracy,1.0
+12,1,Calibration Confidence,0.5
+12,1,Clarity,0.95
+12,1,Coherence Score,1.0
+12,1,Comp Efficiency,1.0
+12,1,Correctness,1.0
+12,1,Efficiency,0.7
+12,1,Final Accuracy,1.0
+12,1,Pass Rate,1.0
+12,1,Redundancy,0.2
+12,1,Robustness Consistency,1.0
+12,1,Similarity,0.95
+12,1,Stepwise Correctness,1.0
+12,1,Validity Rate,1.0
+12,2,Accuracy,1.0
+12,2,Calibration Confidence,0.5
+12,2,Clarity,0.95
+12,2,Coherence Score,1.0
+12,2,Comp Efficiency,1.0
+12,2,Correctness,1.0
+12,2,Efficiency,0.8
+12,2,Final Accuracy,1.0
+12,2,Pass Rate,1.0
+12,2,Redundancy,0.3
+12,2,Robustness Consistency,1.0
+12,2,Similarity,0.95
+12,2,Stepwise Correctness,1.0
+12,2,Validity Rate,1.0
+12,3,Accuracy,1.0
+12,3,Calibration Confidence,0.5
+12,3,Clarity,0.95
+12,3,Coherence Score,1.0
+12,3,Comp Efficiency,1.0
+12,3,Correctness,1.0
+12,3,Efficiency,0.8
+12,3,Final Accuracy,1.0
+12,3,Pass Rate,1.0
+12,3,Redundancy,0.25
+12,3,Robustness Consistency,1.0
+12,3,Similarity,0.95
+12,3,Stepwise Correctness,1.0
+12,3,Validity Rate,1.0
+12,4,Accuracy,1.0
+12,4,Calibration Confidence,0.5
+12,4,Clarity,0.9
+12,4,Coherence Score,0.95
+12,4,Comp Efficiency,1.0
+12,4,Correctness,1.0
+12,4,Efficiency,0.8
+12,4,Final Accuracy,1.0
+12,4,Pass Rate,1.0
+12,4,Redundancy,0.3
+12,4,Robustness Consistency,1.0
+12,4,Similarity,0.95
+12,4,Stepwise Correctness,1.0
+12,4,Validity Rate,1.0
+12,5,Accuracy,1.0
+12,5,Calibration Confidence,0.5
+12,5,Clarity,0.95
+12,5,Coherence Score,1.0
+12,5,Comp Efficiency,1.0
+12,5,Correctness,1.0
+12,5,Efficiency,0.8
+12,5,Final Accuracy,1.0
+12,5,Pass Rate,1.0
+12,5,Redundancy,0.3
+12,5,Robustness Consistency,1.0
+12,5,Similarity,0.95
+12,5,Stepwise Correctness,1.0
+12,5,Validity Rate,1.0
+12,6,Accuracy,1.0
+12,6,Calibration Confidence,0.5
+12,6,Clarity,0.95
+12,6,Coherence Score,1.0
+12,6,Comp Efficiency,1.0
+12,6,Correctness,1.0
+12,6,Efficiency,0.85
+12,6,Final Accuracy,1.0
+12,6,Pass Rate,1.0
+12,6,Redundancy,0.25
+12,6,Robustness Consistency,1.0
+12,6,Similarity,0.95
+12,6,Stepwise Correctness,1.0
+12,6,Validity Rate,1.0
+12,7,Accuracy,1.0
+12,7,Calibration Confidence,0.5
+12,7,Clarity,0.95
+12,7,Coherence Score,1.0
+12,7,Comp Efficiency,1.0
+12,7,Correctness,1.0
+12,7,Efficiency,0.85
+12,7,Final Accuracy,1.0
+12,7,Pass Rate,1.0
+12,7,Redundancy,0.25
+12,7,Robustness Consistency,1.0
+12,7,Similarity,0.95
+12,7,Stepwise Correctness,1.0
+12,7,Validity Rate,1.0
+12,8,Accuracy,1.0
+12,8,Calibration Confidence,0.5
+12,8,Clarity,0.95
+12,8,Coherence Score,1.0
+12,8,Comp Efficiency,1.0
+12,8,Correctness,1.0
+12,8,Efficiency,0.85
+12,8,Final Accuracy,1.0
+12,8,Pass Rate,1.0
+12,8,Redundancy,0.25
+12,8,Robustness Consistency,1.0
+12,8,Similarity,0.95
+12,8,Stepwise Correctness,1.0
+12,8,Validity Rate,1.0
+12,9,Accuracy,1.0
+12,9,Calibration Confidence,0.5
+12,9,Clarity,1.0
+12,9,Coherence Score,1.0
+12,9,Comp Efficiency,1.0
+12,9,Correctness,1.0
+12,9,Efficiency,1.0
+12,9,Final Accuracy,1.0
+12,9,Pass Rate,1.0
+12,9,Redundancy,0.1
+12,9,Robustness Consistency,1.0
+12,9,Similarity,0.95
+12,9,Stepwise Correctness,1.0
+12,9,Validity Rate,1.0
+13,1,Accuracy,1.0
+13,1,Calibration Confidence,0.8
+13,1,Clarity,0.9
+13,1,Coherence Score,1.0
+13,1,Comp Efficiency,0.9
+13,1,Correctness,1.0
+13,1,Efficiency,0.9
+13,1,Final Accuracy,1.0
+13,1,Pass Rate,1.0
+13,1,Redundancy,0.1
+13,1,Robustness Consistency,1.0
+13,1,Similarity,0.9
+13,1,Stepwise Correctness,1.0
+13,1,Validity Rate,1.0
+13,2,Accuracy,1.0
+13,2,Calibration Confidence,0.8
+13,2,Clarity,0.9
+13,2,Coherence Score,1.0
+13,2,Comp Efficiency,0.9
+13,2,Correctness,1.0
+13,2,Efficiency,0.9
+13,2,Final Accuracy,1.0
+13,2,Pass Rate,1.0
+13,2,Redundancy,0.1
+13,2,Robustness Consistency,1.0
+13,2,Similarity,0.9
+13,2,Stepwise Correctness,1.0
+13,2,Validity Rate,1.0
+13,3,Accuracy,0.0
+13,3,Calibration Confidence,0.3
+13,3,Clarity,0.9
+13,3,Coherence Score,1.0
+13,3,Comp Efficiency,0.8
+13,3,Correctness,0.0
+13,3,Efficiency,0.9
+13,3,Final Accuracy,0.0
+13,3,Pass Rate,0.0
+13,3,Redundancy,0.2
+13,3,Robustness Consistency,0.0
+13,3,Similarity,0.6
+13,3,Stepwise Correctness,0.7
+13,3,Validity Rate,1.0
+13,4,Accuracy,1.0
+13,4,Calibration Confidence,0.8
+13,4,Clarity,0.9
+13,4,Coherence Score,1.0
+13,4,Comp Efficiency,0.9
+13,4,Correctness,1.0
+13,4,Efficiency,0.9
+13,4,Final Accuracy,1.0
+13,4,Pass Rate,1.0
+13,4,Redundancy,0.1
+13,4,Robustness Consistency,1.0
+13,4,Similarity,0.9
+13,4,Stepwise Correctness,1.0
+13,4,Validity Rate,1.0
+13,5,Accuracy,1.0
+13,5,Calibration Confidence,0.8
+13,5,Clarity,0.9
+13,5,Coherence Score,1.0
+13,5,Comp Efficiency,0.9
+13,5,Correctness,1.0
+13,5,Efficiency,0.9
+13,5,Final Accuracy,1.0
+13,5,Pass Rate,1.0
+13,5,Redundancy,0.1
+13,5,Robustness Consistency,1.0
+13,5,Similarity,0.9
+13,5,Stepwise Correctness,1.0
+13,5,Validity Rate,1.0
+13,6,Accuracy,1.0
+13,6,Calibration Confidence,0.8
+13,6,Clarity,0.9
+13,6,Coherence Score,1.0
+13,6,Comp Efficiency,0.9
+13,6,Correctness,1.0
+13,6,Efficiency,0.9
+13,6,Final Accuracy,1.0
+13,6,Pass Rate,1.0
+13,6,Redundancy,0.1
+13,6,Robustness Consistency,1.0
+13,6,Similarity,0.9
+13,6,Stepwise Correctness,1.0
+13,6,Validity Rate,1.0
+13,7,Accuracy,1.0
+13,7,Calibration Confidence,0.8
+13,7,Clarity,0.9
+13,7,Coherence Score,1.0
+13,7,Comp Efficiency,0.9
+13,7,Correctness,1.0
+13,7,Efficiency,0.9
+13,7,Final Accuracy,1.0
+13,7,Pass Rate,1.0
+13,7,Redundancy,0.1
+13,7,Robustness Consistency,1.0
+13,7,Similarity,0.9
+13,7,Stepwise Correctness,1.0
+13,7,Validity Rate,1.0
+13,8,Accuracy,0.0
+13,8,Calibration Confidence,0.3
+13,8,Clarity,0.9
+13,8,Coherence Score,1.0
+13,8,Comp Efficiency,0.8
+13,8,Correctness,0.0
+13,8,Efficiency,0.9
+13,8,Final Accuracy,0.0
+13,8,Pass Rate,0.0
+13,8,Redundancy,0.2
+13,8,Robustness Consistency,0.0
+13,8,Similarity,0.6
+13,8,Stepwise Correctness,0.7
+13,8,Validity Rate,1.0
+13,9,Accuracy,1.0
+13,9,Calibration Confidence,0.8
+13,9,Clarity,0.9
+13,9,Coherence Score,1.0
+13,9,Comp Efficiency,0.9
+13,9,Correctness,1.0
+13,9,Efficiency,0.9
+13,9,Final Accuracy,1.0
+13,9,Pass Rate,1.0
+13,9,Redundancy,0.1
+13,9,Robustness Consistency,1.0
+13,9,Similarity,0.9
+13,9,Stepwise Correctness,1.0
+13,9,Validity Rate,1.0
+14,1,Accuracy,1.0
+14,1,Calibration Confidence,0.9
+14,1,Clarity,1.0
+14,1,Coherence Score,1.0
+14,1,Comp Efficiency,1.0
+14,1,Correctness,1.0
+14,1,Efficiency,1.0
+14,1,Final Accuracy,1.0
+14,1,Pass Rate,1.0
+14,1,Redundancy,0.1
+14,1,Robustness Consistency,1.0
+14,1,Similarity,1.0
+14,1,Stepwise Correctness,1.0
+14,1,Validity Rate,1.0
+14,2,Accuracy,1.0
+14,2,Calibration Confidence,0.9
+14,2,Clarity,0.9
+14,2,Coherence Score,0.95
+14,2,Comp Efficiency,0.95
+14,2,Correctness,1.0
+14,2,Efficiency,0.95
+14,2,Final Accuracy,1.0
+14,2,Pass Rate,1.0
+14,2,Redundancy,0.2
+14,2,Robustness Consistency,0.98
+14,2,Similarity,1.0
+14,2,Stepwise Correctness,1.0
+14,2,Validity Rate,1.0
+14,3,Accuracy,1.0
+14,3,Calibration Confidence,0.9
+14,3,Clarity,0.9
+14,3,Coherence Score,0.95
+14,3,Comp Efficiency,0.9
+14,3,Correctness,1.0
+14,3,Efficiency,0.9
+14,3,Final Accuracy,1.0
+14,3,Pass Rate,1.0
+14,3,Redundancy,0.3
+14,3,Robustness Consistency,0.98
+14,3,Similarity,1.0
+14,3,Stepwise Correctness,1.0
+14,3,Validity Rate,1.0
+14,4,Accuracy,1.0
+14,4,Calibration Confidence,0.85
+14,4,Clarity,0.85
+14,4,Coherence Score,0.9
+14,4,Comp Efficiency,0.9
+14,4,Correctness,1.0
+14,4,Efficiency,0.9
+14,4,Final Accuracy,1.0
+14,4,Pass Rate,1.0
+14,4,Redundancy,0.2
+14,4,Robustness Consistency,0.9
+14,4,Similarity,1.0
+14,4,Stepwise Correctness,1.0
+14,4,Validity Rate,1.0
+14,5,Accuracy,1.0
+14,5,Calibration Confidence,0.85
+14,5,Clarity,0.9
+14,5,Coherence Score,0.92
+14,5,Comp Efficiency,0.9
+14,5,Correctness,1.0
+14,5,Efficiency,0.9
+14,5,Final Accuracy,1.0
+14,5,Pass Rate,1.0
+14,5,Redundancy,0.2
+14,5,Robustness Consistency,0.95
+14,5,Similarity,1.0
+14,5,Stepwise Correctness,1.0
+14,5,Validity Rate,1.0
+14,6,Accuracy,1.0
+14,6,Calibration Confidence,0.85
+14,6,Clarity,0.85
+14,6,Coherence Score,0.9
+14,6,Comp Efficiency,0.9
+14,6,Correctness,1.0
+14,6,Efficiency,0.9
+14,6,Final Accuracy,1.0
+14,6,Pass Rate,1.0
+14,6,Redundancy,0.2
+14,6,Robustness Consistency,0.9
+14,6,Similarity,1.0
+14,6,Stepwise Correctness,1.0
+14,6,Validity Rate,1.0
+14,7,Accuracy,1.0
+14,7,Calibration Confidence,0.85
+14,7,Clarity,0.9
+14,7,Coherence Score,0.9
+14,7,Comp Efficiency,0.9
+14,7,Correctness,1.0
+14,7,Efficiency,0.9
+14,7,Final Accuracy,1.0
+14,7,Pass Rate,1.0
+14,7,Redundancy,0.2
+14,7,Robustness Consistency,0.9
+14,7,Similarity,1.0
+14,7,Stepwise Correctness,1.0
+14,7,Validity Rate,1.0
+14,8,Accuracy,1.0
+14,8,Calibration Confidence,0.85
+14,8,Clarity,0.9
+14,8,Coherence Score,0.92
+14,8,Comp Efficiency,0.9
+14,8,Correctness,1.0
+14,8,Efficiency,0.9
+14,8,Final Accuracy,1.0
+14,8,Pass Rate,1.0
+14,8,Redundancy,0.2
+14,8,Robustness Consistency,0.95
+14,8,Similarity,1.0
+14,8,Stepwise Correctness,1.0
+14,8,Validity Rate,1.0
+14,9,Accuracy,0.0
+14,9,Calibration Confidence,0.0
+14,9,Clarity,0.0
+14,9,Coherence Score,0.0
+14,9,Comp Efficiency,0.0
+14,9,Correctness,0.0
+14,9,Efficiency,0.0
+14,9,Final Accuracy,0.0
+14,9,Pass Rate,0.0
+14,9,Redundancy,0.0
+14,9,Robustness Consistency,0.0
+14,9,Similarity,0.0
+14,9,Stepwise Correctness,0.0
+14,9,Validity Rate,0.0
+15,1,Accuracy,1.0
+15,1,Calibration Confidence,0.8
+15,1,Clarity,0.9
+15,1,Coherence Score,0.95
+15,1,Comp Efficiency,0.9
+15,1,Correctness,1.0
+15,1,Efficiency,0.85
+15,1,Final Accuracy,1.0
+15,1,Pass Rate,1.0
+15,1,Redundancy,0.7
+15,1,Robustness Consistency,0.9
+15,1,Similarity,1.0
+15,1,Stepwise Correctness,1.0
+15,1,Validity Rate,1.0
+15,2,Accuracy,1.0
+15,2,Calibration Confidence,0.75
+15,2,Clarity,0.88
+15,2,Coherence Score,0.94
+15,2,Comp Efficiency,0.88
+15,2,Correctness,1.0
+15,2,Efficiency,0.8
+15,2,Final Accuracy,1.0
+15,2,Pass Rate,1.0
+15,2,Redundancy,0.68
+15,2,Robustness Consistency,0.88
+15,2,Similarity,1.0
+15,2,Stepwise Correctness,1.0
+15,2,Validity Rate,1.0
+15,3,Accuracy,1.0
+15,3,Calibration Confidence,0.7
+15,3,Clarity,0.9
+15,3,Coherence Score,0.96
+15,3,Comp Efficiency,0.85
+15,3,Correctness,1.0
+15,3,Efficiency,0.75
+15,3,Final Accuracy,1.0
+15,3,Pass Rate,1.0
+15,3,Redundancy,0.65
+15,3,Robustness Consistency,0.85
+15,3,Similarity,1.0
+15,3,Stepwise Correctness,1.0
+15,3,Validity Rate,1.0
+15,4,Accuracy,1.0
+15,4,Calibration Confidence,0.78
+15,4,Clarity,0.87
+15,4,Coherence Score,0.93
+15,4,Comp Efficiency,0.88
+15,4,Correctness,1.0
+15,4,Efficiency,0.8
+15,4,Final Accuracy,1.0
+15,4,Pass Rate,1.0
+15,4,Redundancy,0.7
+15,4,Robustness Consistency,0.87
+15,4,Similarity,1.0
+15,4,Stepwise Correctness,1.0
+15,4,Validity Rate,1.0
+15,5,Accuracy,1.0
+15,5,Calibration Confidence,0.82
+15,5,Clarity,0.9
+15,5,Coherence Score,0.92
+15,5,Comp Efficiency,0.9
+15,5,Correctness,1.0
+15,5,Efficiency,0.85
+15,5,Final Accuracy,1.0
+15,5,Pass Rate,1.0
+15,5,Redundancy,0.75
+15,5,Robustness Consistency,0.89
+15,5,Similarity,1.0
+15,5,Stepwise Correctness,1.0
+15,5,Validity Rate,1.0
+15,6,Accuracy,1.0
+15,6,Calibration Confidence,0.8
+15,6,Clarity,0.89
+15,6,Coherence Score,0.95
+15,6,Comp Efficiency,0.92
+15,6,Correctness,1.0
+15,6,Efficiency,0.88
+15,6,Final Accuracy,1.0
+15,6,Pass Rate,1.0
+15,6,Redundancy,0.72
+15,6,Robustness Consistency,0.88
+15,6,Similarity,1.0
+15,6,Stepwise Correctness,1.0
+15,6,Validity Rate,1.0
+15,7,Accuracy,1.0
+15,7,Calibration Confidence,0.85
+15,7,Clarity,0.92
+15,7,Coherence Score,0.97
+15,7,Comp Efficiency,0.95
+15,7,Correctness,1.0
+15,7,Efficiency,0.9
+15,7,Final Accuracy,1.0
+15,7,Pass Rate,1.0
+15,7,Redundancy,0.8
+15,7,Robustness Consistency,0.91
+15,7,Similarity,1.0
+15,7,Stepwise Correctness,1.0
+15,7,Validity Rate,1.0
+15,8,Accuracy,1.0
+15,8,Calibration Confidence,0.82
+15,8,Clarity,0.91
+15,8,Coherence Score,0.94
+15,8,Comp Efficiency,0.93
+15,8,Correctness,1.0
+15,8,Efficiency,0.88
+15,8,Final Accuracy,1.0
+15,8,Pass Rate,1.0
+15,8,Redundancy,0.85
+15,8,Robustness Consistency,0.9
+15,8,Similarity,1.0
+15,8,Stepwise Correctness,1.0
+15,8,Validity Rate,1.0
+15,9,Accuracy,1.0
+15,9,Calibration Confidence,0.9
+15,9,Clarity,0.95
+15,9,Coherence Score,0.98
+15,9,Comp Efficiency,0.97
+15,9,Correctness,1.0
+15,9,Efficiency,0.95
+15,9,Final Accuracy,1.0
+15,9,Pass Rate,1.0
+15,9,Redundancy,0.9
+15,9,Robustness Consistency,0.92
+15,9,Similarity,1.0
+15,9,Stepwise Correctness,1.0
+15,9,Validity Rate,1.0
+16,1,Accuracy,1.0
+16,1,Calibration Confidence,0.9
+16,1,Clarity,0.9
+16,1,Coherence Score,0.9
+16,1,Comp Efficiency,0.9
+16,1,Correctness,1.0
+16,1,Efficiency,0.9
+16,1,Final Accuracy,1.0
+16,1,Pass Rate,1.0
+16,1,Redundancy,0.9
+16,1,Robustness Consistency,0.9
+16,1,Similarity,0.9
+16,1,Stepwise Correctness,1.0
+16,1,Validity Rate,1.0
+16,2,Accuracy,1.0
+16,2,Calibration Confidence,0.7
+16,2,Clarity,0.85
+16,2,Coherence Score,0.9
+16,2,Comp Efficiency,0.8
+16,2,Correctness,1.0
+16,2,Efficiency,0.8
+16,2,Final Accuracy,1.0
+16,2,Pass Rate,1.0
+16,2,Redundancy,0.7
+16,2,Robustness Consistency,0.8
+16,2,Similarity,0.8
+16,2,Stepwise Correctness,1.0
+16,2,Validity Rate,1.0
+16,3,Accuracy,1.0
+16,3,Calibration Confidence,0.8
+16,3,Clarity,0.85
+16,3,Coherence Score,0.85
+16,3,Comp Efficiency,0.8
+16,3,Correctness,1.0
+16,3,Efficiency,0.8
+16,3,Final Accuracy,1.0
+16,3,Pass Rate,1.0
+16,3,Redundancy,0.7
+16,3,Robustness Consistency,0.8
+16,3,Similarity,0.7
+16,3,Stepwise Correctness,1.0
+16,3,Validity Rate,1.0
+16,4,Accuracy,1.0
+16,4,Calibration Confidence,0.9
+16,4,Clarity,0.9
+16,4,Coherence Score,0.9
+16,4,Comp Efficiency,0.9
+16,4,Correctness,1.0
+16,4,Efficiency,0.9
+16,4,Final Accuracy,1.0
+16,4,Pass Rate,1.0
+16,4,Redundancy,0.9
+16,4,Robustness Consistency,0.9
+16,4,Similarity,0.9
+16,4,Stepwise Correctness,1.0
+16,4,Validity Rate,1.0
+16,5,Accuracy,1.0
+16,5,Calibration Confidence,0.9
+16,5,Clarity,0.9
+16,5,Coherence Score,0.9
+16,5,Comp Efficiency,0.9
+16,5,Correctness,1.0
+16,5,Efficiency,0.9
+16,5,Final Accuracy,1.0
+16,5,Pass Rate,1.0
+16,5,Redundancy,0.8
+16,5,Robustness Consistency,0.9
+16,5,Similarity,0.8
+16,5,Stepwise Correctness,1.0
+16,5,Validity Rate,1.0
+16,6,Accuracy,1.0
+16,6,Calibration Confidence,0.9
+16,6,Clarity,0.9
+16,6,Coherence Score,0.9
+16,6,Comp Efficiency,0.9
+16,6,Correctness,1.0
+16,6,Efficiency,0.9
+16,6,Final Accuracy,1.0
+16,6,Pass Rate,1.0
+16,6,Redundancy,0.9
+16,6,Robustness Consistency,0.9
+16,6,Similarity,0.9
+16,6,Stepwise Correctness,1.0
+16,6,Validity Rate,1.0
+16,7,Accuracy,1.0
+16,7,Calibration Confidence,0.9
+16,7,Clarity,0.9
+16,7,Coherence Score,0.9
+16,7,Comp Efficiency,0.9
+16,7,Correctness,1.0
+16,7,Efficiency,0.9
+16,7,Final Accuracy,1.0
+16,7,Pass Rate,1.0
+16,7,Redundancy,0.8
+16,7,Robustness Consistency,0.9
+16,7,Similarity,0.9
+16,7,Stepwise Correctness,1.0
+16,7,Validity Rate,1.0
+16,8,Accuracy,1.0
+16,8,Calibration Confidence,0.6
+16,8,Clarity,0.7
+16,8,Coherence Score,0.7
+16,8,Comp Efficiency,0.6
+16,8,Correctness,1.0
+16,8,Efficiency,0.6
+16,8,Final Accuracy,1.0
+16,8,Pass Rate,1.0
+16,8,Redundancy,0.3
+16,8,Robustness Consistency,0.6
+16,8,Similarity,0.5
+16,8,Stepwise Correctness,1.0
+16,8,Validity Rate,1.0
+16,9,Accuracy,1.0
+16,9,Calibration Confidence,0.9
+16,9,Clarity,0.9
+16,9,Coherence Score,0.9
+16,9,Comp Efficiency,0.9
+16,9,Correctness,1.0
+16,9,Efficiency,0.9
+16,9,Final Accuracy,1.0
+16,9,Pass Rate,1.0
+16,9,Redundancy,0.9
+16,9,Robustness Consistency,0.9
+16,9,Similarity,0.9
+16,9,Stepwise Correctness,1.0
+16,9,Validity Rate,1.0
+17,1,Accuracy,1.0
+17,1,Calibration Confidence,0.6
+17,1,Clarity,0.9
+17,1,Coherence Score,0.9
+17,1,Comp Efficiency,0.9
+17,1,Correctness,1.0
+17,1,Efficiency,0.9
+17,1,Final Accuracy,1.0
+17,1,Pass Rate,1.0
+17,1,Redundancy,0.1
+17,1,Robustness Consistency,0.7
+17,1,Similarity,1.0
+17,1,Stepwise Correctness,1.0
+17,1,Validity Rate,1.0
+17,2,Accuracy,1.0
+17,2,Calibration Confidence,0.65
+17,2,Clarity,0.85
+17,2,Coherence Score,0.88
+17,2,Comp Efficiency,0.7
+17,2,Correctness,1.0
+17,2,Efficiency,0.7
+17,2,Final Accuracy,1.0
+17,2,Pass Rate,1.0
+17,2,Redundancy,0.5
+17,2,Robustness Consistency,0.75
+17,2,Similarity,1.0
+17,2,Stepwise Correctness,1.0
+17,2,Validity Rate,1.0
+17,3,Accuracy,1.0
+17,3,Calibration Confidence,0.7
+17,3,Clarity,0.8
+17,3,Coherence Score,0.85
+17,3,Comp Efficiency,0.6
+17,3,Correctness,1.0
+17,3,Efficiency,0.6
+17,3,Final Accuracy,1.0
+17,3,Pass Rate,1.0
+17,3,Redundancy,0.6
+17,3,Robustness Consistency,0.8
+17,3,Similarity,1.0
+17,3,Stepwise Correctness,1.0
+17,3,Validity Rate,1.0
+17,4,Accuracy,1.0
+17,4,Calibration Confidence,0.8
+17,4,Clarity,0.9
+17,4,Coherence Score,0.87
+17,4,Comp Efficiency,0.5
+17,4,Correctness,1.0
+17,4,Efficiency,0.5
+17,4,Final Accuracy,1.0
+17,4,Pass Rate,1.0
+17,4,Redundancy,0.4
+17,4,Robustness Consistency,0.9
+17,4,Similarity,1.0
+17,4,Stepwise Correctness,1.0
+17,4,Validity Rate,1.0
+17,5,Accuracy,1.0
+17,5,Calibration Confidence,0.7
+17,5,Clarity,0.88
+17,5,Coherence Score,0.86
+17,5,Comp Efficiency,0.7
+17,5,Correctness,1.0
+17,5,Efficiency,0.7
+17,5,Final Accuracy,1.0
+17,5,Pass Rate,1.0
+17,5,Redundancy,0.5
+17,5,Robustness Consistency,0.78
+17,5,Similarity,1.0
+17,5,Stepwise Correctness,1.0
+17,5,Validity Rate,1.0
+17,6,Accuracy,1.0
+17,6,Calibration Confidence,0.75
+17,6,Clarity,0.87
+17,6,Coherence Score,0.88
+17,6,Comp Efficiency,0.8
+17,6,Correctness,1.0
+17,6,Efficiency,0.8
+17,6,Final Accuracy,1.0
+17,6,Pass Rate,1.0
+17,6,Redundancy,0.45
+17,6,Robustness Consistency,0.82
+17,6,Similarity,1.0
+17,6,Stepwise Correctness,1.0
+17,6,Validity Rate,1.0
+17,7,Accuracy,1.0
+17,7,Calibration Confidence,0.78
+17,7,Clarity,0.9
+17,7,Coherence Score,0.89
+17,7,Comp Efficiency,0.75
+17,7,Correctness,1.0
+17,7,Efficiency,0.75
+17,7,Final Accuracy,1.0
+17,7,Pass Rate,1.0
+17,7,Redundancy,0.5
+17,7,Robustness Consistency,0.85
+17,7,Similarity,1.0
+17,7,Stepwise Correctness,1.0
+17,7,Validity Rate,1.0
+17,8,Accuracy,1.0
+17,8,Calibration Confidence,0.76
+17,8,Clarity,0.88
+17,8,Coherence Score,0.87
+17,8,Comp Efficiency,0.8
+17,8,Correctness,1.0
+17,8,Efficiency,0.8
+17,8,Final Accuracy,1.0
+17,8,Pass Rate,1.0
+17,8,Redundancy,0.48
+17,8,Robustness Consistency,0.83
+17,8,Similarity,1.0
+17,8,Stepwise Correctness,1.0
+17,8,Validity Rate,1.0
+17,9,Accuracy,1.0
+17,9,Calibration Confidence,0.72
+17,9,Clarity,0.95
+17,9,Coherence Score,0.91
+17,9,Comp Efficiency,0.85
+17,9,Correctness,1.0
+17,9,Efficiency,0.85
+17,9,Final Accuracy,1.0
+17,9,Pass Rate,1.0
+17,9,Redundancy,0.2
+17,9,Robustness Consistency,0.8
+17,9,Similarity,1.0
+17,9,Stepwise Correctness,1.0
+17,9,Validity Rate,1.0
+18,1,Accuracy,1.0
+18,1,Calibration Confidence,0.95
+18,1,Clarity,1.0
+18,1,Coherence Score,1.0
+18,1,Comp Efficiency,1.0
+18,1,Correctness,1.0
+18,1,Efficiency,0.9
+18,1,Final Accuracy,1.0
+18,1,Pass Rate,1.0
+18,1,Redundancy,0.8
+18,1,Robustness Consistency,1.0
+18,1,Similarity,1.0
+18,1,Stepwise Correctness,1.0
+18,1,Validity Rate,1.0
+18,2,Accuracy,1.0
+18,2,Calibration Confidence,0.95
+18,2,Clarity,1.0
+18,2,Coherence Score,1.0
+18,2,Comp Efficiency,1.0
+18,2,Correctness,1.0
+18,2,Efficiency,0.85
+18,2,Final Accuracy,1.0
+18,2,Pass Rate,1.0
+18,2,Redundancy,0.7
+18,2,Robustness Consistency,1.0
+18,2,Similarity,1.0
+18,2,Stepwise Correctness,1.0
+18,2,Validity Rate,1.0
+18,3,Accuracy,1.0
+18,3,Calibration Confidence,0.95
+18,3,Clarity,1.0
+18,3,Coherence Score,1.0
+18,3,Comp Efficiency,1.0
+18,3,Correctness,1.0
+18,3,Efficiency,0.85
+18,3,Final Accuracy,1.0
+18,3,Pass Rate,1.0
+18,3,Redundancy,0.7
+18,3,Robustness Consistency,1.0
+18,3,Similarity,1.0
+18,3,Stepwise Correctness,1.0
+18,3,Validity Rate,1.0
+18,4,Accuracy,1.0
+18,4,Calibration Confidence,0.95
+18,4,Clarity,1.0
+18,4,Coherence Score,1.0
+18,4,Comp Efficiency,1.0
+18,4,Correctness,1.0
+18,4,Efficiency,0.85
+18,4,Final Accuracy,1.0
+18,4,Pass Rate,1.0
+18,4,Redundancy,0.7
+18,4,Robustness Consistency,1.0
+18,4,Similarity,1.0
+18,4,Stepwise Correctness,1.0
+18,4,Validity Rate,1.0
+18,5,Accuracy,1.0
+18,5,Calibration Confidence,0.95
+18,5,Clarity,1.0
+18,5,Coherence Score,1.0
+18,5,Comp Efficiency,1.0
+18,5,Correctness,1.0
+18,5,Efficiency,0.85
+18,5,Final Accuracy,1.0
+18,5,Pass Rate,1.0
+18,5,Redundancy,0.7
+18,5,Robustness Consistency,1.0
+18,5,Similarity,1.0
+18,5,Stepwise Correctness,1.0
+18,5,Validity Rate,1.0
+18,6,Accuracy,1.0
+18,6,Calibration Confidence,0.95
+18,6,Clarity,1.0
+18,6,Coherence Score,1.0
+18,6,Comp Efficiency,1.0
+18,6,Correctness,1.0
+18,6,Efficiency,0.85
+18,6,Final Accuracy,1.0
+18,6,Pass Rate,1.0
+18,6,Redundancy,0.7
+18,6,Robustness Consistency,1.0
+18,6,Similarity,1.0
+18,6,Stepwise Correctness,1.0
+18,6,Validity Rate,1.0
+18,7,Accuracy,1.0
+18,7,Calibration Confidence,0.95
+18,7,Clarity,1.0
+18,7,Coherence Score,1.0
+18,7,Comp Efficiency,1.0
+18,7,Correctness,1.0
+18,7,Efficiency,0.85
+18,7,Final Accuracy,1.0
+18,7,Pass Rate,1.0
+18,7,Redundancy,0.7
+18,7,Robustness Consistency,1.0
+18,7,Similarity,1.0
+18,7,Stepwise Correctness,1.0
+18,7,Validity Rate,1.0
+18,8,Accuracy,1.0
+18,8,Calibration Confidence,0.95
+18,8,Clarity,1.0
+18,8,Coherence Score,1.0
+18,8,Comp Efficiency,1.0
+18,8,Correctness,1.0
+18,8,Efficiency,0.85
+18,8,Final Accuracy,1.0
+18,8,Pass Rate,1.0
+18,8,Redundancy,0.7
+18,8,Robustness Consistency,1.0
+18,8,Similarity,1.0
+18,8,Stepwise Correctness,1.0
+18,8,Validity Rate,1.0
+18,9,Accuracy,1.0
+18,9,Calibration Confidence,0.95
+18,9,Clarity,1.0
+18,9,Coherence Score,1.0
+18,9,Comp Efficiency,1.0
+18,9,Correctness,1.0
+18,9,Efficiency,0.85
+18,9,Final Accuracy,1.0
+18,9,Pass Rate,1.0
+18,9,Redundancy,0.7
+18,9,Robustness Consistency,1.0
+18,9,Similarity,1.0
+18,9,Stepwise Correctness,1.0
+18,9,Validity Rate,1.0
+19,1,Accuracy,1.0
+19,1,Calibration Confidence,0.8
+19,1,Clarity,0.9
+19,1,Coherence Score,0.9
+19,1,Comp Efficiency,0.8
+19,1,Correctness,1.0
+19,1,Efficiency,0.8
+19,1,Final Accuracy,1.0
+19,1,Pass Rate,1.0
+19,1,Redundancy,0.2
+19,1,Robustness Consistency,0.8
+19,1,Similarity,0.8
+19,1,Stepwise Correctness,0.8
+19,1,Validity Rate,1.0
+19,2,Accuracy,1.0
+19,2,Calibration Confidence,0.8
+19,2,Clarity,0.9
+19,2,Coherence Score,0.9
+19,2,Comp Efficiency,0.7
+19,2,Correctness,1.0
+19,2,Efficiency,0.7
+19,2,Final Accuracy,1.0
+19,2,Pass Rate,1.0
+19,2,Redundancy,0.3
+19,2,Robustness Consistency,0.8
+19,2,Similarity,0.8
+19,2,Stepwise Correctness,0.8
+19,2,Validity Rate,1.0
+19,3,Accuracy,1.0
+19,3,Calibration Confidence,0.8
+19,3,Clarity,0.9
+19,3,Coherence Score,0.9
+19,3,Comp Efficiency,0.7
+19,3,Correctness,1.0
+19,3,Efficiency,0.7
+19,3,Final Accuracy,1.0
+19,3,Pass Rate,1.0
+19,3,Redundancy,0.3
+19,3,Robustness Consistency,0.8
+19,3,Similarity,0.8
+19,3,Stepwise Correctness,0.8
+19,3,Validity Rate,1.0
+19,4,Accuracy,1.0
+19,4,Calibration Confidence,0.8
+19,4,Clarity,0.8
+19,4,Coherence Score,0.8
+19,4,Comp Efficiency,0.6
+19,4,Correctness,1.0
+19,4,Efficiency,0.6
+19,4,Final Accuracy,1.0
+19,4,Pass Rate,1.0
+19,4,Redundancy,0.4
+19,4,Robustness Consistency,0.8
+19,4,Similarity,0.8
+19,4,Stepwise Correctness,0.8
+19,4,Validity Rate,1.0
+19,5,Accuracy,1.0
+19,5,Calibration Confidence,0.8
+19,5,Clarity,0.9
+19,5,Coherence Score,0.9
+19,5,Comp Efficiency,0.7
+19,5,Correctness,1.0
+19,5,Efficiency,0.7
+19,5,Final Accuracy,1.0
+19,5,Pass Rate,1.0
+19,5,Redundancy,0.3
+19,5,Robustness Consistency,0.8
+19,5,Similarity,0.8
+19,5,Stepwise Correctness,0.8
+19,5,Validity Rate,1.0
+19,6,Accuracy,1.0
+19,6,Calibration Confidence,0.8
+19,6,Clarity,0.9
+19,6,Coherence Score,0.9
+19,6,Comp Efficiency,0.7
+19,6,Correctness,1.0
+19,6,Efficiency,0.7
+19,6,Final Accuracy,1.0
+19,6,Pass Rate,1.0
+19,6,Redundancy,0.3
+19,6,Robustness Consistency,0.8
+19,6,Similarity,0.8
+19,6,Stepwise Correctness,0.8
+19,6,Validity Rate,1.0
+19,7,Accuracy,1.0
+19,7,Calibration Confidence,0.8
+19,7,Clarity,0.9
+19,7,Coherence Score,0.9
+19,7,Comp Efficiency,0.6
+19,7,Correctness,1.0
+19,7,Efficiency,0.6
+19,7,Final Accuracy,1.0
+19,7,Pass Rate,1.0
+19,7,Redundancy,0.5
+19,7,Robustness Consistency,0.8
+19,7,Similarity,0.9
+19,7,Stepwise Correctness,1.0
+19,7,Validity Rate,1.0
+19,8,Accuracy,1.0
+19,8,Calibration Confidence,0.8
+19,8,Clarity,0.9
+19,8,Coherence Score,0.9
+19,8,Comp Efficiency,0.7
+19,8,Correctness,1.0
+19,8,Efficiency,0.7
+19,8,Final Accuracy,1.0
+19,8,Pass Rate,1.0
+19,8,Redundancy,0.4
+19,8,Robustness Consistency,0.8
+19,8,Similarity,0.9
+19,8,Stepwise Correctness,1.0
+19,8,Validity Rate,1.0
+19,9,Accuracy,1.0
+19,9,Calibration Confidence,0.8
+19,9,Clarity,0.9
+19,9,Coherence Score,0.9
+19,9,Comp Efficiency,0.7
+19,9,Correctness,1.0
+19,9,Efficiency,0.7
+19,9,Final Accuracy,1.0
+19,9,Pass Rate,1.0
+19,9,Redundancy,0.3
+19,9,Robustness Consistency,0.8
+19,9,Similarity,1.0
+19,9,Stepwise Correctness,1.0
+19,9,Validity Rate,1.0
+20,1,Accuracy,1.0
+20,1,Calibration Confidence,0.95
+20,1,Clarity,0.85
+20,1,Coherence Score,0.85
+20,1,Comp Efficiency,0.8
+20,1,Correctness,1.0
+20,1,Efficiency,0.8
+20,1,Final Accuracy,1.0
+20,1,Pass Rate,0.0
+20,1,Redundancy,0.2
+20,1,Robustness Consistency,0.9
+20,1,Similarity,0.9
+20,1,Stepwise Correctness,1.0
+20,1,Validity Rate,1.0
+20,2,Accuracy,1.0
+20,2,Calibration Confidence,0.8
+20,2,Clarity,0.88
+20,2,Coherence Score,0.88
+20,2,Comp Efficiency,0.9
+20,2,Correctness,1.0
+20,2,Efficiency,0.9
+20,2,Final Accuracy,1.0
+20,2,Pass Rate,0.0
+20,2,Redundancy,0.15
+20,2,Robustness Consistency,0.8
+20,2,Similarity,0.85
+20,2,Stepwise Correctness,1.0
+20,2,Validity Rate,1.0
+20,3,Accuracy,1.0
+20,3,Calibration Confidence,0.8
+20,3,Clarity,0.8
+20,3,Coherence Score,0.8
+20,3,Comp Efficiency,0.7
+20,3,Correctness,1.0
+20,3,Efficiency,0.7
+20,3,Final Accuracy,1.0
+20,3,Pass Rate,0.0
+20,3,Redundancy,0.3
+20,3,Robustness Consistency,0.7
+20,3,Similarity,0.8
+20,3,Stepwise Correctness,1.0
+20,3,Validity Rate,1.0
+20,4,Accuracy,1.0
+20,4,Calibration Confidence,0.95
+20,4,Clarity,0.87
+20,4,Coherence Score,0.87
+20,4,Comp Efficiency,0.8
+20,4,Correctness,1.0
+20,4,Efficiency,0.8
+20,4,Final Accuracy,1.0
+20,4,Pass Rate,0.0
+20,4,Redundancy,0.2
+20,4,Robustness Consistency,0.9
+20,4,Similarity,0.9
+20,4,Stepwise Correctness,1.0
+20,4,Validity Rate,1.0
+20,5,Accuracy,1.0
+20,5,Calibration Confidence,0.8
+20,5,Clarity,0.86
+20,5,Coherence Score,0.86
+20,5,Comp Efficiency,0.9
+20,5,Correctness,1.0
+20,5,Efficiency,0.9
+20,5,Final Accuracy,1.0
+20,5,Pass Rate,0.0
+20,5,Redundancy,0.25
+20,5,Robustness Consistency,0.8
+20,5,Similarity,0.85
+20,5,Stepwise Correctness,1.0
+20,5,Validity Rate,1.0
+20,6,Accuracy,1.0
+20,6,Calibration Confidence,0.8
+20,6,Clarity,0.82
+20,6,Coherence Score,0.82
+20,6,Comp Efficiency,0.9
+20,6,Correctness,1.0
+20,6,Efficiency,0.9
+20,6,Final Accuracy,1.0
+20,6,Pass Rate,0.0
+20,6,Redundancy,0.3
+20,6,Robustness Consistency,0.8
+20,6,Similarity,0.8
+20,6,Stepwise Correctness,1.0
+20,6,Validity Rate,1.0
+20,7,Accuracy,1.0
+20,7,Calibration Confidence,0.8
+20,7,Clarity,0.88
+20,7,Coherence Score,0.88
+20,7,Comp Efficiency,0.9
+20,7,Correctness,1.0
+20,7,Efficiency,0.9
+20,7,Final Accuracy,1.0
+20,7,Pass Rate,0.0
+20,7,Redundancy,0.2
+20,7,Robustness Consistency,0.8
+20,7,Similarity,0.85
+20,7,Stepwise Correctness,1.0
+20,7,Validity Rate,1.0
+20,8,Accuracy,1.0
+20,8,Calibration Confidence,0.8
+20,8,Clarity,0.83
+20,8,Coherence Score,0.83
+20,8,Comp Efficiency,0.9
+20,8,Correctness,1.0
+20,8,Efficiency,0.9
+20,8,Final Accuracy,1.0
+20,8,Pass Rate,0.0
+20,8,Redundancy,0.25
+20,8,Robustness Consistency,0.8
+20,8,Similarity,0.8
+20,8,Stepwise Correctness,1.0
+20,8,Validity Rate,1.0
+20,9,Accuracy,1.0
+20,9,Calibration Confidence,0.95
+20,9,Clarity,0.9
+20,9,Coherence Score,0.9
+20,9,Comp Efficiency,0.8
+20,9,Correctness,1.0
+20,9,Efficiency,0.8
+20,9,Final Accuracy,1.0
+20,9,Pass Rate,0.0
+20,9,Redundancy,0.15
+20,9,Robustness Consistency,0.9
+20,9,Similarity,0.9
+20,9,Stepwise Correctness,1.0
+20,9,Validity Rate,1.0
+21,1,Accuracy,0.9
+21,1,Calibration Confidence,0.8
+21,1,Clarity,0.9
+21,1,Coherence Score,0.9
+21,1,Comp Efficiency,0.9
+21,1,Correctness,0.85
+21,1,Efficiency,0.9
+21,1,Final Accuracy,0.9
+21,1,Pass Rate,0.9
+21,1,Redundancy,0.8
+21,1,Robustness Consistency,0.85
+21,1,Similarity,0.85
+21,1,Stepwise Correctness,0.8
+21,1,Validity Rate,1.0
+21,2,Accuracy,0.8
+21,2,Calibration Confidence,0.75
+21,2,Clarity,0.85
+21,2,Coherence Score,0.85
+21,2,Comp Efficiency,0.9
+21,2,Correctness,0.8
+21,2,Efficiency,0.9
+21,2,Final Accuracy,0.8
+21,2,Pass Rate,0.8
+21,2,Redundancy,0.8
+21,2,Robustness Consistency,0.8
+21,2,Similarity,0.8
+21,2,Stepwise Correctness,0.75
+21,2,Validity Rate,1.0
+21,3,Accuracy,1.0
+21,3,Calibration Confidence,0.85
+21,3,Clarity,0.95
+21,3,Coherence Score,0.95
+21,3,Comp Efficiency,0.9
+21,3,Correctness,0.95
+21,3,Efficiency,0.9
+21,3,Final Accuracy,1.0
+21,3,Pass Rate,1.0
+21,3,Redundancy,0.7
+21,3,Robustness Consistency,0.9
+21,3,Similarity,0.9
+21,3,Stepwise Correctness,0.95
+21,3,Validity Rate,1.0
+21,4,Accuracy,0.85
+21,4,Calibration Confidence,0.8
+21,4,Clarity,0.85
+21,4,Coherence Score,0.85
+21,4,Comp Efficiency,0.9
+21,4,Correctness,0.85
+21,4,Efficiency,0.9
+21,4,Final Accuracy,0.85
+21,4,Pass Rate,0.85
+21,4,Redundancy,0.8
+21,4,Robustness Consistency,0.85
+21,4,Similarity,0.85
+21,4,Stepwise Correctness,0.8
+21,4,Validity Rate,1.0
+21,5,Accuracy,0.9
+21,5,Calibration Confidence,0.85
+21,5,Clarity,0.9
+21,5,Coherence Score,0.9
+21,5,Comp Efficiency,0.9
+21,5,Correctness,0.9
+21,5,Efficiency,0.9
+21,5,Final Accuracy,0.9
+21,5,Pass Rate,0.9
+21,5,Redundancy,0.75
+21,5,Robustness Consistency,0.9
+21,5,Similarity,0.9
+21,5,Stepwise Correctness,0.85
+21,5,Validity Rate,1.0
+21,6,Accuracy,0.8
+21,6,Calibration Confidence,0.75
+21,6,Clarity,0.8
+21,6,Coherence Score,0.8
+21,6,Comp Efficiency,0.9
+21,6,Correctness,0.8
+21,6,Efficiency,0.9
+21,6,Final Accuracy,0.8
+21,6,Pass Rate,0.8
+21,6,Redundancy,0.8
+21,6,Robustness Consistency,0.8
+21,6,Similarity,0.8
+21,6,Stepwise Correctness,0.75
+21,6,Validity Rate,1.0
+21,7,Accuracy,0.7
+21,7,Calibration Confidence,0.7
+21,7,Clarity,0.75
+21,7,Coherence Score,0.75
+21,7,Comp Efficiency,0.9
+21,7,Correctness,0.7
+21,7,Efficiency,0.9
+21,7,Final Accuracy,0.7
+21,7,Pass Rate,0.7
+21,7,Redundancy,0.85
+21,7,Robustness Consistency,0.7
+21,7,Similarity,0.75
+21,7,Stepwise Correctness,0.65
+21,7,Validity Rate,1.0
+21,8,Accuracy,0.95
+21,8,Calibration Confidence,0.9
+21,8,Clarity,0.95
+21,8,Coherence Score,0.95
+21,8,Comp Efficiency,0.9
+21,8,Correctness,0.95
+21,8,Efficiency,0.9
+21,8,Final Accuracy,0.95
+21,8,Pass Rate,0.95
+21,8,Redundancy,0.8
+21,8,Robustness Consistency,0.95
+21,8,Similarity,0.9
+21,8,Stepwise Correctness,0.9
+21,8,Validity Rate,1.0
+21,9,Accuracy,1.0
+21,9,Calibration Confidence,0.9
+21,9,Clarity,0.95
+21,9,Coherence Score,0.95
+21,9,Comp Efficiency,0.9
+21,9,Correctness,0.95
+21,9,Efficiency,0.9
+21,9,Final Accuracy,1.0
+21,9,Pass Rate,0.95
+21,9,Redundancy,0.75
+21,9,Robustness Consistency,0.95
+21,9,Similarity,0.9
+21,9,Stepwise Correctness,0.95
+21,9,Validity Rate,1.0
+22,1,Accuracy,1.0
+22,1,Calibration Confidence,0.85
+22,1,Clarity,0.95
+22,1,Coherence Score,0.95
+22,1,Comp Efficiency,1.0
+22,1,Correctness,1.0
+22,1,Efficiency,0.9
+22,1,Final Accuracy,1.0
+22,1,Pass Rate,1.0
+22,1,Redundancy,0.1
+22,1,Robustness Consistency,0.95
+22,1,Similarity,1.0
+22,1,Stepwise Correctness,1.0
+22,1,Validity Rate,1.0
+22,2,Accuracy,1.0
+22,2,Calibration Confidence,0.85
+22,2,Clarity,0.95
+22,2,Coherence Score,0.95
+22,2,Comp Efficiency,1.0
+22,2,Correctness,1.0
+22,2,Efficiency,0.9
+22,2,Final Accuracy,1.0
+22,2,Pass Rate,1.0
+22,2,Redundancy,0.1
+22,2,Robustness Consistency,0.95
+22,2,Similarity,1.0
+22,2,Stepwise Correctness,1.0
+22,2,Validity Rate,1.0
+22,3,Accuracy,1.0
+22,3,Calibration Confidence,0.85
+22,3,Clarity,0.95
+22,3,Coherence Score,0.95
+22,3,Comp Efficiency,1.0
+22,3,Correctness,1.0
+22,3,Efficiency,0.9
+22,3,Final Accuracy,1.0
+22,3,Pass Rate,1.0
+22,3,Redundancy,0.1
+22,3,Robustness Consistency,0.95
+22,3,Similarity,1.0
+22,3,Stepwise Correctness,1.0
+22,3,Validity Rate,1.0
+22,4,Accuracy,1.0
+22,4,Calibration Confidence,0.85
+22,4,Clarity,0.95
+22,4,Coherence Score,0.95
+22,4,Comp Efficiency,1.0
+22,4,Correctness,1.0
+22,4,Efficiency,0.9
+22,4,Final Accuracy,1.0
+22,4,Pass Rate,1.0
+22,4,Redundancy,0.1
+22,4,Robustness Consistency,0.95
+22,4,Similarity,1.0
+22,4,Stepwise Correctness,1.0
+22,4,Validity Rate,1.0
+22,5,Accuracy,1.0
+22,5,Calibration Confidence,0.85
+22,5,Clarity,0.95
+22,5,Coherence Score,0.95
+22,5,Comp Efficiency,1.0
+22,5,Correctness,1.0
+22,5,Efficiency,0.9
+22,5,Final Accuracy,1.0
+22,5,Pass Rate,1.0
+22,5,Redundancy,0.1
+22,5,Robustness Consistency,0.95
+22,5,Similarity,1.0
+22,5,Stepwise Correctness,1.0
+22,5,Validity Rate,1.0
+22,6,Accuracy,1.0
+22,6,Calibration Confidence,0.85
+22,6,Clarity,0.95
+22,6,Coherence Score,0.95
+22,6,Comp Efficiency,1.0
+22,6,Correctness,1.0
+22,6,Efficiency,0.9
+22,6,Final Accuracy,1.0
+22,6,Pass Rate,1.0
+22,6,Redundancy,0.1
+22,6,Robustness Consistency,0.95
+22,6,Similarity,1.0
+22,6,Stepwise Correctness,1.0
+22,6,Validity Rate,1.0
+22,7,Accuracy,1.0
+22,7,Calibration Confidence,0.85
+22,7,Clarity,0.95
+22,7,Coherence Score,0.95
+22,7,Comp Efficiency,1.0
+22,7,Correctness,1.0
+22,7,Efficiency,0.9
+22,7,Final Accuracy,1.0
+22,7,Pass Rate,1.0
+22,7,Redundancy,0.1
+22,7,Robustness Consistency,0.95
+22,7,Similarity,1.0
+22,7,Stepwise Correctness,1.0
+22,7,Validity Rate,1.0
+22,8,Accuracy,1.0
+22,8,Calibration Confidence,0.85
+22,8,Clarity,0.95
+22,8,Coherence Score,0.95
+22,8,Comp Efficiency,1.0
+22,8,Correctness,1.0
+22,8,Efficiency,0.9
+22,8,Final Accuracy,1.0
+22,8,Pass Rate,1.0
+22,8,Redundancy,0.1
+22,8,Robustness Consistency,0.95
+22,8,Similarity,1.0
+22,8,Stepwise Correctness,1.0
+22,8,Validity Rate,1.0
+22,9,Accuracy,1.0
+22,9,Calibration Confidence,0.85
+22,9,Clarity,0.95
+22,9,Coherence Score,0.95
+22,9,Comp Efficiency,1.0
+22,9,Correctness,1.0
+22,9,Efficiency,0.9
+22,9,Final Accuracy,1.0
+22,9,Pass Rate,1.0
+22,9,Redundancy,0.1
+22,9,Robustness Consistency,0.95
+22,9,Similarity,1.0
+22,9,Stepwise Correctness,1.0
+22,9,Validity Rate,1.0
+23,1,Accuracy,0.0
+23,1,Calibration Confidence,0.2
+23,1,Clarity,0.7
+23,1,Coherence Score,0.8
+23,1,Comp Efficiency,0.2
+23,1,Correctness,0.0
+23,1,Efficiency,0.2
+23,1,Final Accuracy,0.0
+23,1,Pass Rate,0.0
+23,1,Redundancy,0.3
+23,1,Robustness Consistency,0.3
+23,1,Similarity,0.1
+23,1,Stepwise Correctness,0.1
+23,1,Validity Rate,0.2
+23,2,Accuracy,0.0
+23,2,Calibration Confidence,0.1
+23,2,Clarity,0.2
+23,2,Coherence Score,0.4
+23,2,Comp Efficiency,0.1
+23,2,Correctness,0.0
+23,2,Efficiency,0.1
+23,2,Final Accuracy,0.0
+23,2,Pass Rate,0.0
+23,2,Redundancy,0.1
+23,2,Robustness Consistency,0.1
+23,2,Similarity,0.1
+23,2,Stepwise Correctness,0.0
+23,2,Validity Rate,0.1
+23,3,Accuracy,0.0
+23,3,Calibration Confidence,0.1
+23,3,Clarity,0.2
+23,3,Coherence Score,0.1
+23,3,Comp Efficiency,0.1
+23,3,Correctness,0.0
+23,3,Efficiency,0.0
+23,3,Final Accuracy,0.0
+23,3,Pass Rate,0.0
+23,3,Redundancy,0.2
+23,3,Robustness Consistency,0.1
+23,3,Similarity,0.05
+23,3,Stepwise Correctness,0.0
+23,3,Validity Rate,0.0
+23,4,Accuracy,0.0
+23,4,Calibration Confidence,0.2
+23,4,Clarity,0.7
+23,4,Coherence Score,0.7
+23,4,Comp Efficiency,0.3
+23,4,Correctness,0.0
+23,4,Efficiency,0.3
+23,4,Final Accuracy,0.0
+23,4,Pass Rate,0.0
+23,4,Redundancy,0.4
+23,4,Robustness Consistency,0.3
+23,4,Similarity,0.1
+23,4,Stepwise Correctness,0.1
+23,4,Validity Rate,0.2
+23,5,Accuracy,0.0
+23,5,Calibration Confidence,0.5
+23,5,Clarity,0.9
+23,5,Coherence Score,0.9
+23,5,Comp Efficiency,0.9
+23,5,Correctness,0.0
+23,5,Efficiency,0.8
+23,5,Final Accuracy,0.0
+23,5,Pass Rate,0.0
+23,5,Redundancy,0.9
+23,5,Robustness Consistency,0.6
+23,5,Similarity,0.8
+23,5,Stepwise Correctness,0.9
+23,5,Validity Rate,0.6
+23,6,Accuracy,1.0
+23,6,Calibration Confidence,0.4
+23,6,Clarity,0.6
+23,6,Coherence Score,0.6
+23,6,Comp Efficiency,0.5
+23,6,Correctness,0.4
+23,6,Efficiency,0.6
+23,6,Final Accuracy,1.0
+23,6,Pass Rate,1.0
+23,6,Redundancy,0.4
+23,6,Robustness Consistency,0.5
+23,6,Similarity,0.5
+23,6,Stepwise Correctness,0.3
+23,6,Validity Rate,0.5
+23,7,Accuracy,0.0
+23,7,Calibration Confidence,0.3
+23,7,Clarity,0.6
+23,7,Coherence Score,0.7
+23,7,Comp Efficiency,0.5
+23,7,Correctness,0.0
+23,7,Efficiency,0.5
+23,7,Final Accuracy,0.0
+23,7,Pass Rate,0.0
+23,7,Redundancy,0.5
+23,7,Robustness Consistency,0.4
+23,7,Similarity,0.4
+23,7,Stepwise Correctness,0.3
+23,7,Validity Rate,0.3
+23,8,Accuracy,1.0
+23,8,Calibration Confidence,0.4
+23,8,Clarity,0.7
+23,8,Coherence Score,0.5
+23,8,Comp Efficiency,0.6
+23,8,Correctness,0.4
+23,8,Efficiency,0.6
+23,8,Final Accuracy,1.0
+23,8,Pass Rate,1.0
+23,8,Redundancy,0.5
+23,8,Robustness Consistency,0.5
+23,8,Similarity,0.5
+23,8,Stepwise Correctness,0.2
+23,8,Validity Rate,0.3
+24,1,Accuracy,0.3
+24,1,Calibration Confidence,0.5
+24,1,Clarity,0.65
+24,1,Coherence Score,0.7
+24,1,Comp Efficiency,0.85
+24,1,Correctness,0.3
+24,1,Efficiency,0.8
+24,1,Final Accuracy,0.0
+24,1,Pass Rate,0.0
+24,1,Redundancy,0.2
+24,1,Robustness Consistency,0.8
+24,1,Similarity,0.2
+24,1,Stepwise Correctness,0.2
+24,1,Validity Rate,0.2
+24,2,Accuracy,0.3
+24,2,Calibration Confidence,0.5
+24,2,Clarity,0.65
+24,2,Coherence Score,0.7
+24,2,Comp Efficiency,0.85
+24,2,Correctness,0.3
+24,2,Efficiency,0.8
+24,2,Final Accuracy,0.0
+24,2,Pass Rate,0.0
+24,2,Redundancy,0.2
+24,2,Robustness Consistency,0.8
+24,2,Similarity,0.2
+24,2,Stepwise Correctness,0.2
+24,2,Validity Rate,0.2
+24,3,Accuracy,0.3
+24,3,Calibration Confidence,0.5
+24,3,Clarity,0.65
+24,3,Coherence Score,0.7
+24,3,Comp Efficiency,0.85
+24,3,Correctness,0.3
+24,3,Efficiency,0.8
+24,3,Final Accuracy,0.0
+24,3,Pass Rate,0.0
+24,3,Redundancy,0.3
+24,3,Robustness Consistency,0.8
+24,3,Similarity,0.2
+24,3,Stepwise Correctness,0.2
+24,3,Validity Rate,0.2
+24,4,Accuracy,0.3
+24,4,Calibration Confidence,0.5
+24,4,Clarity,0.65
+24,4,Coherence Score,0.7
+24,4,Comp Efficiency,0.85
+24,4,Correctness,0.3
+24,4,Efficiency,0.8
+24,4,Final Accuracy,0.0
+24,4,Pass Rate,0.0
+24,4,Redundancy,0.3
+24,4,Robustness Consistency,0.8
+24,4,Similarity,0.2
+24,4,Stepwise Correctness,0.2
+24,4,Validity Rate,0.2
+24,5,Accuracy,0.1
+24,5,Calibration Confidence,0.5
+24,5,Clarity,0.4
+24,5,Coherence Score,0.5
+24,5,Comp Efficiency,0.3
+24,5,Correctness,0.1
+24,5,Efficiency,0.3
+24,5,Final Accuracy,0.0
+24,5,Pass Rate,0.0
+24,5,Redundancy,0.8
+24,5,Robustness Consistency,0.1
+24,5,Similarity,0.2
+24,5,Stepwise Correctness,0.1
+24,5,Validity Rate,0.15
+24,6,Accuracy,0.1
+24,6,Calibration Confidence,0.5
+24,6,Clarity,0.45
+24,6,Coherence Score,0.6
+24,6,Comp Efficiency,0.6
+24,6,Correctness,0.1
+24,6,Efficiency,0.6
+24,6,Final Accuracy,0.0
+24,6,Pass Rate,0.0
+24,6,Redundancy,0.7
+24,6,Robustness Consistency,0.2
+24,6,Similarity,0.2
+24,6,Stepwise Correctness,0.1
+24,6,Validity Rate,0.15
+24,7,Accuracy,0.9
+24,7,Calibration Confidence,0.6
+24,7,Clarity,0.9
+24,7,Coherence Score,0.85
+24,7,Comp Efficiency,0.55
+24,7,Correctness,0.9
+24,7,Efficiency,0.5
+24,7,Final Accuracy,1.0
+24,7,Pass Rate,1.0
+24,7,Redundancy,0.4
+24,7,Robustness Consistency,0.95
+24,7,Similarity,0.9
+24,7,Stepwise Correctness,1.0
+24,7,Validity Rate,0.9
+24,8,Accuracy,0.85
+24,8,Calibration Confidence,0.6
+24,8,Clarity,0.8
+24,8,Coherence Score,0.8
+24,8,Comp Efficiency,0.55
+24,8,Correctness,0.85
+24,8,Efficiency,0.5
+24,8,Final Accuracy,1.0
+24,8,Pass Rate,1.0
+24,8,Redundancy,0.5
+24,8,Robustness Consistency,0.9
+24,8,Similarity,0.9
+24,8,Stepwise Correctness,0.8
+24,8,Validity Rate,0.9
+24,9,Accuracy,0.9
+24,9,Calibration Confidence,0.6
+24,9,Clarity,0.85
+24,9,Coherence Score,0.9
+24,9,Comp Efficiency,0.55
+24,9,Correctness,0.9
+24,9,Efficiency,0.5
+24,9,Final Accuracy,1.0
+24,9,Pass Rate,1.0
+24,9,Redundancy,0.5
+24,9,Robustness Consistency,0.9
+24,9,Similarity,0.9
+24,9,Stepwise Correctness,0.9
+24,9,Validity Rate,0.9
+25,1,Accuracy,0.7
+25,1,Calibration Confidence,0.2
+25,1,Clarity,0.9
+25,1,Coherence Score,0.9
+25,1,Comp Efficiency,0.9
+25,1,Correctness,0.7
+25,1,Efficiency,0.9
+25,1,Final Accuracy,0.0
+25,1,Pass Rate,0.0
+25,1,Redundancy,0.1
+25,1,Robustness Consistency,0.7
+25,1,Similarity,0.7
+25,1,Stepwise Correctness,0.8
+25,1,Validity Rate,1.0
+25,2,Accuracy,0.7
+25,2,Calibration Confidence,0.2
+25,2,Clarity,0.9
+25,2,Coherence Score,0.9
+25,2,Comp Efficiency,0.9
+25,2,Correctness,0.7
+25,2,Efficiency,0.9
+25,2,Final Accuracy,0.0
+25,2,Pass Rate,0.0
+25,2,Redundancy,0.1
+25,2,Robustness Consistency,0.8
+25,2,Similarity,0.7
+25,2,Stepwise Correctness,0.8
+25,2,Validity Rate,1.0
+25,3,Accuracy,0.1
+25,3,Calibration Confidence,0.2
+25,3,Clarity,0.1
+25,3,Coherence Score,0.2
+25,3,Comp Efficiency,0.2
+25,3,Correctness,0.1
+25,3,Efficiency,0.2
+25,3,Final Accuracy,0.0
+25,3,Pass Rate,0.0
+25,3,Redundancy,0.9
+25,3,Robustness Consistency,0.1
+25,3,Similarity,0.1
+25,3,Stepwise Correctness,0.1
+25,3,Validity Rate,0.0
+25,4,Accuracy,0.8
+25,4,Calibration Confidence,0.2
+25,4,Clarity,0.9
+25,4,Coherence Score,0.9
+25,4,Comp Efficiency,0.9
+25,4,Correctness,0.8
+25,4,Efficiency,0.9
+25,4,Final Accuracy,0.0
+25,4,Pass Rate,0.0
+25,4,Redundancy,0.2
+25,4,Robustness Consistency,0.8
+25,4,Similarity,0.7
+25,4,Stepwise Correctness,0.7
+25,4,Validity Rate,1.0
+25,5,Accuracy,0.6
+25,5,Calibration Confidence,0.2
+25,5,Clarity,0.8
+25,5,Coherence Score,0.8
+25,5,Comp Efficiency,0.8
+25,5,Correctness,0.6
+25,5,Efficiency,0.8
+25,5,Final Accuracy,0.0
+25,5,Pass Rate,0.0
+25,5,Redundancy,0.3
+25,5,Robustness Consistency,0.7
+25,5,Similarity,0.6
+25,5,Stepwise Correctness,0.7
+25,5,Validity Rate,1.0
+25,6,Accuracy,0.7
+25,6,Calibration Confidence,0.2
+25,6,Clarity,0.9
+25,6,Coherence Score,0.9
+25,6,Comp Efficiency,0.9
+25,6,Correctness,0.7
+25,6,Efficiency,0.9
+25,6,Final Accuracy,0.0
+25,6,Pass Rate,0.0
+25,6,Redundancy,0.2
+25,6,Robustness Consistency,0.8
+25,6,Similarity,0.7
+25,6,Stepwise Correctness,0.8
+25,6,Validity Rate,1.0
+25,7,Accuracy,0.7
+25,7,Calibration Confidence,0.2
+25,7,Clarity,0.9
+25,7,Coherence Score,0.9
+25,7,Comp Efficiency,0.9
+25,7,Correctness,0.7
+25,7,Efficiency,0.9
+25,7,Final Accuracy,0.0
+25,7,Pass Rate,0.0
+25,7,Redundancy,0.2
+25,7,Robustness Consistency,0.8
+25,7,Similarity,0.7
+25,7,Stepwise Correctness,0.8
+25,7,Validity Rate,1.0
+25,8,Accuracy,0.6
+25,8,Calibration Confidence,0.2
+25,8,Clarity,0.7
+25,8,Coherence Score,0.7
+25,8,Comp Efficiency,0.8
+25,8,Correctness,0.6
+25,8,Efficiency,0.8
+25,8,Final Accuracy,0.0
+25,8,Pass Rate,0.0
+25,8,Redundancy,0.4
+25,8,Robustness Consistency,0.7
+25,8,Similarity,0.6
+25,8,Stepwise Correctness,0.7
+25,8,Validity Rate,1.0
+25,9,Accuracy,0.5
+25,9,Calibration Confidence,0.2
+25,9,Clarity,0.6
+25,9,Coherence Score,0.6
+25,9,Comp Efficiency,0.7
+25,9,Correctness,0.5
+25,9,Efficiency,0.7
+25,9,Final Accuracy,0.0
+25,9,Pass Rate,0.0
+25,9,Redundancy,0.5
+25,9,Robustness Consistency,0.6
+25,9,Similarity,0.5
+25,9,Stepwise Correctness,0.5
+25,9,Validity Rate,1.0
+26,1,Accuracy,0.0
+26,1,Calibration Confidence,0.0
+26,1,Clarity,0.1
+26,1,Coherence Score,0.1
+26,1,Comp Efficiency,0.05
+26,1,Correctness,0.05
+26,1,Efficiency,0.05
+26,1,Final Accuracy,0.0
+26,1,Pass Rate,0.0
+26,1,Redundancy,0.05
+26,1,Robustness Consistency,0.05
+26,1,Similarity,0.05
+26,1,Stepwise Correctness,0.05
+26,1,Validity Rate,0.0
+26,2,Accuracy,0.2
+26,2,Calibration Confidence,0.1
+26,2,Clarity,0.6
+26,2,Coherence Score,0.5
+26,2,Comp Efficiency,0.4
+26,2,Correctness,0.15
+26,2,Efficiency,0.4
+26,2,Final Accuracy,0.0
+26,2,Pass Rate,0.0
+26,2,Redundancy,0.4
+26,2,Robustness Consistency,0.2
+26,2,Similarity,0.5
+26,2,Stepwise Correctness,0.25
+26,2,Validity Rate,0.1
+26,3,Accuracy,0.25
+26,3,Calibration Confidence,0.15
+26,3,Clarity,0.65
+26,3,Coherence Score,0.55
+26,3,Comp Efficiency,0.45
+26,3,Correctness,0.2
+26,3,Efficiency,0.45
+26,3,Final Accuracy,0.0
+26,3,Pass Rate,0.0
+26,3,Redundancy,0.35
+26,3,Robustness Consistency,0.25
+26,3,Similarity,0.55
+26,3,Stepwise Correctness,0.3
+26,3,Validity Rate,0.15
+26,4,Accuracy,0.3
+26,4,Calibration Confidence,0.2
+26,4,Clarity,0.7
+26,4,Coherence Score,0.6
+26,4,Comp Efficiency,0.4
+26,4,Correctness,0.25
+26,4,Efficiency,0.4
+26,4,Final Accuracy,0.0
+26,4,Pass Rate,0.0
+26,4,Redundancy,0.3
+26,4,Robustness Consistency,0.3
+26,4,Similarity,0.6
+26,4,Stepwise Correctness,0.35
+26,4,Validity Rate,0.2
+26,5,Accuracy,0.35
+26,5,Calibration Confidence,0.25
+26,5,Clarity,0.75
+26,5,Coherence Score,0.65
+26,5,Comp Efficiency,0.45
+26,5,Correctness,0.3
+26,5,Efficiency,0.45
+26,5,Final Accuracy,0.0
+26,5,Pass Rate,0.0
+26,5,Redundancy,0.3
+26,5,Robustness Consistency,0.35
+26,5,Similarity,0.65
+26,5,Stepwise Correctness,0.4
+26,5,Validity Rate,0.25
+26,6,Accuracy,0.28
+26,6,Calibration Confidence,0.18
+26,6,Clarity,0.68
+26,6,Coherence Score,0.58
+26,6,Comp Efficiency,0.42
+26,6,Correctness,0.22
+26,6,Efficiency,0.42
+26,6,Final Accuracy,0.0
+26,6,Pass Rate,0.0
+26,6,Redundancy,0.32
+26,6,Robustness Consistency,0.28
+26,6,Similarity,0.58
+26,6,Stepwise Correctness,0.32
+26,6,Validity Rate,0.18
+26,7,Accuracy,0.32
+26,7,Calibration Confidence,0.22
+26,7,Clarity,0.72
+26,7,Coherence Score,0.62
+26,7,Comp Efficiency,0.43
+26,7,Correctness,0.27
+26,7,Efficiency,0.43
+26,7,Final Accuracy,0.0
+26,7,Pass Rate,0.0
+26,7,Redundancy,0.28
+26,7,Robustness Consistency,0.32
+26,7,Similarity,0.62
+26,7,Stepwise Correctness,0.37
+26,7,Validity Rate,0.22
+26,8,Accuracy,0.4
+26,8,Calibration Confidence,0.3
+26,8,Clarity,0.8
+26,8,Coherence Score,0.7
+26,8,Comp Efficiency,0.5
+26,8,Correctness,0.35
+26,8,Efficiency,0.5
+26,8,Final Accuracy,0.0
+26,8,Pass Rate,0.0
+26,8,Redundancy,0.25
+26,8,Robustness Consistency,0.4
+26,8,Similarity,0.7
+26,8,Stepwise Correctness,0.45
+26,8,Validity Rate,0.3
+26,9,Accuracy,0.45
+26,9,Calibration Confidence,0.35
+26,9,Clarity,0.85
+26,9,Coherence Score,0.75
+26,9,Comp Efficiency,0.55
+26,9,Correctness,0.4
+26,9,Efficiency,0.55
+26,9,Final Accuracy,0.0
+26,9,Pass Rate,0.0
+26,9,Redundancy,0.2
+26,9,Robustness Consistency,0.45
+26,9,Similarity,0.75
+26,9,Stepwise Correctness,0.5
+26,9,Validity Rate,0.35
+27,1,Accuracy,1.0
+27,1,Calibration Confidence,0.88
+27,1,Clarity,0.75
+27,1,Coherence Score,0.85
+27,1,Comp Efficiency,0.68
+27,1,Correctness,1.0
+27,1,Efficiency,0.7
+27,1,Final Accuracy,1.0
+27,1,Pass Rate,1.0
+27,1,Redundancy,0.7
+27,1,Robustness Consistency,0.8
+27,1,Similarity,1.0
+27,1,Stepwise Correctness,1.0
+27,1,Validity Rate,1.0
+27,2,Accuracy,1.0
+27,2,Calibration Confidence,0.92
+27,2,Clarity,0.88
+27,2,Coherence Score,0.9
+27,2,Comp Efficiency,0.78
+27,2,Correctness,1.0
+27,2,Efficiency,0.8
+27,2,Final Accuracy,1.0
+27,2,Pass Rate,1.0
+27,2,Redundancy,0.6
+27,2,Robustness Consistency,0.88
+27,2,Similarity,1.0
+27,2,Stepwise Correctness,1.0
+27,2,Validity Rate,1.0
+27,3,Accuracy,1.0
+27,3,Calibration Confidence,0.9
+27,3,Clarity,0.82
+27,3,Coherence Score,0.88
+27,3,Comp Efficiency,0.72
+27,3,Correctness,1.0
+27,3,Efficiency,0.75
+27,3,Final Accuracy,1.0
+27,3,Pass Rate,1.0
+27,3,Redundancy,0.65
+27,3,Robustness Consistency,0.85
+27,3,Similarity,1.0
+27,3,Stepwise Correctness,1.0
+27,3,Validity Rate,1.0
+27,4,Accuracy,1.0
+27,4,Calibration Confidence,0.93
+27,4,Clarity,0.9
+27,4,Coherence Score,0.92
+27,4,Comp Efficiency,0.8
+27,4,Correctness,1.0
+27,4,Efficiency,0.82
+27,4,Final Accuracy,1.0
+27,4,Pass Rate,1.0
+27,4,Redundancy,0.55
+27,4,Robustness Consistency,0.9
+27,4,Similarity,1.0
+27,4,Stepwise Correctness,1.0
+27,4,Validity Rate,1.0
+27,5,Accuracy,1.0
+27,5,Calibration Confidence,0.91
+27,5,Clarity,0.89
+27,5,Coherence Score,0.91
+27,5,Comp Efficiency,0.79
+27,5,Correctness,1.0
+27,5,Efficiency,0.8
+27,5,Final Accuracy,1.0
+27,5,Pass Rate,1.0
+27,5,Redundancy,0.6
+27,5,Robustness Consistency,0.89
+27,5,Similarity,1.0
+27,5,Stepwise Correctness,1.0
+27,5,Validity Rate,1.0
+27,6,Accuracy,1.0
+27,6,Calibration Confidence,0.9
+27,6,Clarity,0.85
+27,6,Coherence Score,0.89
+27,6,Comp Efficiency,0.75
+27,6,Correctness,1.0
+27,6,Efficiency,0.78
+27,6,Final Accuracy,1.0
+27,6,Pass Rate,1.0
+27,6,Redundancy,0.63
+27,6,Robustness Consistency,0.87
+27,6,Similarity,1.0
+27,6,Stepwise Correctness,1.0
+27,6,Validity Rate,1.0
+27,7,Accuracy,1.0
+27,7,Calibration Confidence,0.5
+27,7,Clarity,0.5
+27,7,Coherence Score,0.6
+27,7,Comp Efficiency,0.6
+27,7,Correctness,1.0
+27,7,Efficiency,0.65
+27,7,Final Accuracy,1.0
+27,7,Pass Rate,1.0
+27,7,Redundancy,0.85
+27,7,Robustness Consistency,0.55
+27,7,Similarity,0.95
+27,7,Stepwise Correctness,1.0
+27,7,Validity Rate,1.0
+27,8,Accuracy,1.0
+27,8,Calibration Confidence,0.9
+27,8,Clarity,0.87
+27,8,Coherence Score,0.9
+27,8,Comp Efficiency,0.81
+27,8,Correctness,1.0
+27,8,Efficiency,0.81
+27,8,Final Accuracy,1.0
+27,8,Pass Rate,1.0
+27,8,Redundancy,0.58
+27,8,Robustness Consistency,0.88
+27,8,Similarity,1.0
+27,8,Stepwise Correctness,1.0
+27,8,Validity Rate,1.0
+27,9,Accuracy,1.0
+27,9,Calibration Confidence,0.94
+27,9,Clarity,0.92
+27,9,Coherence Score,0.93
+27,9,Comp Efficiency,0.84
+27,9,Correctness,1.0
+27,9,Efficiency,0.83
+27,9,Final Accuracy,1.0
+27,9,Pass Rate,1.0
+27,9,Redundancy,0.5
+27,9,Robustness Consistency,0.91
+27,9,Similarity,1.0
+27,9,Stepwise Correctness,1.0
+27,9,Validity Rate,1.0
+28,1,Accuracy,1.0
+28,1,Calibration Confidence,0.9
+28,1,Clarity,0.8
+28,1,Coherence Score,0.9
+28,1,Comp Efficiency,1.0
+28,1,Correctness,1.0
+28,1,Efficiency,0.6
+28,1,Final Accuracy,1.0
+28,1,Pass Rate,1.0
+28,1,Redundancy,0.8
+28,1,Robustness Consistency,0.95
+28,1,Similarity,0.9
+28,1,Stepwise Correctness,1.0
+28,1,Validity Rate,1.0
+28,2,Accuracy,1.0
+28,2,Calibration Confidence,0.9
+28,2,Clarity,0.9
+28,2,Coherence Score,0.9
+28,2,Comp Efficiency,1.0
+28,2,Correctness,1.0
+28,2,Efficiency,0.7
+28,2,Final Accuracy,1.0
+28,2,Pass Rate,1.0
+28,2,Redundancy,0.6
+28,2,Robustness Consistency,0.95
+28,2,Similarity,0.9
+28,2,Stepwise Correctness,1.0
+28,2,Validity Rate,1.0
+28,3,Accuracy,0.0
+28,3,Calibration Confidence,0.3
+28,3,Clarity,0.7
+28,3,Coherence Score,0.7
+28,3,Comp Efficiency,0.5
+28,3,Correctness,0.0
+28,3,Efficiency,0.6
+28,3,Final Accuracy,0.0
+28,3,Pass Rate,0.0
+28,3,Redundancy,0.7
+28,3,Robustness Consistency,0.8
+28,3,Similarity,0.4
+28,3,Stepwise Correctness,0.0
+28,3,Validity Rate,0.6
+28,4,Accuracy,1.0
+28,4,Calibration Confidence,0.9
+28,4,Clarity,0.8
+28,4,Coherence Score,0.9
+28,4,Comp Efficiency,1.0
+28,4,Correctness,1.0
+28,4,Efficiency,0.7
+28,4,Final Accuracy,1.0
+28,4,Pass Rate,1.0
+28,4,Redundancy,0.7
+28,4,Robustness Consistency,0.95
+28,4,Similarity,0.9
+28,4,Stepwise Correctness,1.0
+28,4,Validity Rate,1.0
+28,5,Accuracy,0.0
+28,5,Calibration Confidence,0.3
+28,5,Clarity,0.7
+28,5,Coherence Score,0.7
+28,5,Comp Efficiency,0.5
+28,5,Correctness,0.0
+28,5,Efficiency,0.6
+28,5,Final Accuracy,0.0
+28,5,Pass Rate,0.0
+28,5,Redundancy,0.8
+28,5,Robustness Consistency,0.8
+28,5,Similarity,0.4
+28,5,Stepwise Correctness,0.0
+28,5,Validity Rate,0.6
+28,6,Accuracy,1.0
+28,6,Calibration Confidence,0.9
+28,6,Clarity,0.9
+28,6,Coherence Score,0.9
+28,6,Comp Efficiency,1.0
+28,6,Correctness,1.0
+28,6,Efficiency,0.7
+28,6,Final Accuracy,1.0
+28,6,Pass Rate,1.0
+28,6,Redundancy,0.6
+28,6,Robustness Consistency,0.95
+28,6,Similarity,0.9
+28,6,Stepwise Correctness,1.0
+28,6,Validity Rate,1.0
+28,7,Accuracy,1.0
+28,7,Calibration Confidence,0.9
+28,7,Clarity,0.9
+28,7,Coherence Score,0.9
+28,7,Comp Efficiency,1.0
+28,7,Correctness,1.0
+28,7,Efficiency,0.7
+28,7,Final Accuracy,1.0
+28,7,Pass Rate,1.0
+28,7,Redundancy,0.6
+28,7,Robustness Consistency,0.95
+28,7,Similarity,0.9
+28,7,Stepwise Correctness,1.0
+28,7,Validity Rate,1.0
+28,8,Accuracy,1.0
+28,8,Calibration Confidence,0.9
+28,8,Clarity,0.8
+28,8,Coherence Score,0.9
+28,8,Comp Efficiency,1.0
+28,8,Correctness,1.0
+28,8,Efficiency,0.6
+28,8,Final Accuracy,1.0
+28,8,Pass Rate,1.0
+28,8,Redundancy,0.8
+28,8,Robustness Consistency,0.95
+28,8,Similarity,0.9
+28,8,Stepwise Correctness,1.0
+28,8,Validity Rate,1.0
+28,9,Accuracy,1.0
+28,9,Calibration Confidence,0.9
+28,9,Clarity,0.9
+28,9,Coherence Score,0.9
+28,9,Comp Efficiency,1.0
+28,9,Correctness,1.0
+28,9,Efficiency,0.8
+28,9,Final Accuracy,1.0
+28,9,Pass Rate,1.0
+28,9,Redundancy,0.3
+28,9,Robustness Consistency,0.95
+28,9,Similarity,0.9
+28,9,Stepwise Correctness,1.0
+28,9,Validity Rate,1.0
+29,1,Accuracy,1.0
+29,1,Calibration Confidence,0.8
+29,1,Clarity,0.7
+29,1,Coherence Score,0.9
+29,1,Comp Efficiency,0.5
+29,1,Correctness,1.0
+29,1,Efficiency,0.5
+29,1,Final Accuracy,1.0
+29,1,Pass Rate,1.0
+29,1,Redundancy,0.2
+29,1,Robustness Consistency,0.85
+29,1,Similarity,0.7
+29,1,Stepwise Correctness,1.0
+29,1,Validity Rate,1.0
+29,2,Accuracy,1.0
+29,2,Calibration Confidence,0.75
+29,2,Clarity,0.65
+29,2,Coherence Score,0.85
+29,2,Comp Efficiency,0.45
+29,2,Correctness,1.0
+29,2,Efficiency,0.45
+29,2,Final Accuracy,1.0
+29,2,Pass Rate,1.0
+29,2,Redundancy,0.3
+29,2,Robustness Consistency,0.8
+29,2,Similarity,0.6
+29,2,Stepwise Correctness,1.0
+29,2,Validity Rate,1.0
+29,3,Accuracy,0.0
+29,3,Calibration Confidence,0.2
+29,3,Clarity,0.5
+29,3,Coherence Score,0.3
+29,3,Comp Efficiency,0.4
+29,3,Correctness,0.0
+29,3,Efficiency,0.4
+29,3,Final Accuracy,0.0
+29,3,Pass Rate,0.0
+29,3,Redundancy,0.2
+29,3,Robustness Consistency,0.25
+29,3,Similarity,0.5
+29,3,Stepwise Correctness,0.0
+29,3,Validity Rate,0.0
+29,4,Accuracy,1.0
+29,4,Calibration Confidence,0.8
+29,4,Clarity,0.75
+29,4,Coherence Score,0.9
+29,4,Comp Efficiency,0.55
+29,4,Correctness,1.0
+29,4,Efficiency,0.55
+29,4,Final Accuracy,1.0
+29,4,Pass Rate,1.0
+29,4,Redundancy,0.4
+29,4,Robustness Consistency,0.85
+29,4,Similarity,0.7
+29,4,Stepwise Correctness,1.0
+29,4,Validity Rate,1.0
+29,5,Accuracy,0.0
+29,5,Calibration Confidence,0.2
+29,5,Clarity,0.5
+29,5,Coherence Score,0.3
+29,5,Comp Efficiency,0.4
+29,5,Correctness,0.0
+29,5,Efficiency,0.4
+29,5,Final Accuracy,0.0
+29,5,Pass Rate,0.0
+29,5,Redundancy,0.2
+29,5,Robustness Consistency,0.25
+29,5,Similarity,0.5
+29,5,Stepwise Correctness,0.0
+29,5,Validity Rate,0.0
+29,6,Accuracy,1.0
+29,6,Calibration Confidence,0.75
+29,6,Clarity,0.8
+29,6,Coherence Score,0.85
+29,6,Comp Efficiency,0.7
+29,6,Correctness,1.0
+29,6,Efficiency,0.7
+29,6,Final Accuracy,1.0
+29,6,Pass Rate,1.0
+29,6,Redundancy,0.5
+29,6,Robustness Consistency,0.8
+29,6,Similarity,0.8
+29,6,Stepwise Correctness,1.0
+29,6,Validity Rate,1.0
+29,7,Accuracy,1.0
+29,7,Calibration Confidence,0.8
+29,7,Clarity,0.85
+29,7,Coherence Score,0.9
+29,7,Comp Efficiency,0.75
+29,7,Correctness,1.0
+29,7,Efficiency,0.75
+29,7,Final Accuracy,1.0
+29,7,Pass Rate,1.0
+29,7,Redundancy,0.6
+29,7,Robustness Consistency,0.85
+29,7,Similarity,0.85
+29,7,Stepwise Correctness,1.0
+29,7,Validity Rate,1.0
+29,8,Accuracy,1.0
+29,8,Calibration Confidence,0.75
+29,8,Clarity,0.7
+29,8,Coherence Score,0.85
+29,8,Comp Efficiency,0.65
+29,8,Correctness,1.0
+29,8,Efficiency,0.65
+29,8,Final Accuracy,1.0
+29,8,Pass Rate,1.0
+29,8,Redundancy,0.4
+29,8,Robustness Consistency,0.8
+29,8,Similarity,0.6
+29,8,Stepwise Correctness,1.0
+29,8,Validity Rate,1.0
+29,9,Accuracy,1.0
+29,9,Calibration Confidence,0.85
+29,9,Clarity,0.9
+29,9,Coherence Score,0.95
+29,9,Comp Efficiency,0.85
+29,9,Correctness,1.0
+29,9,Efficiency,0.85
+29,9,Final Accuracy,1.0
+29,9,Pass Rate,1.0
+29,9,Redundancy,0.7
+29,9,Robustness Consistency,0.9
+29,9,Similarity,0.9
+29,9,Stepwise Correctness,1.0
+29,9,Validity Rate,1.0
+30,1,Accuracy,1.0
+30,1,Calibration Confidence,1.0
+30,1,Clarity,1.0
+30,1,Coherence Score,1.0
+30,1,Comp Efficiency,1.0
+30,1,Correctness,1.0
+30,1,Efficiency,0.8
+30,1,Final Accuracy,1.0
+30,1,Pass Rate,1.0
+30,1,Redundancy,0.8
+30,1,Robustness Consistency,1.0
+30,1,Similarity,1.0
+30,1,Stepwise Correctness,1.0
+30,1,Validity Rate,1.0
+30,2,Accuracy,0.5
+30,2,Calibration Confidence,0.5
+30,2,Clarity,0.8
+30,2,Coherence Score,0.8
+30,2,Comp Efficiency,1.0
+30,2,Correctness,0.8
+30,2,Efficiency,0.7
+30,2,Final Accuracy,1.0
+30,2,Pass Rate,1.0
+30,2,Redundancy,0.6
+30,2,Robustness Consistency,0.5
+30,2,Similarity,0.7
+30,2,Stepwise Correctness,0.0
+30,2,Validity Rate,0.5
+30,3,Accuracy,0.5
+30,3,Calibration Confidence,0.5
+30,3,Clarity,0.8
+30,3,Coherence Score,0.8
+30,3,Comp Efficiency,1.0
+30,3,Correctness,0.8
+30,3,Efficiency,0.6
+30,3,Final Accuracy,1.0
+30,3,Pass Rate,1.0
+30,3,Redundancy,0.5
+30,3,Robustness Consistency,0.5
+30,3,Similarity,0.7
+30,3,Stepwise Correctness,0.0
+30,3,Validity Rate,0.5
+30,4,Accuracy,0.0
+30,4,Calibration Confidence,0.2
+30,4,Clarity,0.5
+30,4,Coherence Score,0.4
+30,4,Comp Efficiency,1.0
+30,4,Correctness,0.0
+30,4,Efficiency,0.6
+30,4,Final Accuracy,0.0
+30,4,Pass Rate,0.0
+30,4,Redundancy,0.5
+30,4,Robustness Consistency,0.0
+30,4,Similarity,0.3
+30,4,Stepwise Correctness,0.0
+30,4,Validity Rate,0.0
+30,5,Accuracy,1.0
+30,5,Calibration Confidence,1.0
+30,5,Clarity,1.0
+30,5,Coherence Score,1.0
+30,5,Comp Efficiency,1.0
+30,5,Correctness,1.0
+30,5,Efficiency,0.8
+30,5,Final Accuracy,1.0
+30,5,Pass Rate,1.0
+30,5,Redundancy,0.7
+30,5,Robustness Consistency,1.0
+30,5,Similarity,1.0
+30,5,Stepwise Correctness,1.0
+30,5,Validity Rate,1.0
+30,6,Accuracy,1.0
+30,6,Calibration Confidence,1.0
+30,6,Clarity,0.9
+30,6,Coherence Score,0.9
+30,6,Comp Efficiency,1.0
+30,6,Correctness,1.0
+30,6,Efficiency,0.7
+30,6,Final Accuracy,1.0
+30,6,Pass Rate,1.0
+30,6,Redundancy,0.6
+30,6,Robustness Consistency,1.0
+30,6,Similarity,1.0
+30,6,Stepwise Correctness,1.0
+30,6,Validity Rate,1.0
+30,7,Accuracy,1.0
+30,7,Calibration Confidence,1.0
+30,7,Clarity,1.0
+30,7,Coherence Score,1.0
+30,7,Comp Efficiency,1.0
+30,7,Correctness,1.0
+30,7,Efficiency,0.7
+30,7,Final Accuracy,1.0
+30,7,Pass Rate,1.0
+30,7,Redundancy,0.7
+30,7,Robustness Consistency,1.0
+30,7,Similarity,1.0
+30,7,Stepwise Correctness,1.0
+30,7,Validity Rate,1.0
+30,8,Accuracy,0.0
+30,8,Calibration Confidence,0.2
+30,8,Clarity,0.7
+30,8,Coherence Score,0.7
+30,8,Comp Efficiency,1.0
+30,8,Correctness,0.0
+30,8,Efficiency,0.6
+30,8,Final Accuracy,0.0
+30,8,Pass Rate,0.0
+30,8,Redundancy,0.5
+30,8,Robustness Consistency,0.0
+30,8,Similarity,0.2
+30,8,Stepwise Correctness,0.0
+30,8,Validity Rate,0.0
+30,9,Accuracy,1.0
+30,9,Calibration Confidence,1.0
+30,9,Clarity,1.0
+30,9,Coherence Score,1.0
+30,9,Comp Efficiency,1.0
+30,9,Correctness,1.0
+30,9,Efficiency,0.9
+30,9,Final Accuracy,1.0
+30,9,Pass Rate,1.0
+30,9,Redundancy,0.9
+30,9,Robustness Consistency,1.0
+30,9,Similarity,1.0
+30,9,Stepwise Correctness,1.0
+30,9,Validity Rate,1.0
