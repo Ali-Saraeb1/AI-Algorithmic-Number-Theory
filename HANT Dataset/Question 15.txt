@@ -1,0 +1,132 @@
+\section{Chinese Remainder Theorem for Two Congruences}
+\subsection*{Question}
+find an integer x that satisfies the following congruences:
+\[
+x \equiv 1 (mod 2)
+x \equiv 2 (mod 3)
+\]
+Express your answer as the unique solution modulo 2 × 3. Your solution should combine the two congruences into one without disclosing the internal details of the algorithm.
+
+\subsection*{Hints}
+
+
+\subsection*{Few-Shot Hinting}
+Consider these simple instances:
+### Example 1
+  \( x \equiv 2 \pmod{3}, \quad x \equiv 3 \pmod{5} \)
+
+**Solution:**  
+  \( x = 2 + 3k \), then substituting into the second congruence:  
+  \( 2 + 3k \equiv 3 \pmod{5} \), so  
+  \( 3k \equiv 1 \pmod{5} \).  
+  Thus,  
+  \( k \equiv 2 \pmod{5} \), so \( k = 2 + 5t \).  
+  Thus,  
+  \( x = 2 + 3(2 + 5t) = 8 + 15t \).  
+  Thus,  
+  \( x \equiv 8 \pmod{15} \).
+
+---
+
+### Example 2 
+  \( x \equiv 1 \pmod{4}, \quad x \equiv 2 \pmod{7} \)
+
+- **Solution:**  
+  \( x = 1 + 4k \), then substituting into the second congruence:  
+  \( 1 + 4k \equiv 2 \pmod{7} \), so  
+  \( 4k \equiv 1 \pmod{7} \).  
+  Thus,
+  \( k \equiv 2 \pmod{7} \), so \( k = 2 + 7t \).  
+  Thus,  
+  \( x = 1 + 4(2 + 7t) = 9 + 28t \).  
+  Thus,
+  \( x \equiv 9 \pmod{28} \).
+
+
+---
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+"Notice that from the first congruence, one can express \(x\) as an equation. Use the second equation."
+
+---
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+"Step by step, ask:
+1. How can you express \(x\) based on the first congruence?
+2. Use the second equation.
+3. How does this help you construct the unique solution \(x\) modulo \(m_1 \cdot m_2\)?"
+
+---
+
+\subsection*{Self-Consistency}
+"Keep in mind:
+- The representation of \(x\) from the first congruence is key.
+- Use the second equation
+- Solving this reduced equation should yield a value that, when substituted back, gives an \(x\) satisfying both congruences."
+
+---
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+"Reflect on the following:
+- By expressing \(x\) in terms of \(a\) and an integer multiple of \(m_1\), you naturally incorporate the first condition.
+-Use the second equation.
+- The overall strategy ensures that the final candidate \(x\) meets both congruences."
+
+---
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+"Summarize the idea symbolically:
+- Write \(x \) in an equation in integers.
+- Use the second equation.
+- Use the resulting relation to determine \(k\) modulo \(m_2\), thereby yielding \(x\) modulo \(m_1 m_2\)."
+
+---
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+"Outline your conceptual approach:
+1. **Express \(x\):** Begin by writing \(x\) in an equation in \( Z \) (the integers).
+2. Use the second equation.
+3. **Reconstruct:**Express your answer modulo \(m_1 \cdot m_2\)."
+
+---
+
+\subsection*{ReAct Prompting}
+"Proceed with these steps:
+- **Reasoning:** How can we represent \(x\) as an equation in terms of \(m_1 \)?
+- **Action:** Use the second equation.
+- **Conclusion:** Construct \(x\) modulo \(m_1 \cdot m_2\)."
+
+---
+
+\subsection*{Clear and Specific Instructions}
+"For the system
+\[
+x \equiv a \pmod{m_1} \quad \text{and} \quad x \equiv b \pmod{m_2},
+\]
+with \(\gcd(m_1, m_2) = 1\):
+1. Consider expressing \(x\) in term \(m_1\).
+2. Use the second equation.
+3. Ensure the final result is presented modulo \(m_1 \cdot m_2\).
+
+
+\subsection*{Answer/Algorithm}
+Step 1: Express x from the first congruence.
+- Since \( x \equiv 1 (mod 2) \), write x = 1 + 2k for some integer k.
+
+Step 2: Substitute this expression into the second congruence.
+- Replace \( x in x \equiv 2 (mod 3) \) to get:
+  \( 1 + 2k \equiv 2 (mod 3) \)
+
+Step 3: Simplify and solve for k.
+- Subtract 1 from both sides:
+  \( 2k \equiv 1 (mod 3) \)
+- Find the modular inverse of 2 modulo 3. Since \( 2 × 2 = 4 \equiv 1 (mod 3) \), the inverse of 2 is 2.
+- Multiply both sides by 2:
+  \( k \equiv 2 (mod 3) \)
+- Hence, k = 2 + 3t for some integer t.
+
+Step 4: Substitute back to find x.
+- x = 1 + 2k = 1 + 2(2 + 3t) = 1 + 4 + 6t = 5 + 6t
+
+Final Answer:
+The unique solution is \( x \equiv 5 (mod 6) \).

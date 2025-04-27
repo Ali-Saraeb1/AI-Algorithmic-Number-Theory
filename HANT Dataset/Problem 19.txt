@@ -1,0 +1,92 @@
+\section{Carmichael Function Computation}
+\subsection*{Question}
+Design an algorithm to compute the Carmichael function \(\lambda(n)\), defined as the smallest positive integer such that 
+\[
+a^{\lambda(n)} \equiv 1 \pmod{n}
+\]
+for every integer \(a\) that is coprime to \(n\) (i.e., the greatest common divisor of a and n is \(\gcd(a, n) = 1\)).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+- **Prime Factorization:** Write \(n\) as a product of prime powers.  
+- Use Lagrange's theorem: *Definition:* Lagrange's Theorem states that for a finite group, the order (number of elements) of every subgroup divides the order of the entire group.
+- **Aggregation:** Combine the contributions from all prime power factors
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+"Begin by factorizing \(n\) into its prime power components. For each component, use the standard result regarding the behavior of its multiplicative group (i.e., the set of integers less than the prime power that are coprime to it, under modular multiplication) to compute a local contribution. Then, aggregate these contributions.
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+"Step-by-step:
+1. Factorize \(n\) into its prime power components.  
+2. For each prime power, compute a value based on properties of the multiplicative group modulo that prime power (the set of numbers less than the prime power that are coprime to it, with multiplication modulo the prime power).  
+3. Combine these computed values."
+
+\subsection*{Self-Consistency}
+"Ensure that your algorithm:
+- Correctly performs prime factorization (i.e., expresses \(n\) as a product of prime powers).
+- Computes each prime power’s contribution using established number theory results regarding the multiplicative group modulo that prime power (the set of integers less than the prime power that are coprime to it, under multiplication modulo that prime power).
+- Combines these contributions
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+"Reflect on these steps:
+- Decompose \(n\) using prime factorization (express \(n\) as \(p_1^{e_1} \cdots p_k^{e_k}\)).
+- For each prime power, derive its contribution using properties of its multiplicative group (the set of integers less than the prime power that are coprime to it, under modular multiplication).
+- Aggregate these contributions."
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+"Express the method symbolically:
+- Write \(n = \prod_i p_i^{e_i}\), where each \(p_i\) is a prime and each \(e_i\) is a positive integer (this is prime factorization).
+- For each prime power \(p_i^{e_i}\), let its contribution be given by a standard result regarding its multiplicative group (the set of integers less than \(p_i^{e_i}\) that are coprime to it).
+- Then, combine these contributions."
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+"Outline your strategy:
+1. **Factorization:** Decompose \(n\) as a product of prime powers (i.e., perform prime factorization: \(n = p_1^{e_1} \cdots p_k^{e_k}\)).
+2. **Local Computation:** For each prime power \(p^e\), compute its contribution using known number theory results about the multiplicative group modulo \(p^e\) (the set of integers less than \(p^e\) that are coprime to it, under multiplication modulo \(p^e\)).
+3. **Aggregation:** Combine these contributions
+4. **Verification:** Check that the computed \(\lambda(n)\) satisfies \(a^{\lambda(n)} \equiv 1 \pmod{n}\) for every \(a\) with \(\gcd(a, n) = 1\)."
+
+\subsection*{ReAct Prompting}
+"Proceed with these steps:
+- **Action:** Factorize \(n\) into its prime power components.  
+- **Reasoning:** Each prime power contributes independently to the multiplicative structure modulo \(n\) (the set of integers less than the prime power that are coprime to it, with multiplication modulo that number).
+- **Action:** Compute the contribution for each prime power using established number theory techniques.
+- **Action:** Combine the contributions."
+
+\subsection*{Clear and Specific Instructions}
+"For any integer \(n\):
+1. Factorize \(n\) into its prime power factors (i.e., express \(n\) as \(p_1^{e_1} \cdots p_k^{e_k}\)).
+2. For each prime power, compute its contribution using standard number theory results regarding its multiplicative group (the set of integers less than the prime power that are coprime to it, with multiplication modulo that number).
+3. Combine these contributions 
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def carmichael(n):
+    from math import gcd
+    # Factorize n using trial division:
+    # "Trial division" is the process of dividing n by successive integers to determine its prime factors.
+    factors = {}
+    temp = n
+    p = 2
+    while p * p <= temp:
+        while temp % p == 0:
+            factors[p] = factors.get(p, 0) + 1
+            temp //= p
+        p += 1
+    if temp > 1:
+        factors[temp] = 1
+
+    # Compute contributions for each prime power and combine them using LCM:
+    # "Least Common Multiple (LCM)" is the smallest positive integer that is a multiple of every number in a given set.
+    lcm = 1
+    for p, e in factors.items():
+        # For each prime power p^e, compute its contribution using standard number theory results.
+        # (The contribution is derived from the structure of the multiplicative group modulo p^e.)
+        if p == 2 and e > 2:
+            contribution = 2 ** (e - 2)
+        else:
+            contribution = (p - 1) * (p ** (e - 1))
+        lcm = (lcm * contribution) // gcd(lcm, contribution)
+    return lcm
+\end{lstlisting}

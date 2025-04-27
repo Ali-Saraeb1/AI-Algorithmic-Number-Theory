@@ -1,0 +1,105 @@
+\section{4. Continued Fraction Expansion}
+
+\subsection*{Question}
+Given the rational number
+ \[
+\alpha = \frac{415}{93},
+\]
+compute its continued fraction expansion:
+\[
+\alpha = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + \dots}}}.
+\]
+
+Generate the sequence \( [a_0, a_1, a_2, \dots] \) and stop when the fractional part becomes zero (for rationals) or when a maximum number of iterations is reached (for irrationals).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+**Example 1: Find the continued fraction of \( \frac{4}{3} \)**  
+1. **First Step**: The integer part of \( \frac{4}{3} \) is 1, so \( a_0 = 1 \).  
+2. **Second Step**: \( \frac{4}{3}= 1 + \frac{1}{3} \).  
+3. **Third Step**: Can we repeat?
+
+**Example 2: Find the continued fraction of \( \sqrt{2} \)**  
+1. **First Step**: The integer part of \( \sqrt{2} \approx 1.414 \) is 1, so \( a_0 = 1 \).  
+2. **Second Step**: \( \sqrt{2}= 1+  0.414 \).  
+3. **Third Step**: How can we make use of fractions to repeat the first two steps?
+
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+1. **Start**: Identify the integer part of \( \alpha \).
+2. **Separate**: Rewrite \( \alpha \) 
+3. **Invert**: How can we make use of fractions to repeat the first two steps?
+4. **Repeat**: Continue until the fractional part is negligible or a maximum iteration count is reached.
+5. **Assemble**: The collected 
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+1. **Extract the integer part** of \( \alpha \) to get \( a_0 \).
+2. **Determine the fractional part** rewriting \( \alpha \).
+3. **If the fraction is non-zero**, consider how to repeat the process.
+4. **Iterate** until you reach a clear stopping condition.
+
+\subsection*{Self-Consistency}
+To check consistency, verify that the continued fraction expansion correctly approximates the input number by reconstructing the number from the expansion and checking if it matches the original number.
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+1. Start by recognizing that any real number can be represented as a continued fraction.
+2. The process of repeatedly extracting the integer part and rewriting the number in terms of fractions.
+3. Each iteration brings the approximation closer to the true value of \( \alpha \).
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+1. Express the continued fraction expansion symbolically as:
+
+\[
+\alpha = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \dots}}.
+\]
+
+2. Start with \( a_0 = \lfloor \alpha \rfloor \).
+3. Proceed
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+1. **Initialization**: Set your starting number \( \alpha \).
+2. **Iteration Loop**:
+  - Compute \( a = \lfloor \alpha \rfloor \).
+  - Rewrite \( \alpha \) in terms of fraction to repeat the process. 
+3. **Termination**: End the loop when the process can not be repeated.
+
+\subsection*{ReAct Prompting}
+1. **Action**: Extract the integer part from \( \alpha \).
+2. **Reasoning**: Consider what to do with the fractional part.
+3. **Action**: Rewrite \( \alpha \).
+4. **Reasoning**: Verify whether the new value is ready for another extraction or if you should stop.
+
+\subsection*{Clear and Specific Instructions}
+1. **Initialization**: Begin with your real number \( \alpha \).
+2. **Separation**: Divide \( \alpha \) into its integer and fractional components.
+3. **Iteration**: Repeat the process with the updated value by rewriting \( \alpha \) in terms of fractios.
+4. **Termination**: Stop when the process can not be repeated or if max number of iterations is reached.
+6. **Result**: Collect the numbers forming the expansion.
+
+\subsection*{Answer/Algorithm}
+Step-by-Step Computation:
+--------------------------
+1. Start with \( \alpha \) = 415/93 ≈ 4.4624.
+   - Compute a_0 = ⌊415/93⌋ = 4.
+   - Fractional part = 415/93 − 4 = (415 − 4×93)/93 = (415 − 372)/93 = 43/93.
+
+2. Take the reciprocal of the fractional part:
+   - New \( \alpha \) = 93/43 ≈ 2.1628.
+   - Compute a_1 = ⌊93/43⌋ = 2.
+   - Fractional part = 93/43 − 2 = (93 − 2×43)/43 = (93 − 86)/43 = 7/43.
+
+3. Take the reciprocal of the new fractional part:
+   - New \( \alpha \) = 43/7 ≈ 6.1429.
+   - Compute a_2 = ⌊43/7⌋ = 6.
+   - Fractional part = 43/7 − 6 = (43 − 6×7)/7 = (43 − 42)/7 = 1/7.
+
+4. Take the reciprocal of the last fractional part:
+   - New \( \alpha \) = 7/1 = 7.
+   - Compute a_3 = ⌊7⌋ = 7.
+   - Fractional part = 7 − 7 = 0.
+
+Since the fractional part is now zero, the process stops.
+
+Final Continued Fraction Expansion:
+    [a_0, a_1, a_2, a_3] = [4, 2, 6, 7]

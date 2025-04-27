@@ -1,0 +1,105 @@
+\section{Lucas–Lehmer Primality Test}
+\subsection*{Question}
+Use the Lucas–Lehmer test to determine whether the Mersenne number
+\( M_{5} = 2^{5} - 1 = 31 \) is prime by exploiting a simple quadratic recurrence.  
+
+**Definition (Mersenne Number).**  
+A *Mersenne number* is any integer of the form \(M_p = 2^p - 1\) where \(p\) itself is prime. :contentReference[oaicite:0]{index=0}
+
+**Definition (Lucas–Lehmer Sequence).**  
+Define a sequence \(\{s_n\}_{n\ge0}\) by
+\[
+s_0 = 4,\qquad
+s_{n+1} = s_n^2 \;-\; 2 \quad (\bmod\;M_p).
+\]
+This recurrence is the heart of the test. :contentReference[oaicite:1]{index=1}
+
+Your goal is to craft an algorithm that computes just enough terms of \(\{s_n\}\) (in time polynomial in the bit‑length of \(M_p\)) to decide primality.
+
+---
+
+\subsection*{Hints}
+
+\subsection*{Few‑Shot Hinting}
+Observe the behavior of the last few iterates for small primes \(p\). Focus on:
+- How many updates you perform.
+- The residue you see at that final index.
+
+| \(p\)  | \(M_p\)  | Updates performed | Final residue (mod \(M_p\)) |
+|:------:|:--------:|:-----------------:|:----------------------------:|
+| 3      | 7        | 1                 | 0                            |
+| 5      | 31       | 3                 | 0                            |
+| 7      | 127      | 5                 | 0                            |
+| 11     | 2047     | 9                 | ≠0                           |
+| 13     | 8191     | 11                | 0                            |
+
+\subsection*{Chain‑of‑Thought (CoT) Prompting}
+*"Let’s think: pick a starting value, then repeat a simple squaring‑minus‑two step modulo \(M_p\). Notice that exactly at the \((p\!-\!2)\)-th update the result either vanishes or not—this is your signal."*
+
+\subsection*{Automatic Chain‑of‑Thought (Auto‑CoT) Prompting}
+*"Step by step:  
+1. Form \(M_p=2^p-1\).  
+2. Seed a short sequence at 4.  
+3. Loop with a quadratic map mod \(M_p\).  
+4. Examine the last term for your answer."*
+
+\subsection*{Self‑Consistency}
+*"To be sure:  
+- Confirm \(p\) is prime.  
+- Do exactly \(p-2\) iterations.  
+- Always reduce modulo \(M_p\).  
+- Check your method against known small cases."*
+
+\subsection*{Logical Chain‑of‑Thought (LogiCoT) Prompting}
+*"Logically: if no nontrivial factor of \(M_p\) divides all iterates, the sequence will collapse to a special residue only when \(M_p\) is truly prime."*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Symbolically:  
+\[
+M \;=\;2^p-1,\quad
+s_0=4,\quad
+s_{n+1}=(s_n^2-2)\bmod M.
+\]
+Perform \(p-2\) steps; the final \(s_{p-2}\) encodes primality."*
+
+\subsection*{Structured Chain‑of‑Thought (SCoT) Prompting}
+1. **Compute** \(M\gets 2^p-1\).  
+2. **Initialize** \(s\gets 4\).  
+3. **Iterate** \(p-2\) times: \( s = (s*s − 2) mod M \)
+4. **Inspect** the last residue to decide.
+
+\subsection*{ReAct Prompting}
+- **Action:** Compute \(M=2^p-1\).  
+- **Thought:** A simple recurrence might reveal divisibility.  
+- **Action:** Set \(s=4\).  
+- **Thought:** Repeated squaring mod \(M\) should highlight primality.  
+- **Action:** Run \(p-2\) updates.  
+- **Thought:** The final value is your verdict.
+
+\subsection*{Clear and Specific Instructions}
+*"Input: a prime \(p\).  
+1. Let \(M \gets 2^p - 1\).  
+2. Start with \(s = 4\).  
+3. Repeat exactly \(p-2\) times: update \(s \gets (s^2 - 2)\bmod M\).  
+4. Inspect the final \(s\): its value tells you whether \(M_p\) is prime."*
+
+---
+
+
+\subsection*{Answer/Algorithm}
+Step 1: Set initial term of the sequence:
+\[
+s_0 = 4
+\]
+Step 2: Apply recurrence \( s_{n+1} = s_n^2 - 2 \mod 31 \) for \( 3 \) steps:
+\[
+\begin{align*}
+s_1 &= 4^2 - 2 = 14 \mod 31 = 14 \\
+s_2 &= 14^2 - 2 = 194 \mod 31 = 8 \\
+s_3 &= 8^2 - 2 = 62 \mod 31 = 0 \\
+\end{align*}
+\]
+Final result:
+\[ s_{3} = 0 \]
+Conclusion:
+\[ M_{5} = 31 \text{ is } \textbf{prime} \]

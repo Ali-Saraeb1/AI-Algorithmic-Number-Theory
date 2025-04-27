@@ -1,0 +1,55 @@
+\section{1. Binary Exponentiation}
+
+\subsection*{Question}
+Given an element \( x \) (from a set with an associative multiplication operation and an identity element) and a nonnegative integer \( n \) (with the input size measured in binary), design an algorithm to compute \( x^n \). The goal is to minimize the number of multiplications compared to multiplying \( x \) by itself \( n \) times.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Recall similar problems provided in earlier examples. For binary exponentiation, think about how previous hints encouraged breaking an exponent into binary digits.  
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"First, convert \( n \) into its binary form. Then, for each bit (starting from the least significant), determine what the next step is"*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Let’s think step-by-step. How does each bit of \( n \)’s binary representation determine when to multiply? Compute \( x^{2^i} \) via squaring, and combine these results."*
+
+\subsection*{Self-Consistency}
+*"Consider writing n in binary form. Verify that regardless of the path taken, the number of multiplications remains minimal. Which approach consistently minimizes operations?"*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Justify when is squaring \( x \) a good step. Think of n as a binary number. Confirm that each operation logically reduces the problem size by half."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Let \( n = \sum_{i=0}^{k} b_i \cdot 2^i \). Then, for each \( i \), use this symbolic representation to clarify next operation."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Begin by setting your initial state (\( y = 1 \)), then use a loop to process each bit of \( n \). Inside the loop, include a conditional check for whether the current bit. This structured approach mirrors how the algorithm iteratively reduces \( n \)."*
+
+\subsection*{ReAct Prompting}
+*"First, observe the binary digits of \( n \). *(Action: List out the binary digits.)* Then, decide: if a digit is 1, do something to \( x \). *(Action: Update the product.)* Then move to the next digit. *(Action: Continue until done.)*"*
+
+\subsection*{Clear and Specific Instructions}
+*"Given \( x \) and \( n \), first convert \( n \) into its binary form. Then, for each bit starting from the least significant: if the bit is 1, update your accumulator suitably, and move to the next bit."*
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def exponentiation(x, n):
+    """
+    Compute x^n using Right-to-Left Binary Exponentiation.
+    
+    Parameters:
+        x: Element from a set with an associative multiplication and an identity.
+        n: Nonnegative integer exponent.
+    
+    Returns:
+        x raised to the power n.
+    """
+    y = 1  # Identity element for multiplication
+    while n > 0:
+        if n % 2 == 1:  # If the current least-significant bit is 1
+            y = y * x
+        x = x * x      # Square x for the next bit
+        n = n // 2     # Shift n right by one bit
+    return y
+\end{lstlisting}

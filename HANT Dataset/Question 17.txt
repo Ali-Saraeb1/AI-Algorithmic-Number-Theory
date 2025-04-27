@@ -1,0 +1,67 @@
+\section{Rational Root Theorem Algorithm}
+\subsection*{Question}
+Using the Rational Root Theorem, list all potential rational roots of the polynomial x² - 3x + 2. Show all steps of how you generated the candidate list.
+ Your goal is to generate a candidate list solely by exploiting inherent properties of the polynomial’s coefficients.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider these examples:
+- **Example 1:** For the polynomial \(2x^3 - 3x^2 + x - 6\), the candidates are \(\pm1, \pm2, \pm3, \pm6, \pm\frac{1}{2}, \pm\frac{3}{2}\).
+- **Example 2:** For the polynomial \(x^2 - 5x + 6\), the potential rational roots are simply the divisors of \(6\): \(\pm1, \pm2, \pm3, \pm6\).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+"Reflect on the structure of a polynomial: although all coefficients contribute to its behavior, two of them can critically restrict the range of possible rational numbers. Ponder why the final term and the zeroth coefficient might provide the necessary clues to form a finite candidate list."
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+"Step-by-step:
+1. Identify the coefficients that impose the strongest restrictions on potential roots.
+2. Think specifically about the impact of the coefficient in the zeroth position along with the constant term.
+3. Use these insights to design a method that systematically generates a finite list of candidate numbers."
+
+\subsection*{Self-Consistency}
+"Double-check that your approach always relies on these key coefficients to narrow down the candidates. Your reasoning should consistently reflect how the information from these two coefficients confines the possibilities."
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+"Ask yourself: which aspects of the polynomial ensure that only a limited number of rational numbers are plausible candidates? Consider how the roles of the constant term and the zeroth coefficient lead naturally to a finite set of fractions worth examining."
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+"Express your idea symbolically:
+- Isolate two key numbers from the polynomial.
+- Realize that their factors (divisors) determine the numerator and denominator of the candidates.
+- Combine these factors in a structured way to form the candidate pool."
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+"Outline your strategy:
+1. **Extract Key Coefficients:** Identify the two coefficients (including the zeroth coefficient) that have the most impact.
+2. **Analyze Their Influence:** Consider how the divisibility properties of these coefficients limit the possible candidates.
+3. **Generate Candidates:** Form a method to combine these factors into a finite, deduplicated list of rational numbers."
+
+\subsection*{ReAct Prompting}
+"Proceed with these steps:
+- **Action:** Extract the crucial coefficients, paying special attention to the one in the zeroth position.
+- **Reasoning:** Deliberate on how the factors of these coefficients restrict the potential rational roots.
+- **Action:** Devise a method to systematically combine these factors into candidate fractions.
+- **Outcome:** A refined list of potential rational roots for further evaluation."
+
+\subsection*{Clear and Specific Instructions}
+"For a polynomial with integer coefficients:
+1. Identify the two key coefficients that restrict the possible candidates (hint: focus on the zeroth coefficient and the constant term).
+2. Develop a strategy that uses the divisibility properties of these coefficients to generate a finite set of candidate rational numbers.
+3. Return the deduplicated candidate list."
+
+\subsection*{Answer/Algorithm}
+Step 1: Identify the key coefficients.
+- The leading coefficient (from x²) is 1.
+- The constant term is 2.
+
+Step 2: List the divisors.
+- Divisors of the constant term 2 are: ±1, ±2.
+- Divisors of the leading coefficient 1 are: ±1.
+
+Step 3: Form the candidate rational roots.
+- Form fractions p/q, where p is a divisor of 2 and q is a divisor of 1.
+- The candidates are: ±(1/1) and ±(2/1), which simplify to: ±1, ±2.
+
+Final Answer:
+The potential rational roots of x² - 3x + 2 are: -2, -1, 1, and 2.

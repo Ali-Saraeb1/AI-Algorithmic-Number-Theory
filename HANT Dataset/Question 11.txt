@@ -1,0 +1,95 @@
+\section{Sieve of Eratosthenes}
+\subsection*{Question}
+List all prime numbers up to 
+\[
+N = 30
+\]
+using the Sieve of Eratosthenes by systematically eliminating composite numbers.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Review these conceptual scenarios for different values of \( N \) without revealing the solution:
+- **Example: \( N = 10 \)**
+  - **Hint**: Imagine you have a list of numbers from 2 to 10. How could the smallest number in your list help you eliminate several other numbers from consideration? Think about the minimal set of numbers you must examine for this candidate.
+  
+- **Example: \( N = 20 \)**
+  - **Hint**: With a list from 2 to 20, consider how after the first round of eliminations, the next smallest candidate can further reduce your list. What reasoning might guide you to avoid checking numbers that have already been addressed?
+  
+- **Example: \( N = 30 \)**
+  - **Hint**: Visualize an extended candidate list. Reflect on how successive rounds of using the smallest remaining candidate help you narrow down the list without reprocessing numbers unnecessarily. What strategy might naturally limit the range of numbers you need to check for each candidate?
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Begin by assuming every number in the range might be prime. Then, in a stepwise manner, use the first candidate to conceptually 'sift out' those numbers that cannot be prime. Ask yourself: what is the minimum necessary work to ensure you do not double-count eliminations? Use this insight to structure your approach."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Let’s think conceptually:
+1. Start with a full set of numbers from 2 to \( N \).
+2. Use the smallest candidate to eliminate certain numbers.
+3. Move to the next candidate and repeat the process.
+4. Determine a rationale for when you can safely skip checking some numbers.
+This step-by-step reflection guides you toward an efficient filtering method without giving away the exact mechanics."*
+
+\subsection*{Self-Consistency}
+*"Ask yourself:
+- After using a candidate to remove composites, how can you be confident that you won’t need to revisit those numbers later?
+- What property of the elimination process ensures that every composite number is addressed exactly once?
+These questions help verify the internal consistency of your strategy."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Consider the logical rationale: once a candidate has been used to eliminate certain numbers, why is it unnecessary to check those numbers again with later candidates? Reflect on how the ordering of candidates contributes to this efficiency."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Visualize your candidate list as an array where each element initially has the potential to be prime. Think about how updating the status of elements using a candidate can be represented symbolically without detailing the exact update rules. How does this abstraction guide your reasoning?"*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Plan the process in broad strokes:
+1. Initialize a representation for numbers in your range.
+2. Sequentially use each candidate to eliminate numbers that are clearly composite.
+3. Ensure that each candidate’s elimination range is determined by a principle that prevents overlap.
+This high-level structure should help you conceptualize the solution while leaving room for your own detailed design."*
+
+\subsection*{ReAct Prompting}
+*"Step 1 (Action): Conceptually prepare your candidate list.
+Step 2 (Reasoning): Understand that the smallest candidate in the list is key to eliminating composites.
+Step 3 (Action): Imagine marking off numbers that are clear multiples.
+Step 4 (Reasoning): Reflect on how the process naturally avoids re-checking numbers.
+This approach encourages a dynamic, iterative method without exposing the specific implementation details."*
+
+\subsection*{Clear and Specific Instructions}
+*"To tackle the problem, design a process that:
+1. Assumes all numbers in a given range could be prime.
+2. Uses the smallest remaining candidate to strategically 'sift out' non-prime numbers.
+3. Limits the work for each candidate by focusing on a minimal necessary range.
+4. Continues the process until all candidates have been considered.
+This strategy should guide you to develop an efficient solution without revealing every detail."*
+
+\subsection*{Answer/Algorithm}
+We follow the standard sieve procedure:
+
+1. Create an array \(\text{isPrime}[2..30]\), all set to \(\text{true}\).
+2. For each \(p = 2,3,4,\dots,\lfloor\sqrt{30}\rfloor=5\):
+   - If \(\text{isPrime}[p]\) is true, mark off
+     \[
+       p^2,\,p^2+p,\,p^2+2p,\,\dots
+       \quad\text{up to }30
+     \]
+     as composite (\(\text{false}\)).
+3. At the end, the indices \(i\) with \(\text{isPrime}[i]=\text{true}\) are the primes.
+
+Concretely for \(N=30\):
+
+- **\(p=2\):** mark off \(4,6,8,\dots,30\).
+- **\(p=3\):** mark off \(9,12,15,\dots,30\).
+- **\(p=4\):** already marked composite, skip.
+- **\(p=5\):** mark off \(25,30\).
+
+The remaining true entries are
+\[
+2,\;3,\;5,\;7,\;11,\;13,\;17,\;19,\;23,\;29.
+\]
+
+\textbf{Answer:} The primes up to \(30\) are
+\[
+\boxed{2,\,3,\,5,\,7,\,11,\,13,\,17,\,19,\,23,\,29}.
+\]

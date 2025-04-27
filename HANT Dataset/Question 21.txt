@@ -1,0 +1,122 @@
+\section{Solving Euler's Totient Sieve}
+
+\subsection*{Question}
+Compute Euler's totient function \( \phi(n) \) for all integers \( 1 \leq n \leq 10 \) using the Euler (Phi) Sieve algorithm.
+
+Recall that the Euler's totient function \(\phi(n)\) is defined as the number of positive integers up to \(n\) that are relatively prime to \(n\). You should efficiently populate an array of totients.
+
+\subsection*{Hints}
+
+\subsection*{Few‑Shot Hinting}
+Work \(N=6\) by hand:
+\begin{enumerate}
+  \item Initialize \(\phi[i]=i\) for \(1\le i\le6\).
+  \item Find entries still equal to their index—these mark primes.
+  \item Observe how each prime’s own entry drops by exactly one “unit” of its original size.
+  \item Attempt to apply that same proportional drop to every multiple of that prime.
+\end{enumerate}
+
+\subsection*{Chain‑of‑Thought (CoT) Prompting}
+*"Label each integer \(i\) by itself.  When you see \(i\) still labelled \(i\), declare it prime: reduce its label by one unit in proportion to its size, then use that proportional reduction to update all its multiples in one traversal."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Phase 1: set \(\phi[i]:=i\).  
+Phase 2: detect \(\phi[p]=p\) as prime \(p\), reduce \(\phi[p]\) accordingly.  
+Phase 3: propagate that exact multiplicative factor to \(\phi(p\cdot k)\) for all \(k\)."*
+
+\subsection*{Self‑Consistency}
+*"No matter which prime \(p\) you process first, as long as you apply its multiplicative effect exactly once to each multiple, the final \(\phi\)-array remains the same."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Ask yourself:  
+1. How does initializing \(\phi[i]=i\) reveal primes without explicit primality tests?  
+2. Once I note how \(\phi[p]\) changes, how do I reuse that relative change for every composite \(p\,k\)?"*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Formally:
+\[
+\phi[i]\gets i,\quad
+\text{if }\phi[p]=p\;\bigl(\text{prime}\bigr),\;
+\phi[p]\gets p-1,
+\;\forall k\ge2:\;\phi[p\,k]\gets \phi[p\,k]\times\frac{\phi[p]}{p}.
+\]"*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\begin{enumerate}
+  \item \textbf{Init:} \(\phi[i]\leftarrow i\).  
+  \item \textbf{Detect:} for \(i=2\) to \(N\), if \(\phi[i]=i\), set \(\phi[i]\leftarrow i-1\).  
+  \item \textbf{Propagate:} for each multiple \(j=i\cdot2,i\cdot3,\dots\le N\), apply the same scaling.  
+  \item \textbf{Skip:} any \(j\) with \(\phi[j]\neq j\) has been processed—do not repeat.
+\end{enumerate}
+
+\subsection*{ReAct Prompting}
+\begin{itemize}
+  \item **Action:** Initialize \(\phi[i]=i\).  
+  \item **Reasoning:** Unchanged entries indicate primes.  
+  \item **Action:** On prime \(p\), reduce \(\phi[p]\) by exactly one “fraction” of its original size, then apply that fraction to all multiples \(j=p\,k\).  
+  \item **Reasoning:** One pass per prime covers all contributions.
+\end{itemize}
+
+\subsection*{Clear and Specific Instructions}
+*"1. Allocate \(\phi[1..N]\) with \(\phi[i]=i\).  
+2. For \(i=2\) to \(N\):  
+   - If \(\phi[i]=i\), treat \(i\) as prime \(p\), set \(\phi[p]:=p-1\).  
+   - Then for each \(j=p\cdot k\le N\), multiply \(\phi[j]\) by the same factor \(\phi[p]/p\).  
+   - Skip any \(j\) once \(\phi[j]\neq j\).  
+3. Return the fully populated \(\phi\)-array."*
+
+\subsection*{Answer/Algorithm}
+\We use the Euler Totient Sieve method to compute \( \phi(n) \) for \( n = 1 \) to \( 10 \).
+
+Step 1: Initialize an array \( \phi \) such that \( \phi[i] = i \):
+\[
+\phi = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+\]
+
+Step 2: Iterate through each number \( i \) from 2 to 10:
+
+- \( i = 2 \) is prime:  
+  \( \phi(2) = 1 \)  
+  Update multiples of 2:  
+  \[
+  \begin{align*}
+  \phi(4) &= \phi(4) // 2 \times 1 = 4 // 2 \times 1 = 2 \\
+  \phi(6) &= 6 // 2 \times 1 = 3 \\
+  \phi(8) &= 8 // 2 \times 1 = 4 \\
+  \phi(10) &= 10 // 2 \times 1 = 5
+  \end{align*}
+  \]
+
+- \( i = 3 \) is prime:  
+  \( \phi(3) = 2 \)  
+  Update multiples of 3:  
+  \[
+  \begin{align*}
+  \phi(6) &= \phi(6) // 3 \times 2 = 3 // 3 \times 2 = 2 \\
+  \phi(9) &= 9 // 3 \times 2 = 6
+  \end{align*}
+  \]
+
+- \( i = 4 \) is not prime, skip.
+
+- \( i = 5 \) is prime:  
+  \( \phi(5) = 4 \)  
+  Update multiples:  
+  \[
+  \phi(10) = 5 // 5 \times 4 = 4
+  \]
+
+- \( i = 6 \) is not prime, skip.  
+- \( i = 7 \) is prime: \( \phi(7) = 6 \)  
+- \( i = 8 \), \( 9 \), and \( 10 \) are not prime, skip.
+
+Final result:
+\[
+\phi = [0, 1, 1, 2, 2, 4, 2, 6, 4, 6, 4]
+\]
+That is:
+\[
+\phi(1)=1, \phi(2)=1, \phi(3)=2, \phi(4)=2, \phi(5)=4, \phi(6)=2, \phi(7)=6, \phi(8)=4, \phi(9)=6, \phi(10)=4
+\]
+
+

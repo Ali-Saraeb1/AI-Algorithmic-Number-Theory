@@ -1,0 +1,208 @@
+\section{5. Lifting Cube Roots via Hensel’s Lemma}
+
+\subsection*{Question}
+Suppose you have a prime 
+\[
+p = 5,
+\]
+and consider the function
+\[
+f(x) = x^3 - 3.
+\]
+An initial solution is given by 
+\[
+a = 2,
+\]
+which satisfies
+\[
+f(2) \equiv 0 \pmod{5} \quad \text{since} \quad 2^3 - 3 = 8 - 3 = 5.
+\]
+Given that the derivative \( f'(2) \not\equiv 0 \pmod{5} \), Lift this solution to modulo \( 5^2 = 25 \). That is, find an integer \( b \) such that:
+\[
+b \equiv 2 \pmod{5}
+\]
+and
+\[
+f(b) \equiv 0 \pmod{25}.
+\]
+Show all intermediate steps.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+Think of Hensel’s Lemma as a technique to “lift” a solution modulo a prime \( p \) to a more refined solution modulo \( p^2 \). Start with an initial solution \( a \) such that
+\[
+f(a) \equiv 0 \pmod{p},
+\]
+and then refine it to find \( b \) satisfying:
+\[
+b \equiv a \pmod{p} \quad \text{and} \quad f(b) \equiv 0 \pmod{p^2}.
+\]
+Notice that \( f(x) \) can be expanded as:
+\[
+f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+\]
+We can choose \( b \) so that the linear term \( f'(a)(b-a) \) cancels \(f(a) \) modulo \(p^2\). How about the terms \( (b-a)^k \) modulo \(p^2\) for \(k \ge 2\) ?
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+1. **Start:** Verify that \( a \) is a solution modulo \( p \) (i.e., \( f(a) \equiv 0 \pmod{p} \)).
+2. **Linearize:** Write the Taylor expansion:
+   \[
+   f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+   \]
+3. **Determine Correction:** Substitute \( x = b = a + h \) to obtain:
+   \[
+   f(b) \equiv f(a) + f'(a)h \pmod{p^2}.
+   \]
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+- **Extract:** Begin with \( a \) satisfying \( f(a) \equiv 0 \pmod{p} \).
+- **Approximate:** Use the linear term:
+  \[
+  f(a+h) \approx f(a) + f'(a)h.
+  \]
+- **Lift:** Ensuring \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Self-Consistency}
+
+Confirm your approach by:
+- Checking that \( f(a) \equiv 0 \pmod{p} \).
+- Verifying that \( f'(a) \) is invertible modulo \( p^2 \) (which it is if \( p \nmid f'(a) \)).
+- Ensuring that \( b \equiv a \pmod{p} \) satisfies \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+Reflect on:
+- How the expansion
+  \[
+  f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots
+  \]
+  approximates \( f(x) \) near \( a \).
+- How to choose \( h = b-a\) to cancel the linear error term.
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+Express the method symbolically:
+- Expand:
+  \[
+  f(x) = f(a) + f'(a)(x-a) + \cdots.
+  \]
+- And ponder what b should be
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+Break the algorithm into clear steps:
+- **Initialization:** Start with \( a \) such that \( f(a) \equiv 0 \pmod{p} \).
+- **Find Correction:** Solve the congruence:
+  \[
+  f(a) + f'(a)h \equiv 0 \pmod{p^2},
+  \]
+  to find \( h \).
+- **Final Step:** Find \(b\) so that \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{ReAct Prompting}
+
+Alternate between actions and reasoning:
+1. **Action:** Begin with \( a \) satisfying \( f(a) \equiv 0 \pmod{p} \).
+2. **Reasoning:** Use the Taylor series expansion to understand how \( f(x) \) behaves near \( a \). What does this tell you about b?
+
+\subsection*{Clear and Specific Instructions}
+
+Notice that \( f(x) \) can be written as:
+\[
+f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+\]
+Given that:
+- \( f(a) \equiv 0 \pmod{p} \),
+- \( f'(a) \not\equiv 0 \pmod{p} \),
+
+we can choose the desired \( b \).
+This guarantees \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Answer/Algorithm}
+Step-by-Step Computation:
+--------------------------
+1. **Initial Data:**
+   \[
+   f(x) = x^3 - 3,\quad p = 5,\quad a = 2.
+   \]
+   Compute:
+   \[
+   f(2) = 2^3 - 3 = 8 - 3 = 5.
+   \]
+   Since \( 5 \) is divisible by \( 5 \), we have:
+   \[
+   f(2) \equiv 0 \pmod{5}.
+   \]
+
+2. **Compute the Derivative:**
+   \[
+   f'(x) = 3x^2,\quad f'(2) = 3 \times 2^2 = 12.
+   \]
+   Note that \( 12 \equiv 2 \pmod{5} \) (so \( f'(2) \not\equiv 0 \pmod{5} \)), and we assume \( f'(2) \) is invertible modulo \( 25 \).
+
+3. **Apply Hensel’s Lemma:**
+   We wish to find an integer \( h \) such that if we set \( b = a + h \), then
+   \[
+   f(b) \equiv 0 \pmod{25}.
+   \]
+   Linearizing using the Taylor expansion at \( a \):
+   \[
+   f(b) \equiv f(a) + f'(a)h \pmod{25}.
+   \]
+   We have:
+   \[
+   f(2) + f'(2)h \equiv 5 + 12h \equiv 0 \pmod{25}.
+   \]
+   Rearranging,
+   \[
+   12h \equiv -5 \pmod{25}.
+   \]
+   Since \(-5 \equiv 20 \pmod{25}\), the congruence becomes:
+   \[
+   12h \equiv 20 \pmod{25}.
+   \]
+
+4. **Solve for \( h \):**
+   To solve \( 12h \equiv 20 \pmod{25} \), we need the modular inverse of \( 12 \) modulo \( 25 \).  
+   Observe that:
+   \[
+   12 \times 23 = 276 \equiv 1 \pmod{25} \quad \text{(since } 276 - 11 \times 25 = 276 - 275 = 1\text{)}.
+   \]
+   Hence, the inverse of \( 12 \) modulo \( 25 \) is \( 23 \). Multiplying both sides by \( 23 \):
+   \[
+   h \equiv 20 \times 23 \pmod{25}.
+   \]
+   Compute:
+   \[
+   20 \times 23 = 460.
+   \]
+   Reduce modulo \( 25 \):
+   \[
+   460 \div 25 = 18 \text{ remainder } 10, \quad \text{so } h \equiv 10 \pmod{25}.
+   \]
+
+5. **Determine the Lifted Solution:**
+   The lifted solution is:
+   \[
+   b = a + h = 2 + 10 = 12.
+   \]
+   Verification:
+   - \( b \equiv 12 \equiv 2 \pmod{5} \) (since \( 12 - 2 = 10 \) is divisible by \( 5 \)).
+   - Compute:
+     \[
+     f(12) = 12^3 - 3 = 1728 - 3 = 1725.
+     \]
+     Since \( 1725 = 25 \times 69 \), it follows that:
+     \[
+     f(12) \equiv 0 \pmod{25}.
+     \]
+
+Final Result:
+The lifted solution is \( b = 12 \), which satisfies:
+\[
+b \equiv 2 \pmod{5} \quad \text{and} \quad f(12) \equiv 0 \pmod{25}.
+\]

@@ -1,0 +1,118 @@
+\section{Elliptic Curve Point Doubling}
+
+\subsection*{Question}
+
+Let \( P = (3, 5) \) be a point on the elliptic curve over a finite field \( \mathbb{F}_p \) with the equation:
+\[
+y^2 \equiv x^3 + 2x + 3 \pmod{11}
+\]
+Compute the coordinates of the point \( 2P = (x_3, y_3), \) which is the result of doubling the point \( P \) on the curve.
+
+{Definitions}
+
+- **Elliptic Curve**: A set of points satisfying the equation \( y^2 = x^3 + ax + b \) over a field, along with a special point at infinity.
+
+- **Finite Field \( \mathbb{F}_p \)**: A field with a finite number of elements \( p \), where \( p \) is a prime number. Arithmetic operations are performed modulo \( p \).
+
+- **Point Doubling**: The operation of adding a point \( P \) on an elliptic curve to itself to obtain another point \( 2P \) on the curve.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+Consider the following example illustrating the point doubling process:
+
+- **Example**: Let \( P = (2, 3) \) be a point on the elliptic curve \( y^2 \equiv x^3 + 2x + 3 \pmod{5} \).
+
+  To find \( 2P = (x_3, y_3) \), observe that the slope \( \lambda \) of the tangent line at \( P \) can be computed, and then used to determine \( x_3 \) and \( y_3 \).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+*Begin by computing the slope of the tangent line at point \( P \). Then, use this slope to calculate the new coordinates \( x_3 \) and \( y_3 \) for the point \( 2P \).*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+*Step by step, consider:
+
+1. Compute the slope of the tangent at \( P \).
+2. Use this slope to find the new \( x \)-coordinate.
+3. Substitute the values to determine the new \( y \)-coordinate.
+4. Ensure all calculations are performed modulo \( p \).*
+
+\subsection*{Self-Consistency}
+
+*Verify your computations by checking that the resulting point \( 2P \) lies on the original elliptic curve equation.*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+*Reflect on the logical steps:
+
+- Calculating the slope of the tangent at \( P \).
+- Determining the new coordinates using this slope.
+- Confirming that the new point satisfies the elliptic curve equation.*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+*Express the method symbolically:
+
+- Compute \( \lambda \) (the slope).
+- Calculate \( x_3 \) using \( \lambda \).
+- Determine \( y_3 \) using \( \lambda \) and \( x_3 \).
+- Apply modulo \( p \) operations to ensure the results are within the finite field.*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+*Outline your strategy:
+
+1. **Slope Calculation:** Compute the slope \( \lambda \) of the tangent at \( P \).
+2. **Coordinate Computation:** Use \( \lambda \) to find \( x_3 \) and \( y_3 \).
+3. **Verification:** Confirm that \( (x_3, y_3) \) satisfies the elliptic curve equation.
+4. **Output:** Return the coordinates \( (x_3, y_3) \) as the result of doubling \( P \).*
+
+\subsection*{ReAct Prompting}
+
+*Proceed with these actions and reasoning:
+
+- **Action:** Compute the slope \( \lambda \) at point \( P \).
+- **Reasoning:** The slope provides the necessary information to determine the new coordinates.
+- **Action:** Calculate \( x_3 \) and \( y_3 \) using \( \lambda \).
+- **Reasoning:** These coordinates represent the point \( 2P \) on the curve.
+- **Action:** Verify that \( (x_3, y_3) \) satisfies the elliptic curve equation.
+- **Conclusion:** \( (x_3, y_3) \) is the correct result of doubling \( P \).*
+
+\subsection*{Clear and Specific Instructions}
+
+*For a given point \( P = (x_1, y_1) \) on the elliptic curve \( y^2 \equiv x^3 + ax + b \pmod{p} \):
+
+1. Compute the slope \( \lambda \) of the tangent line at \( P \).
+2. Use \( \lambda \) to calculate the new \( x \)-coordinate \( x_3 \).
+3. Determine the new \( y \)-coordinate \( y_3 \) using \( \lambda \) and \( x_3 \).
+4. Perform all calculations modulo \( p \).
+5. Return the point \( (x_3, y_3) \) as the result of doubling \( P \).*
+
+\subsection*{Answer/Algorithm}
+Step 1: Compute the slope \( \lambda \):
+\[
+\lambda = \frac{3x_1^2 + a}{2y_1} \mod 11 = \frac{3 \cdot 3^2 + 2}{2 \cdot 5} = \frac{3 \cdot 9 + 2}{10} = \frac{29}{10} \mod 11
+\]
+\[
+29 \equiv 7 \mod 11, \quad 10^{-1} \mod 11 = 10
+\]
+\[
+\lambda = 7 \cdot 10 = 4 \mod 11
+\]
+
+Step 2: Compute \( x_3 \):
+\[
+x_3 = \lambda^2 - 2x_1 = 4^2 - 2 \cdot 3 = 16 - 6 = 10 \equiv 10 \mod 11
+\]
+
+Step 3: Compute \( y_3 \):
+\[
+y_3 = \lambda(x_1 - x_3) - y_1 = 4(3 - 10) - 5 = -28 - 5 = -33 \equiv 0 \mod 11
+\]
+
+Final result:
+\[
+2P = (10, 0)
+\]

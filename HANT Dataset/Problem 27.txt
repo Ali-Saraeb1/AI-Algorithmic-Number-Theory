@@ -1,0 +1,146 @@
+\section{RSA Key Generation}
+\subsection*{Question}
+Develop an algorithm to generate RSA public and private keys using two large prime numbers \( p \) and \( q \). Your algorithm should produce:
+- A public key \( (e, n) \)
+- A private key \( (d, n) \)
+
+where:
+- \( n \) is the product of \( p \) and \( q \),
+- \( e \) is an encryption exponent selected based on specific criteria,
+- \( d \) is the decryption exponent corresponding to \( e \).
+
+Ensure that the generated keys adhere to the RSA algorithm's requirements for secure encryption and decryption, without revealing the method for computing \( d \).
+
+{Technical Definitions}
+- **Prime Number:** A natural number greater than 1 that has no positive divisors other than 1 and itself.
+- **Modulus (\( n \))**: The product of \( p \) and \( q \) (i.e., \( n = p \times q \)); serves as a foundational component in both the public and private keys.
+- **Euler's Totient Function (\( \phi(n) \))**: Represents the count of integers up to \( n \) that are coprime with \( n \). For two primes \( p \) and \( q \), \( \phi(n) = (p-1)(q-1) \).
+- **Encryption Exponent (\( e \))**: An integer chosen such that \( 1 < e < \phi(n) \) and \( \gcd(e, \phi(n)) = 1 \); used in the encryption process.
+- **Decryption Exponent (\( d \))**: The multiplicative inverse of \( e \) modulo \( \phi(n) \); satisfies the equation \( e \times d \equiv 1 \pmod{\phi(n)} \); used in the decryption process.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider the following examples that illustrate the RSA key generation process:
+
+- **Example 1:**
+  - Choose two prime numbers: \( p = 3 \), \( q = 11 \).
+  - Compute the modulus: \( n = p \times q = 3 \times 11 = 33 \).
+  - Calculate Euler's totient: \( \phi(n) = (p-1)(q-1) = (3-1)(11-1) = 2 \times 10 = 20 \).
+  - Select an encryption exponent: \( e = 7 \) (where \( 1 < e < 20 \) and \( \gcd(e, 20) = 1 \)).
+  - Determine the decryption exponent \( d \) such that \( e \times d \equiv 1 \pmod{20} \); here, \( d = 3 \) satisfies this condition.
+
+- **Example 2:**
+  - Choose two prime numbers: \( p = 7 \), \( q = 19 \).
+  - Compute the modulus: \( n = p \times q = 7 \times 19 = 133 \).
+  - Calculate Euler's totient: \( \phi(n) = (p-1)(q-1) = (7-1)(19-1) = 6 \times 18 = 108 \).
+  - Select an encryption exponent: \( e = 5 \) (where \( 1 < e < 108 \) and \( \gcd(e, 108) = 1 \)).
+  - Determine the decryption exponent \( d \) such that \( e \times d \equiv 1 \pmod{108} \); here, \( d = 65 \) satisfies this condition.
+
+These examples demonstrate the process of selecting appropriate values for \( p \), \( q \), \( e \), and \( d \) to generate RSA keys.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Begin by selecting two large prime numbers \( p \) and \( q \). Compute their product to obtain the modulus \( n \). Calculate Euler's totient \( \phi(n) \) based on \( p \) and \( q \). Choose an encryption exponent \( e \) that is coprime with \( \phi(n) \). Finally, determine the decryption exponent \( d \) that satisfies the modular inverse relationship with \( e \) under modulo \( \phi(n) \)."*
+
+\subsection*{Automatic Chain‑of‑Thought (Auto‑CoT) Prompting}
+*"Step by step:
+1. Validate primality of \(p,q\).  
+2. Compute \(n\) and \(\phi(n)\).  
+3. Select \(e\) with \(\gcd(e,\phi(n))=1\).  
+4. Use extended Euclid to find \(d\).  
+5. Return \((e,n)\) and \((d,n)\)."*
+
+\subsection*{Self-Consistency}
+*"Ensure that:
+- The chosen numbers \( p \) and \( q \) are prime.
+- The encryption exponent \( e \) is selected such that \( \gcd(e, \phi(n)) = 1 \).
+- The decryption exponent \( d \) satisfies the equation \( e \times d \equiv 1 \pmod{\phi(n)} \).
+This approach guarantees the integrity and security of the generated RSA key pair."*
+
+
+\subsection*{Logical Chain‑of‑Thought (LogiCoT) Prompting}
+*"Logically:
+- \(n=pq\) ensures modulus size.
+- \(\phi(n)=(p-1)(q-1)\) counts invertible residues.
+- \(e\) must lie in the unit group mod \(\phi(n)\).
+- \(d\) is the unique inverse of \(e\) in that group."*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Symbolically:
+\[
+n = p\,q,\quad
+\phi = (p-1)(q-1),\quad
+e \in (\mathbb{Z}/\phi\mathbb{Z})^\times,\quad
+d \equiv e^{-1}\pmod{\phi}.
+\]"*
+
+\subsection*{Structured Chain‑of‑Thought (SCoT) Prompting}
+*"Break your approach into phases:
+1. **Validation:** Confirm primality.  
+2. **Setup:** Compute \(n\) and \(\phi(n)\).  
+3. **Selection:** Find \(e\) in the unit group.  
+4. **Inversion:** Compute \(d\) as the modular inverse of \(e\).  
+5. **Assembly:** Form the key pair."*
+
+\subsection*{ReAct Prompting}
+*"Action: Test p,q for primality.  
+Reasoning: RSA requires prime factors.  
+Action: Compute n,\(\phi\).  
+Reasoning: \(\phi\) defines the group order.  
+Action: Choose e coprime to \(\phi\).  
+Reasoning: e must be invertible.  
+Action: Compute d via extended Euclid.  
+Reasoning: d is e’s modular inverse.  
+Action: Output keys."*
+
+\subsection*{Clear and Specific Instructions}
+*"1. Verify \(p,q\) are prime.  
+2. Compute \(n=pq\) and \(\phi(n)=(p-1)(q-1)\).  
+3. Choose \(e\) with \(1<e<\phi(n)\) and \(\gcd(e,\phi(n))=1\).  
+4. Use the extended Euclidean algorithm to find \(d\) satisfying \(e\,d\equiv1\pmod{\phi(n)}\).  
+5. Return public key \((e,n)\) and private key \((d,n)\)."*
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def mod_inverse(e, phi):
+    # Extended Euclidean Algorithm to find the modular inverse of e modulo phi.
+    def egcd(a, b):
+        if a == 0:
+            return (b, 0, 1)
+        g, x, y = egcd(b % a, a)
+        return (g, y - (b // a) * x, x)
+    
+    g, x, _ = egcd(e, phi)
+    if g != 1:
+        raise Exception('Modular inverse does not exist; choose a different encryption exponent.')
+    return x % phi
+
+def is_prime(n):
+    # Simple primality test.
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def generate_rsa_keys(p, q, e):
+    # Validate that p and q are prime.
+    if not (is_prime(p) and is_prime(q)):
+        raise ValueError("Both numbers must be prime.")
+    
+    n = p * q
+    phi = (p - 1) * (q - 1)
+    
+    # Check that e is valid.
+    if e <= 1 or e >= phi or egcd(e, phi)[0] != 1:
+        raise ValueError("Invalid encryption exponent; choose a value coprime with φ(n).")
+    
+    d = mod_inverse(e, phi)
+    return (e, n), (d, n)
+
+# Example usage:
+# p = 61, q = 53, e = 17
+# Expected public key: (17, 3233)
+# Expected private key: (2753, 3233)
+\end{lstlisting}

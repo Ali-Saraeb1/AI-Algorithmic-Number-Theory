@@ -1,0 +1,145 @@
+\section{Solving Pell’s Equation}
+\subsection*{Question}
+Given a nonsquare positive integer \(d\), solve Pell’s equation:
+\[
+x^2 - d\,y^2 = 1
+\]
+using the continued fraction expansion of \(\sqrt{d}\). Assume that the continued fraction expansion of \(\sqrt{d}\) has an even period length. Your algorithm should determine the fundamental solution \((x,y)\) efficiently by leveraging the periodic structure of the expansion.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+- **Example 1: \(d = 3\)**  
+  The continued fraction expansion of \(\sqrt{3}\) is \([1; \overline{1,2}]\).  
+  We observe
+  \[
+  2^2 - 3\cdot1^2 = 4 - 3 = 1.
+  \]  
+
+- **Example 2: \(d = 7\)**  
+  The continued fraction expansion of \(\sqrt{7}\) is \([2; \overline{1,1,1,4}]\).  
+  We observe
+  \[
+  8^2 - 7\cdot3^2 = 64 - 63 = 1.
+  \]  
+
+- **Example 3: \(d = 11\)**  
+  The continued fraction expansion of \(\sqrt{11}\) is \([3; \overline{3,6}]\).  
+  We observe
+  \[
+  10^2 - 11\cdot3^2 = 100 - 99 = 1.
+  \]  
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Observe that the convergents \(x/y\) not only approximate \(\sqrt{d}\) but satisfy \(x/y \approx \sqrt{d+\frac{1}{y^2}}\). When \(y\) is large, this approximation is close to \(\sqrt{d}\). Use continued fractions."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Step by step, consider:
+1. Note that \(x/y \approx \sqrt{d+\frac{1}{y^2}}\)
+2. Approximate \(\sqrt{d}\) e.g via continued fractions.
+3. Verify that the candidate \((x,y)\) satisfies \(x^2 - d\,y^2 = 1\)."*
+
+\subsection*{Self-Consistency}
+*"Ensure your method is robust by:
+- Make sure you understand what continued fractions are.
+- Recognizing that \(x^2 - d\,y^2 = 1\) implies \(x/y \approx \sqrt{d+\frac{1}{y^2}}\), and for large \(y\) this approximates \(\sqrt{d}\).
+- Comparing your candidate solution with known examples."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Reflect on these logical steps:
+- The relation \(x^2 - d\,y^2 = 1\) means \(x/y\) is nearly \(\sqrt{d+\frac{1}{y^2}}\) and for large \(y\), close to \(\sqrt{d}\).
+- Recall continued fractions
+- Verify that your solution satisfies the original equation."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Express the method symbolically:
+- Represent \(\sqrt{d}\) as \([a_0; \overline{a_1, a_2, \dots, a_k}]\) with even \(k\).
+- The equation implies \(x/y \approx \sqrt(d) \)"*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Outline your strategy:
+1. **Continued Fraction Expansion:** Compute the expansion of \(\sqrt{d}\).
+2. **Observation:** The equation gives \(x/y = \sqrt{d+\frac{1}{y^2}} \approx \sqrt{d}\).
+3. **Verification:** Confirm that the candidate solution satisfies the equation.
+4. **Output:** Find \((x,y)\)."*
+
+\subsection*{ReAct Prompting}
+*"Proceed with these actions and reasoning:
+- **Action:** Compute the continued fraction expansion of \(\sqrt{d}\).
+- **Reasoning:** \(x/y \approx \sqrt{d+\frac{1}{y^2}} \approx \sqrt{d} \)), suggesting a candidate.
+- **Conclusion:** Finalize the candidate as the solution."*
+
+\subsection*{Clear and Specific Instructions}
+*"For a given nonsquare positive integer \(d\):
+1. Compute the continued fraction expansion of \(\sqrt{d}\).
+2. \(x/y \approx \sqrt{d+\frac{1}{y^2}}\), which approximates \(\sqrt{d}\) for large \(y\).
+3. Verify that the candidate solution satisfies the equation.
+4. Return the solution \((x,y)\)."*
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+import math
+
+def continued_fraction_sqrt(d):
+    """
+    Computes the continued fraction expansion of sqrt(d).
+    
+    Returns:
+      a0: The integer part of sqrt(d).
+      periodic_part: A list of the periodic coefficients.
+    """
+    m = 0
+    d0 = 1
+    a0 = int(math.sqrt(d))
+    if a0 * a0 == d:
+        raise ValueError(f"{d} is a perfect square; no nontrivial solution exists.")
+    a = a0
+    periodic_part = []
+    seen = {}
+    # Repeat until the state repeats (which indicates the period)
+    while (m, d0, a) not in seen:
+        seen[(m, d0, a)] = len(periodic_part)
+        m = d0 * a - m
+        d0 = (d - m * m) // d0
+        a = (a0 + m) // d0
+        periodic_part.append(a)
+    return a0, periodic_part
+
+def convergents_from_cf(a0, periodic_part):
+    """
+    Generates the convergents (h/k) from the continued fraction expansion.
+    """
+    cf = [a0] + periodic_part
+    convergents = []
+    h_minus2, h_minus1 = 0, 1
+    k_minus2, k_minus1 = 1, 0
+    for a in cf:
+        h = a * h_minus1 + h_minus2
+        k = a * k_minus1 + k_minus2
+        convergents.append((h, k))
+        h_minus2, h_minus1 = h_minus1, h
+        k_minus2, k_minus1 = k_minus1, k
+    return convergents
+
+def solve_pell(d):
+    """
+    Solves Pell's equation x^2 - d*y^2 = 1 for a nonsquare positive integer d.
+    
+    Assumes that the continued fraction expansion of sqrt(d) has an even period.
+    Returns:
+      The fundamental solution (x, y) as a tuple.
+    """
+    a0, periodic_part = continued_fraction_sqrt(d)
+    period_length = len(periodic_part)
+    if period_length % 2 != 0:
+        raise ValueError(f"Expected even period length for sqrt({d})")
+    convergents = convergents_from_cf(a0, periodic_part)
+    # The fundamental solution is obtained from the convergent at the stopping point indicated by the period.
+    x, y = convergents[period_length - 1]
+    return x, y
+    
+# Example usage:
+# For d = 3, the fundamental solution is (2, 1)
+# For d = 7, the fundamental solution is (8, 3)
+# For d = 11, the fundamental solution is (10, 3)
+\end{lstlisting}

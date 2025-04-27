@@ -1,0 +1,93 @@
+\section{Fermat’s Two-Squares Theorem}
+
+\subsection*{Question}
+Determine whether the number \( N = 130 \) can be written in the form \( x^2 + y^2 \) with \( x, y \in \mathbb{Z} \).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+\begin{itemize}
+  \item Remember that every odd prime falls into one of two residue classes modulo 4. These classes play very different roles in the theory.
+  \item For small values of \( N \), observe how the prime factorization might suggest the possibility or impossibility of a representation as a sum of two squares.
+  \item Keep in mind that the exponent of a prime factor may affect the representability of the number, especially in cases where the prime itself is not directly representable as a sum of two squares.
+\end{itemize}
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+"Start by decomposing \( N \) into its prime factors. Reflect on how the residue class modulo 4 of each odd prime influences the possibility of expressing \( N \) as \( x^2+y^2 \). Consider what happens when combining these factors in a general integer \( N \), and use your theoretical insights to decide if the overall structure permits such a representation. Also, note that the exponent of a prime factor plays a role in this decision, particularly when the prime itself is not directly representable."
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+"Step by step:
+\begin{enumerate}
+  \item Factorize \( N \) into its prime components.
+  \item Recall that odd primes can only be \( \equiv \) to two classes \( \pmod{4} \), and these two cases affect the sum-of-two-squares representation differently.
+  \item Evaluate how the exponents of these primes contribute to the overall representability of \( N \), keeping in mind that the frequency with which a prime appears can influence the outcome, especially if the prime is not directly representable.
+  \item Conclude whether \( N \) can be written as \( x^2+y^2 \) based on the combined behavior of its factors.
+\end{enumerate}"
+
+\subsection*{Self-Consistency}
+"Ensure that your algorithm:
+\begin{itemize}
+  \item Accurately factorizes \( N \).
+  \item Considers the two possible residue classes for odd primes modulo 4.
+  \item Properly assesses the impact of the exponents in the factorization on the representability of \( N \), particularly noting that the exponent may mitigate restrictions when a prime is not representable as a sum of two squares.
+  \item Handles a general \( N \) by integrating the effects of all prime factors.
+\end{itemize}"
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+"Reflect on the following:
+\begin{itemize}
+  \item Odd primes fall into two categories modulo 4; one of these categories is more permissive for sums of two squares.
+  \item For a general \( N \), the interplay between the different types of prime factors (and their exponents) dictates the overall possibility of a representation.
+  \item Consider that the exponent of a prime factor may affect the representability of \( N \), particularly when the prime itself is not directly representable as a sum of two squares.
+  \item Use these insights to design an algorithm that checks the necessary properties without revealing the explicit condition.
+\end{itemize}"
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+"Express \( N \) as \( \prod_{i} p_i^{e_i} \). Think about how, for some primes, the exponent \( e_i \) influences the sum-of-two-squares representation, and how the mix of primes (there are two classes mod 4) shapes the answer for a general \( N \). Note that the impact of a prime factor may be affected by the number of times it appears in the factorization."
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+"Outline your approach:
+\begin{enumerate}
+  \item Factorize \( N \) into its prime factors.
+  \item Distinguish between the two types of odd primes and two types of exponents.
+  \item Conclude whether such a representation exists, and optionally indicate how one might compute it.
+\end{enumerate}"
+
+\subsection*{ReAct Prompting}
+"Proceed as follows:
+\begin{itemize}
+  \item \textbf{Action:} Factorize \( N \).
+  \item \textbf{Reasoning:} Recognize that odd primes come in two flavors modulo 4 and that their exponents affect the outcome. Keep in mind that the exponent of a prime factor may alter its impact on representability when the prime itself is not representable.
+  \item \textbf{Action:} Check the necessary conditions implied by these theoretical insights.
+  \item \textbf{Conclusion:} Determine if \( N \) can be represented as \( x^2+y^2 \) without fully disclosing the underlying criterion.
+\end{itemize}"
+
+\subsection*{Clear and Specific Instructions}
+"For any positive integer \( N \):
+\begin{enumerate}
+  \item Factorize \( N \) completely.
+  \item Use the fact that every odd prime belong to one of two classes \( \pmod{4} \) to guide your analysis.
+  \item Evaluate the impact of the exponents of these primes on the possibility of representing \( N \) as \( x^2+y^2 \), keeping in mind that the exponent of a prime factor may affect the outcome when the prime is not directly representable as a sum of two squares.
+  \item Without revealing the full theorem, decide if \( N \) can be expressed in this form.
+  \item Optionally, outline a method to compute such a representation.
+\end{enumerate}"
+
+\subsection*{Answer/Algorithm}
+
+Step 1: Factorize \( 130 \):
+\[
+130 = 2 \times 5 \times 13
+\]
+
+Step 2: Examine each odd prime factor:
+- \( 5 \equiv 1 \mod 4 \): allowed  
+- \( 13 \equiv 1 \mod 4 \): allowed  
+- \( 2 \): does not affect representability
+
+Step 3: None of the odd primes \( \equiv 3 \mod 4 \) appear with an odd exponent.
+
+Conclusion:
+\[
+130 = x^2 + y^2 \text{ for some integers } x, y.
+\]
+So 130 can be expressed as a sum of two squares.

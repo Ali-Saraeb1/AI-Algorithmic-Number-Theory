@@ -1,0 +1,191 @@
+\section{2. Greatest Common Divisor (Euclid’s Algorithm)}
+\subsection*{Question}
+Given two positive integers 48 and 18, compute their greatest common divisor (GCD) using Euclid’s Algorithm.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+Consider the following worked-out examples using the Euclidean algorithm to compute the GCD:
+
+**Example 1: GCD(48, 18)**
+
+1. **First Step**: Compute the remainder of 48 divided by 18:
+   - 48 ÷ 18 = 2 with a remainder of 12 (since 48 - 2 × 18 = 12).
+   - Thus, GCD(48, 18) = GCD(18, 12).
+
+2. **Second Step**: Compute the remainder of 18 divided by 12:
+   - 18 ÷ 12 = 1 with a remainder of 6 (since 18 - 1 × 12 = 6).
+   - Thus, GCD(18, 12) = GCD(12, 6).
+
+3. **Third Step**: Compute the remainder of 12 divided by 6:
+   - 12 ÷ 6 = 2 with a remainder of 0 (since 12 - 2 × 6 = 0).
+   - Thus, GCD(12, 6) = GCD(6, 0).
+
+Since the remainder is now 0, the algorithm terminates, and the GCD is the last non-zero remainder, which is 6.
+
+**Example 2: GCD(60, 48)**
+
+1. **First Step**: Compute the remainder of 60 divided by 48:
+   - 60 ÷ 48 = 1 with a remainder of 12 (since 60 - 1 × 48 = 12).
+   - Thus, GCD(60, 48) = GCD(48, 12).
+
+2. **Second Step**: Compute the remainder of 48 divided by 12:
+   - 48 ÷ 12 = 4 with a remainder of 0 (since 48 - 4 × 12 = 0).
+   - Thus, GCD(48, 12) = GCD(12, 0).
+
+Since the remainder is now 0, the algorithm terminates, and the GCD is the last non-zero remainder, which is 12.
+
+These examples illustrate how the Euclidean algorithm simplifies the GCD computation by repeatedly replacing the larger number with the remainder of the division until a remainder of zero is achieved.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+Start with the larger number. Compute its remainder when divided by the smaller number. Continue until reaching a simple termination condition based on the remainder.
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+Let's think step by step:
+
+- Compute the remainder of the larger number divided by the smaller number.
+- Repeat the process until the remainder is zero.
+- Decide what the GCD is.
+
+\subsection*{Self-Consistency}
+
+Try computing the GCD in multiple ways:
+
+- Using the Euclidean algorithm.
+- Listing out divisors explicitly.
+- Applying the algorithm recursively.
+
+Compare the results—do they always match?
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+Check whether each step preserves the GCD. If `d` divides both `a` and `b`, does it also divide their difference? How can we use that?
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+Express the process using symbols:
+
+- Let \( g = \gcd(a, b) \).
+- Let's reduce a \mod b.
+- Continue applying this rule until one term is zero.
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+Think in terms of control flow:
+
+- While loop runs while `b ≠ 0`.
+- Inside the loop, think of replacing a and b with two integers less than or equal themselves without changing the GCD
+- Stop when `b = 0` and return `a`.
+## Advanced Strategies for Computing the Greatest Common Divisor (GCD)
+
+\subsection*{ReAct Prompting}
+
+ReAct Prompting combines reasoning with actions to guide the problem-solving process. For computing the GCD using the Euclidean algorithm, the steps are:
+
+1. **Action**: Compute the remainder of the larger number divided by the smaller number.
+2. **Reasoning**: What can we say about the new numbers we have?
+3. **Conclusion**: The GCD is related to the remainder remainder.
+
+\subsection*{Clear and Specific Instructions}
+
+Providing explicit instructions enhances clarity and guides the problem-solving process effectively. For the Euclidean algorithm:
+
+1. **Initialization**: Given two integers, \( a \) and \( b \), with \( a > b \).
+2. **Division**: Compute the remainder \( r \) when \( a \) is divided by \( b \): \( r = a \mod b \).
+4. **Think**: How can we simplify the problem using \(r \)
+5. **Termination**: When does repeating the above steps become redundant?.
+
+
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def gcd(a: int, b: int) -> int:
+    while b > 0:
+        a, b = b, a % b
+    return a
+\end{lstlisting}\section{2. Greatest Common Divisor (Euclid’s Algorithm)}
+
+\subsection*{Question}
+Given two positive integers \( a \) and \( b \), compute their greatest common divisor (GCD), which is the largest integer that divides both \( a \) and \( b \).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider the following solved cases:  
+- **Input**: (60, 48) → **Output**: 12  
+- **Input**: (99, 78) → **Output**: 3  
+- **Input**: (105, 30) → **Output**: 15  
+- **Input**: (17, 13) → **Output**: 1  
+- **Input**: (120, 100) → **Output**: 20  
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Start with the larger number. Compute its remainder when divided by the smaller number. If the remainder is zero, you have the answer. Otherwise, repeat this process with the smaller number and the remainder. Continue until reaching a simple termination condition."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Let’s think step by step:  
+1. Compute the remainder of the larger number divided by the smaller number.  
+2. Replace the larger number with the smaller number and the smaller number with the remainder.  
+3. Repeat until the remainder is zero.  
+4. The last non-zero remainder is the GCD."*
+
+\subsection*{Self-Consistency}
+*"Try computing the GCD using multiple methods:  
+- The Euclidean algorithm.  
+- Listing out divisors explicitly.  
+- Applying recursion.  
+Compare the results—do they always match?"*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Check whether each step preserves the GCD. If \( d \) divides both \( a \) and \( b \), does it also divide their difference? What happens when replacing the larger number with its remainder?"*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Express the process using symbols:  
+- Let \( g = \gcd(a, b) \).  
+- Observe that \( \gcd(a, b) = \gcd(b, a \mod b) \).  
+- Continue applying this rule until one term is zero."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Think in terms of control flow:  
+1. While loop runs while \( b \neq 0 \).  
+2. Inside the loop, swap \( a \) with \( b \), and \( b \) with \( a \mod b \).  
+3. Stop when \( b = 0 \) and return \( a \)."*
+
+\subsection*{ReAct Prompting}
+*"First, observe the division process. *(Action: Compute remainder.)*  
+Then, decide: if the remainder is zero, return the smaller number. *(Action: Check termination.)*  
+Otherwise, update values and repeat. *(Action: Continue recursion.)*"*
+
+\subsection*{Clear and Specific Instructions}
+*"Given two integers \( a \) and \( b \):  
+1. Compute \( a \mod b \).  
+2. Set \( a = b \), \( b = \) remainder.  
+3. Repeat until remainder = 0.  
+4. The last non-zero remainder is the GCD."*
+
+\subsection*{Answer/Algorithm}
+Step-by-Step Computation:
+--------------------------
+1. Initialization:
+   - Set a = 48 and b = 18.
+
+2. First Iteration:
+   - Compute the remainder: 48 mod 18 = 48 - 2 × 18 = 12.
+   - Update values: a becomes 18, and b becomes 12.
+
+3. Second Iteration:
+   - Compute the remainder: 18 mod 12 = 18 - 1 × 12 = 6.
+   - Update values: a becomes 12, and b becomes 6.
+
+4. Third Iteration:
+   - Compute the remainder: 12 mod 6 = 12 - 2 × 6 = 0.
+   - Update values: a becomes 6, and b becomes 0.
+
+5. Termination:
+   - Since b is now 0, the algorithm stops.
+   - The greatest common divisor (GCD) is the last non-zero value of a, which is 6.
+
+Conclusion:
+The GCD of 48 and 18 is 6.

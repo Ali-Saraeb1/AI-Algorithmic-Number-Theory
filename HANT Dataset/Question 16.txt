@@ -1,0 +1,85 @@
+\section{Linear Congruence Solver}
+\subsection*{Question}
+Solve the linear congruence \( 2x \equiv 4 (mod 6) \). Determine all integers x that satisfy the congruence.
+
+That is, determine all integers \(x\) satisfying the congruence, or state that no solution exists.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+- **Example 1: \(2x \equiv 4 \pmod{6}\)**  
+  Begin by computing \(\gcd(2,6) = 2\). Observe that the right-hand side \(4\) is divisible by this gcd. Consider reducing the congruence by this factor. What new modulus results, and how can you find a value of \(x\) satisfying the simplified congruence?
+
+- **Example 2: \(3x \equiv 4 \pmod{6}\)**  
+  Here, \(\gcd(3,6) = 3\), but 3 does not divide 4. Reflect on whether this congruence can have a solution, and if not, why this divisibility condition is essential.
+
+- **Example 3: \(4x \equiv 6 \pmod{10}\)**  
+  Compute \(\gcd(4,10) = 2\), and note that 2 divides 6. Reduce the equation accordingly. What modulus and coefficient result from this simplification? How might you proceed from there to find a valid solution?
+
+- **Example 4: \(5x \equiv 0 \pmod{15}\)**  
+  Since the right-hand side is 0, the congruence becomes homogeneous. Think about when such congruences have nontrivial solutions and how many distinct congruence classes of solutions exist.
+
+- **Example 5: \(7x \equiv 1 \pmod{13}\)**  
+  Observe that \(\gcd(7,13) = 1\), so the congruence should be solvable. What general principle ensures that such congruences have a unique solution modulo the modulus?
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*“To determine whether a congruence of the form \(ax \equiv b \pmod{n}\) is solvable, start by considering the divisibility by \(\gcd(a,n)\). If solvable, explore how the problem reduces to a simpler congruence where the coefficient of \(x\) is coprime to a smaller modulus. Then reflect on how such reduced equations are typically handled in number theory.”*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Step by step:
+1. Consider whether the original congruence can be solved at all—what condition must hold?
+2. If the condition is satisfied, ask: how can the equation be simplified?
+3. Once simplified, how can a valid residue class of solutions be obtained?
+4. Finally, how might the solution set be characterized modulo the original modulus?"*
+
+\subsection*{Self-Consistency}
+*“Your reasoning should align with basic number-theoretic principles:
+- The greatest common divisor of the coefficient and modulus is an important quantity for existence and derivation.
+- That the solution set, when it exists, forms a full residue class modulo a predictable modulus.”*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*“Reframe the congruence \(ax \equiv b \pmod{n}\) as the equation \(ax - ny = b\), a linear Diophantine equation in two variables. Consider when such equations are known to have integer solutions. Then, think about how one constructs a particular solution and describes the entire solution set using arithmetic properties.”*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*Let \(g = \gcd(a,n)\). Decide on the existence of the solution.  
+Then examine the simplified congruence \(a'x \equiv b' \pmod{n'}\).*  
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*Organize your strategy as:
+1. **Check Solvability:** Consider \(\gcd(a,n)\).
+2. **Simplify:** Simplify the equation.
+3. **Solve Reduced Form:** Consider how such simplified congruences can be handled using standard number-theoretic tools.
+4. **Describe All Solutions:** Think about how to reconstruct the full set of solutions modulo \(n\) from the simplified form.*  
+
+\subsection*{ReAct Prompting}
+**Reasoning:** The solvability of a linear congruence depends on whether a certain divisor condition is satisfied.  
+**Action:** Compute \(\gcd(a,n)\).  
+**Reasoning:** The congruence can be simplified.  
+**Action:** Reduce the equation and apply a conceptual method (e.g., Euclidean or modular reasoning) to handle the simplified case.  
+**Reasoning:** Use arithmetic structure to understand how all solutions are derived from one.
+
+\subsection*{Clear and Specific Instructions}
+*“To solve \(ax \equiv b \pmod{n}\):
+1. Compute the greatest common divisor \(g = \gcd(a,n)\).
+2. Decide if a solution exists.
+3. If possible, simplify the equation.
+4. Use structural reasoning to identify how the solutions to the reduced congruence inform the solution set of the original.”*
+
+\subsection*{Answer/Algorithm}
+Step 1: Compute the greatest common divisor.
+- gcd(2, 6) = 2.
+
+Step 2: Check for solvability.
+- Since 2 divides 4, the congruence has a solution.
+
+Step 3: Simplify the congruence by dividing by the gcd.
+- Dividing both sides of \( 2x \equiv 4 (mod 6) \) by 2 gives:
+  \( x \equiv 2 (mod 3) \).
+
+Step 4: Describe the general solution.
+- The solution set is all integers of the form:
+  x = 2 + 3k, where k is any integer.
+
+Final Answer:
+All integers x = 2 + 3k (with k in Z, integer) are solutions to \( 2x \equiv 4 (mod 6)\)

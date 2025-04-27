@@ -1,0 +1,115 @@
+\section{Elliptic Curve Point Multiplication via Double-and-Add Algorithm}
+
+\subsection*{Question}
+Let \(E\) be an elliptic curve over the finite field \(\mathbb{F}_p\) defined by
+\[
+y^2 = x^3 + ax + b,
+\]
+and let \(P = (x, y)\) be a point on \(E\). For a positive integer \(n\), design an algorithm to compute the scalar multiplication \(nP\) (i.e., summing \(P\) with itself \(n\) times) using a double-and-add strategy. Your algorithm should leverage the binary representation of \(n\) to determine the sequence of operations on \(P\) without exposing all internal computational details.
+
+\textbf{Technical Definitions:}
+- **Elliptic Curve \(E\):** The set of points \((x,y) \in \mathbb{F}_p^2\) satisfying \(y^2 = x^3 + ax + b\), along with an identity element \(\mathcal{O}\) (the point at infinity).
+- **Point Doubling:** An operation that computes \(2P\) for a given point \(P\) on \(E\) using a formula derived from the curve's tangent.
+- **Point Addition:** The operation that computes \(P + Q\) for two distinct points \(P\) and \(Q\) on \(E\) via the chord-and-tangent method.
+- **Scalar Multiplication:** The computation of \(nP\) by repeated application of point doubling and point addition.
+- **Double-and-Add Algorithm:** A method that expresses \(n\) in a form which guides an iterative process that combines operations in a systematic way, thus reducing the number of arithmetic steps.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Reflect on these observations:
+- When \(n\) is expressed in a compact numeral system (e.g., binary), it becomes apparent how the computation of \(nP\) may be decomposed into a series of smaller, repeatable operations.
+- An effective strategy minimizes redundant computations by determining at each step whether to combine an additional contribution from \(P\).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+\textit{Consider representing the scalar \(n\) in a structured numeral system to expose its intrinsic composition. Initialize an accumulator with the identity element of the elliptic curve. Then, iteratively update the accumulator using a fixed rule, conditionally incorporating the point \(P\) based on the structure of \(n\). Conclude by verifying that the resultant point lies on the curve \(E\).}
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+\textit{Proceed step by step:
+1. Express \(n\) in a numeral system that makes its structure explicit.
+2. Initialize a result variable with the identity element of \(E\).
+3. For each component of the numeral representation, update the result using a predefined operation.
+4. Under appropriate conditions (determined by the numeral structure), modify the result by incorporating \(P\).
+5. Validate that the final result satisfies the elliptic curve equation.}
+
+\subsection*{Self-Consistency}
+\textit{Ensure your method:
+- Utilizes a numeral representation of \(n\) that guides the iterative process efficiently.
+- Applies a consistent operation at each step, with a conditional modification that preserves correctness.
+- Verifies at every step that the intermediate result remains a valid point on \(E\).}
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+\textit{Reflect on the reasoning:
+- A numeral representation of \(n\) helps structure the computation into repeatable steps.
+- At each step, a fixed operation is applied, with a conditional modification guided by the numeral system.
+- The final result must be checked against the curve equation to ensure correctness.}
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+\textit{Express the approach symbolically:
+Let 
+\[
+n = (d_k d_{k-1} \dots d_0),
+\]
+where the digits \(d_i\) guide the process. Initialize \(R = \mathcal{O}\). For each digit \(d_i\), update \(R\) using a uniform rule and, when a specific condition is met by \(d_i\), further update \(R\) by combining it with \(P\). The final \(R\) represents \(nP\).}
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\textit{Outline your strategy:
+1. \textbf{Representation:} Convert \(n\) into a structured numeral form.
+2. \textbf{Initialization:} Set the accumulator \(R\) to the identity element \(\mathcal{O}\).
+3. \textbf{Iteration:} For each digit in the representation:
+   - Apply a standard update to \(R\).
+   - Conditionally modify \(R\) by incorporating \(P\) based on the digit.
+4. \textbf{Verification:} Confirm that the final point satisfies the curve equation \(y^2 = x^3 + ax + b\).
+5. \textbf{Output:} Return \(R\) as the computed \(nP\).}
+
+\subsection*{ReAct Prompting}
+\textit{Follow these steps:
+- \textbf{Action:} Represent \(n\) in a numeral system that clarifies its structure.
+- \textbf{Reasoning:} The structure of \(n\) indicates when to include an extra contribution from \(P\).
+- \textbf{Action:} Iteratively update an accumulator using a fixed operation.
+- \textbf{Action:} Conditionally modify the accumulator by incorporating \(P\) as dictated by the numeral system.
+- \textbf{Conclusion:} Verify that the final point lies on \(E\) before returning it.}
+
+\subsection*{Clear and Specific Instructions}
+\textit{For the elliptic curve \(E\) and the point \(P\):
+1. Express the scalar \(n\) in a structured numeral representation.
+2. Initialize an accumulator with the identity element \(\mathcal{O}\) of \(E\).
+3. For each digit in the numeral representation:
+   - Apply a consistent update to the accumulator.
+   - Conditionally combine the accumulator with \(P\) based on the digit.
+4. Verify that the final computed point satisfies \(y^2 = x^3 + ax + b\).
+5. Return the final point as \(nP\).}
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def double_and_add(n, P, a, p):
+    """
+    Compute the scalar multiplication nP on an elliptic curve defined by 
+    y^2 = x^3 + ax + b over the finite field F_p using the double-and-add algorithm.
+    
+    Parameters:
+      n : Positive integer scalar.
+      P : Tuple (x, y) representing a point on the elliptic curve.
+      a : Coefficient in the elliptic curve equation.
+      p : Prime modulus defining the finite field F_p.
+      
+    Returns:
+      A tuple representing the computed point nP on the elliptic curve.
+    """
+    # Initialize the result as the identity element (None represents the point at infinity)
+    result = None  
+    # Express n in binary form (excluding the '0b' prefix)
+    n_binary = bin(n)[2:]
+    
+    for bit in n_binary:
+        # Update result by applying a standard operation (abstracted as point doubling)
+        result = result and point_doubling(result, a, p) or P
+        # Conditionally update result (abstracted as point addition) when the digit requires it
+        if bit == '1':
+            result = point_addition(result, P, a, p)
+    
+    return result
+
+# Note: The functions 'point_doubling' and 'point_addition' encapsulate the core elliptic 
+# curve arithmetic operations without exposing the detailed implementation.
+\end{lstlisting}

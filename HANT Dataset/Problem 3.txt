@@ -1,0 +1,79 @@
+\section{3. Multiplicative Inverse (Extended Euclidean Algorithm)}
+
+\subsection*{Question}
+Given integers \( a \) and \( n \) such that \( \gcd(a,n) = 1 \), find the multiplicative inverse of \( a \) in \( \mathbb{Z}/n\mathbb{Z} \)—that is, find an integer \( x \) satisfying:
+\[
+a \cdot x \equiv 1 \pmod{n}.
+\]
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+**Example 1: Find the inverse of 3 modulo 11**
+1. **First Step**: Apply the extended Euclidean algorithm to find \( \gcd(3, 11) \). Express this as a linear combination of 3 and 11.
+2. **Second Step**: The multiplicative inverse can be deduced modulo 11.
+
+**Example 2: Find the inverse of 7 modulo 26**
+1. **First Step**: Use the extended Euclidean algorithm to find \( \gcd(7, 26) \).
+2. **Second Step**: Trace back the steps to express 1 as a linear combination of 7 and 26.
+3. **Third Step**: Deduce multiplicative inverse of 7 modulo 26.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+1. Apply the extended Euclidean algorithm to \( a \) and \( n \) to find the GCD.
+2. Can the GCD be bigger than 1? If it's 1, what equation do we have?
+2. Deduce the multiplicative inverse modulo \( n \).
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+1. Compute the GCD of \( a \) and \( n \) using the extended Euclidean algorithm.
+2. If the GCD is 1, an equation can be written down involving the three numbers.
+
+\subsection*{Self-Consistency}
+To check consistency, compute the inverse using the extended Euclidean algorithm by trying to derive some equation, then verify that multiplying \( a \) by the inverse results in 1 modulo \( n \).
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+1. Since \( \gcd(a, n) = 1 \), the extended Euclidean algorithm guarantees some equation involving 1, \( a \) and \( n \).
+2. What's the inverse in the equation?
+3. If \( \gcd(a, n) \neq 1 \), what happens?
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+1. Let \( \gcd(a, n) = 1 \), and express this as \( a \cdot x + n \cdot y = 1 \).
+2. How can we find x and y?
+3. What if the \( GCD \neq 1 \).
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+1. Express the final GCD in an equation involving \( a \) and \( n \). How can we do that?
+2. Distinguish between the two cases GCD is 1 and GCD is not 1.
+
+\subsection*{ReAct Prompting}
+1. **Action**: Use the extended Euclidean algorithm to find an equation between the GCD, \( a \) and \( n \).
+2. **Reasoning**: If the GCD is 1, this seems to be close to the definition of inverse.
+3. **Reasoning**: If the GCD is not 1, what happens can you say about the left and right hand side of the equations.
+4. **Action**: Provide a computational answer.
+
+\subsection*{Clear and Specific Instructions}
+1. **Initialization**: Start with integers \( a \) and \( n \).
+2. **Apply the Extended Euclidean Algorithm**: Use it to put \( \gcd(a, n) \), along with coefficients \( x \) and \( y \) in an equation.
+3. **Conclusion**: If the GCD is 1, compare the equation of multiplicative inverse and the equation you have. If not, what can one say about both sides of the equation?
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def extended_gcd(a: int, b: int) -> tuple:
+    """
+    Returns a tuple (g, x, y) such that a*x + b*y = g = gcd(a, b).
+    """
+    if b == 0:
+        return (a, 1, 0)
+    else:
+        g, x1, y1 = extended_gcd(b, a % b)
+        return (g, y1, x1 - (a // b) * y1)
+
+def mod_inverse(a: int, n: int) -> int:
+    """
+    Returns the multiplicative inverse of a modulo n.
+    Raises an exception if the inverse does not exist.
+    """
+    g, x, _ = extended_gcd(a, n)
+    if g != 1:
+        raise ValueError(f"Inverse does not exist because gcd({a}, {n}) != 1")
+    return x % n
+\end{lstlisting}

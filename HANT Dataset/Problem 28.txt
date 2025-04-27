@@ -1,0 +1,121 @@
+\section{Elliptic Curve Point Doubling}
+
+\subsection*{Question}
+
+Given a point \( P = (x_1, y_1) \) on an elliptic curve defined over a finite field \( \mathbb{F}_p \) with the equation:
+
+\[
+y^2 \equiv x^3 + ax + b \pmod{p}
+\]
+
+where \( a, b \in \mathbb{F}_p \) and \( p \) is a prime number, compute the coordinates of the point \( 2P = (x_3, y_3) \), which is the result of doubling the point \( P \) on the curve.
+
+{Definitions}
+
+- **Elliptic Curve**: A set of points satisfying the equation \( y^2 = x^3 + ax + b \) over a field, along with a special point at infinity.
+
+- **Finite Field \( \mathbb{F}_p \)**: A field with a finite number of elements \( p \), where \( p \) is a prime number. Arithmetic operations are performed modulo \( p \).
+
+- **Point Doubling**: The operation of adding a point \( P \) on an elliptic curve to itself to obtain another point \( 2P \) on the curve.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+Consider the following example illustrating the point doubling process:
+
+- **Example**: Let \( P = (2, 3) \) be a point on the elliptic curve \( y^2 \equiv x^3 + 2x + 3 \pmod{5} \).
+
+  To find \( 2P = (x_3, y_3) \), observe that the slope \( \lambda \) of the tangent line at \( P \) can be computed, and then used to determine \( x_3 \) and \( y_3 \).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+*Begin by computing the slope of the tangent line at point \( P \). Then, use this slope to calculate the new coordinates \( x_3 \) and \( y_3 \) for the point \( 2P \).*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+*Step by step, consider:
+
+1. Compute the slope of the tangent at \( P \).
+2. Use this slope to find the new \( x \)-coordinate.
+3. Substitute the values to determine the new \( y \)-coordinate.
+4. Ensure all calculations are performed modulo \( p \).*
+
+\subsection*{Self-Consistency}
+
+*Verify your computations by checking that the resulting point \( 2P \) lies on the original elliptic curve equation.*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+*Reflect on the logical steps:
+
+- Calculating the slope of the tangent at \( P \).
+- Determining the new coordinates using this slope.
+- Confirming that the new point satisfies the elliptic curve equation.*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+*Express the method symbolically:
+
+- Compute \( \lambda \) (the slope).
+- Calculate \( x_3 \) using \( \lambda \).
+- Determine \( y_3 \) using \( \lambda \) and \( x_3 \).
+- Apply modulo \( p \) operations to ensure the results are within the finite field.*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+*Outline your strategy:
+
+1. **Slope Calculation:** Compute the slope \( \lambda \) of the tangent at \( P \).
+2. **Coordinate Computation:** Use \( \lambda \) to find \( x_3 \) and \( y_3 \).
+3. **Verification:** Confirm that \( (x_3, y_3) \) satisfies the elliptic curve equation.
+4. **Output:** Return the coordinates \( (x_3, y_3) \) as the result of doubling \( P \).*
+
+\subsection*{ReAct Prompting}
+
+*Proceed with these actions and reasoning:
+
+- **Action:** Compute the slope \( \lambda \) at point \( P \).
+- **Reasoning:** The slope provides the necessary information to determine the new coordinates.
+- **Action:** Calculate \( x_3 \) and \( y_3 \) using \( \lambda \).
+- **Reasoning:** These coordinates represent the point \( 2P \) on the curve.
+- **Action:** Verify that \( (x_3, y_3) \) satisfies the elliptic curve equation.
+- **Conclusion:** \( (x_3, y_3) \) is the correct result of doubling \( P \).*
+
+\subsection*{Clear and Specific Instructions}
+
+*For a given point \( P = (x_1, y_1) \) on the elliptic curve \( y^2 \equiv x^3 + ax + b \pmod{p} \):
+
+1. Compute the slope \( \lambda \) of the tangent line at \( P \).
+2. Use \( \lambda \) to calculate the new \( x \)-coordinate \( x_3 \).
+3. Determine the new \( y \)-coordinate \( y_3 \) using \( \lambda \) and \( x_3 \).
+4. Perform all calculations modulo \( p \).
+5. Return the point \( (x_3, y_3) \) as the result of doubling \( P \).*
+
+\subsection*{Answer/Algorithm}
+```python
+def modinv(u, p):
+    """Return the modular inverse of u mod p (p prime)."""
+    return pow(u, p-2, p)  # Fermat's little theorem
+
+def point_double(P, a, p):
+    """
+    Double a point P = (x1, y1) on the elliptic curve y^2 = x^3 + a*x + b over F_p.
+    Assumes P is not the point at infinity and y1 != 0.
+    """
+    x1, y1 = P
+    if y1 % p == 0:
+        raise ValueError("Tangent is vertical; result is point at infinity.")
+    # 1. Compute inverse of 2*y1 mod p
+    inv_2y1 = modinv(2 * y1 % p, p)
+    # 2. Compute slope lambda
+    lam = (3 * x1*x1 + a) * inv_2y1 % p
+    # 3. Compute x3
+    x3 = (lam*lam - 2 * x1) % p
+    # 4. Compute y3
+    y3 = (lam * (x1 - x3) - y1) % p
+    return (x3, y3)
+
+# Example usage:
+# E: y^2 = x^3 + 2x + 3 over F_11, P = (3,5)
+# print(point_double((3,5), a=2, p=11))  # yields 2P

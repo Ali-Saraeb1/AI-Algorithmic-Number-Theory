@@ -1,0 +1,78 @@
+\section{Fermat Factorization Method}
+\subsection*{Question}
+Devise an algorithm that factorizes a given odd integer \(N\) using an alternative method to direct trial division. Your task is to discover a pair of factors by uncovering a hidden numerical structure within \(N\).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider these examples:
+- **Example 1:** For \(N=15\), notice that \(4^2 - 1^2 = 16 - 1 = 15\). Hence, the factors are \(4-1=3\) and \(4+1=5\).
+- **Example 2:** For \(N=21\), observe that \(5^2 - 2^2 = 25 - 4 = 21\), giving factors \(5-2=3\) and \(5+2=7\).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+Let \(x\) be an integer satisfying
+\[
+x \ge \sqrt{N}.
+\]
+Investigate the numerical gap defined by the difference between \(x^2\) and \(N\). Determine under what conditions this gap possesses a structural property that allows it to be exactly decomposed using a classical quadratic transformation, without revealing the explicit decomposition.
+
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+Proceed as follows:
+1. Initialize \(x_0 = \lceil \sqrt{N} \rceil\).
+2. For each candidate \(x \ge x_0\), compute the gap \(g(x)\) (the difference between \(x^2\) and \(N\)).
+3. Check if \(g(x)\) exhibits the necessary structural signature.
+4. If not, increment \(x\) and repeat until the signature is observed.
+
+\subsection*{Self-Consistency}
+Ensure that:
+- The candidate \(x\) is chosen such that \(x^2 \ge N\).
+- Once the condition is met, a classical quadratic method is used to derive factors whose product equals \(N\).
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+- Recall the identity 
+\[
+x^2 - y^2 = (x-y)(x+y).
+\]
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+Express the method symbolically:
+- Choose \(x\) such that \(x \ge \sqrt{N}\).
+- Let \(g(x)\) denote the gap computed from \(x^2\) and \(N\).
+- When \(g(x)\) manifests the necessary structural signature.
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+Outline your strategy:
+\begin{enumerate}
+    \item Set \(x_0^2 \ge N\).
+    \item For each \(x = x_0, x_0+1, x_0+2, \dots\), compute the gap \(g(x)\).
+    \item Identify the first \(x\) for which \(g(x)\) meets the necessary structural signature.
+\end{enumerate}
+
+\subsection*{ReAct Prompting}
+Proceed with these steps:
+- **Action:** Set \(x\) as the smallest integer such that \(x^2 \ge N\).
+- **Reasoning:** This choice guarantees that the computed gap \(g(x)\) is nonnegative.
+- **Action:** Evaluate \(g(x)\) and check for the required structural signature.
+
+\subsection*{Clear and Specific Instructions}
+For any odd integer \(N\):
+1. Define \(x \ge  \lceil \sqrt{N} \rceil\) and compute the gap \(g(x)\).
+2. Determine whether \(g(x)\) exhibits the necessary structural signature.
+3. If not, increment \(x\) and repeat.
+4. Deduce and return the factors of \(N\).
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def fermat_factorization(N):
+    from math import isqrt
+    x = isqrt(N)
+    if x * x < N:
+        x += 1
+    while True:
+        y2 = x * x - N
+        y = isqrt(y2)
+        if y * y == y2:
+            return (x - y, x + y)
+        x += 1
+\end{lstlisting}

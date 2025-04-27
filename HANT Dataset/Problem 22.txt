@@ -1,0 +1,93 @@
+\section{Zeckendorf’s Representation via a Greedy Algorithm}
+
+\subsection*{Question}
+Every positive integer admits a unique decomposition as a sum of non‑consecutive Fibonacci numbers (Zeckendorf’s theorem).  For instance,
+\[
+100 = 89 + 8 + 3.
+\]
+Design an algorithm that, given \(N>0\), returns 
+\[
+N = F_{i_1} + F_{i_2} + \cdots + F_{i_k},
+\]
+with \(F_{i_1} > F_{i_2} > \cdots > F_{i_k}\) and \(i_{j+1} < i_j - 1\).
+
+\subsection*{Hints}
+
+\subsection*{Few‑Shot Hinting}
+Examine small cases \(N=4,5,6,7\):
+\begin{enumerate}
+  \item List all Fibonacci numbers \(\le N\).
+  \item Observe which term “dominates” each \(N\).
+  \item Check how the remaining gap falls below the next smaller Fibonacci index.
+  \item Note that once a term is used, its immediate predecessor can never fit.
+\end{enumerate}
+
+\subsection*{Chain‑of‑Thought (CoT) Prompting}
+*"Think of \(N\) as a resource.  You have precomputed “units” (Fibonacci terms) sorted descending.  Consume the largest unit your resource can afford, then observe how the leftover resource automatically excludes the next smaller unit."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Phase 1: generate \(\{F_i\}\) up to \(N\).  
+Phase 2: identify the maximal \(F_i\) that does not exceed the current remainder.  
+Phase 3: update the remainder so that it strictly falls below the next candidate index.  
+Phase 4: repeat until no resource remains."*
+
+\subsection*{Self‑Consistency}
+*"Whichever implementation you choose, if you always (a) precompute the sequence, (b) pick the largest admissible term, and (c) reduce the target into the forbidden zone for the preceding index, you arrive at the same unique decomposition."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Reflect on:
+- How does generating all \(F_i\le N\) guarantee completeness of choices?
+- Why does choosing the maximal admissible \(F_i\) force the remainder below \(F_{i-1}\)?
+- How does that gap enforce the non‑consecutive constraint?"*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Let \(R_0=N\) and \(\{F_1,F_2,\dots\}\) with \(F_i\le N\).  For each step \(t\):
+\[
+i_t=\max\{\,i:F_i\le R_{t-1}\},\quad
+R_t=R_{t-1}-F_{i_t},
+\]
+noting \(R_t<F_{i_t-1}\) so \(i_{t+1}\le i_t-2\)."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\begin{enumerate}
+  \item **Generate**: compute all Fibonacci terms \(\le N\).  
+  \item **Initialize**: set remainder \(R\leftarrow N\).  
+  \item **Iterate**:
+    \begin{itemize}
+      \item Select the largest term \(F_{i}\le R\).
+      \item Reduce \(R\) by exactly that term.
+      \item Observe that \(R\) now lies below \(F_{i-1}\), forbidding consecutive use.
+    \end{itemize}
+  \item **Terminate** when \(R=0\).  
+  \item **Result**: collected terms in descending order give the Zeckendorf sum.
+\end{enumerate}
+
+\subsection*{ReAct Prompting}
+\begin{itemize}
+  \item **Action:** Precompute Fibonacci sequence up to \(N\).  
+  \item **Reasoning:** These are the only valid summands.  
+  \item **Action:** While remainder \(R>0\), pick the largest \(F_i\le R\) and reduce \(R\).  
+  \item **Reasoning:** The remainder then falls below the predecessor index, ensuring no two consecutive terms.  
+  \item **Conclusion:** The accumulated terms form the unique Zeckendorf decomposition.
+\end{itemize}
+
+\subsection*{Clear and Specific Instructions}
+*"Compute all Fibonacci numbers \(\le N\).  Then repeatedly withdraw the largest allowable term from your “budget” \(R\), updating \(R\) so that it inevitably lies below the next smaller Fibonacci.  Continue until \(R=0\).  The sequence of withdrawals, in descending order, is your Zeckendorf representation."*
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def zeckendorf_representation(N):
+    # Generate Fibonacci sequence up to N
+    fib = [1, 2]
+    while fib[-1] < N:
+        fib.append(fib[-1] + fib[-2])
+    # Greedy decomposition
+    rep, R = [], N
+    for f in reversed(fib):
+        if f <= R:
+            rep.append(f)
+            R -= f
+        if R == 0:
+            break
+    return "+".join(map(str, rep))
+\end{lstlisting}

@@ -1,0 +1,121 @@
+\section{Computing the Binary GCD (Stein’s) Algorithm Using Even–Odd Properties}
+
+\subsection*{Question}
+Compute the greatest common divisor \( \gcd(48, 30) \) using the Binary GCD (Stein’s) Algorithm, which relies only on even/odd checks, subtraction, and halving.This method, known as the Binary GCD (or Stein’s) Algorithm, relies on the properties of even and odd numbers to simplify the computation.
+
+\subsection*{Hints}
+
+\subsubsection*{Few‑Shot Hinting}
+Try these pairs by hand and look for a small, parity‑based move that reduces their size without changing their gcd:
+\[
+(4,2),\quad (9,3),\quad (5,12),\quad (15,6).
+\]
+What uniform transformation applies when both share parity?  When they differ?  When both are odd?
+
+\subsection*{Chain‑of‑Thought (CoT) Prompting}
+*"Begin with trivial endpoints (\(a=0\) or \(b=0\)).  Then at each step:
+1. Inspect whether \(a\) and \(b\) share the same parity or not.
+2. Choose a simple parity‑based update or a difference‑based move.
+3. Ensure each move strictly reduces \(\max(a,b)\) while preserving \(\gcd(a,b)\).
+Repeat until one value vanishes."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Outline:
+1. Handle zeros.
+2. Loop:
+   - Use parity tests to select one of two reduction rules.
+   - Apply the rule that shrinks the larger argument.
+3. End when one argument is zero; return the other."*
+
+\subsection*{Self‑Consistency}
+Every transformation—whether a parity alignment or an odd‑odd subtraction—must keep the gcd invariant and strictly decrease a size measure, guaranteeing termination.
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Reflect:
+- Which parity pattern triggers which reduction?
+- How does your chosen step guarantee the larger of \((a,b)\) decreases?
+- Why does this process always terminate with the correct gcd?"*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Let \(\pi(x)\) denote parity.  Then define a map
+\[
+(a,b)\;\mapsto\;(a',b')
+\]
+so that  
+\[
+\pi(a'),\pi(b')\in\{\text{even},\text{odd}\},
+\quad
+\max(a',b')<\max(a,b),
+\quad
+\gcd(a',b')=\gcd(a,b).
+\]
+Iterate until one coordinate is zero."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\begin{enumerate}
+  \item **Base:** if \(a=0\) or \(b=0\), return the other.
+  \item **Parity Phase:** if \(a,b\) share parity, apply a paired reduction.
+  \item **Alignment Phase:** otherwise, apply a parity‑alignment step.
+  \item **Reduction Phase:** when both are odd, apply a size‑reducing subtraction.
+  \item **Repeat** until one argument vanishes.
+\end{enumerate}
+
+\subsection*{ReAct Prompting}
+\begin{itemize}
+  \item **Action:** Check for zero arguments.  
+    **Reasoning:** Trivial gcd.
+  \item **Action:** Test parities of \(a\) and \(b\).  
+    **Reasoning:** Parity guides which reduction preserves gcd.
+  \item **Action:** Apply the selected parity‑driven or subtraction rule.  
+    **Reasoning:** Each rule reduces the larger argument.
+  \item **Conclusion:** When one argument is zero, the other is the gcd.
+\end{itemize}
+
+\subsection*{Clear and Specific Instructions}
+*"Iterate until one input is zero by alternating:
+- a parity‑alignment move when parities differ,
+- a paired reduction when they match,
+- and a subtraction‑based reduction when both are odd.
+Each move preserves the gcd and reduces the problem size.  The nonzero remainder is the gcd."*
+
+\subsection*{Answer/Algorithm}
+Step 1: Initial check  
+Neither 48 nor 30 is zero.
+
+Step 2: Remove all common factors of 2:  
+\[
+\text{Both 48 and 30 are even} \Rightarrow \text{divide both by 2}: \\
+48 \to 24, \quad 30 \to 15, \quad \text{factor} = 1
+\]
+
+Step 3: Make sure the smaller number is odd  
+\[
+24 \text{ is even } \Rightarrow 24 \to 12 \to 6 \to 3 \quad \text{(divide by 2 three times)}
+\]
+
+Now we have:  
+\[
+a = 3, \quad b = 15
+\]
+
+Step 4: Reduce the pair using subtraction and halving:
+\[
+15 \text{ is odd}, \\
+\text{Since } 15 > 3, \text{ subtract: } b = 15 - 3 = 12 \\
+12 \text{ is even } \Rightarrow 12 \to 6 \to 3
+\]
+
+Now \( b = 3 \), and we repeat:
+\[
+a = 3, b = 3 \Rightarrow b = b - a = 0
+\]
+
+Step 5: Reintroduce factor of 2:
+\[
+\gcd(48, 30) = 3 \times 2^1 = 6
+\]
+
+Final Answer:
+\[
+\gcd(48, 30) = 6
+\]

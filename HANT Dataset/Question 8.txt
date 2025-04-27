@@ -1,0 +1,65 @@
+\section{Binary Exponentiation}
+
+\subsection*{Question}
+Given the base number 2 and the exponent 10, compute 2^10 using the binary exponentiation algorithm.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Recall similar problems provided in earlier examples. For binary exponentiation, think about how previous hints encouraged breaking an exponent into binary digits.  
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"First, convert \( n \) into its binary form. Then, for each bit (starting from the least significant), determine what the next step is"*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Let’s think step-by-step. How does each bit of \( n \)’s binary representation determine when to multiply? Compute \( x^{2^i} \) via squaring, and combine these results."*
+
+\subsection*{Self-Consistency}
+*"Consider writing n in binary form. Verify that regardless of the path taken, the number of multiplications remains minimal. Which approach consistently minimizes operations?"*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Justify when is squaring \( x \) a good step. Think of n as a binary number. Confirm that each operation logically reduces the problem size by half."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Let \( n = \sum_{i=0}^{k} b_i \cdot 2^i \). Then, for each \( i \), use this symbolic representation to clarify next operation."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Begin by setting your initial state (\( y = 1 \)), then use a loop to process each bit of \( n \). Inside the loop, include a conditional check for whether the current bit. This structured approach mirrors how the algorithm iteratively reduces \( n \)."*
+
+\subsection*{ReAct Prompting}
+*"First, observe the binary digits of \( n \). *(Action: List out the binary digits.)* Then, decide: if a digit is 1, do something to \( x \). *(Action: Update the product.)* Then move to the next digit. *(Action: Continue until done.)*"*
+
+\subsection*{Clear and Specific Instructions}
+*"Given \( x \) and \( n \), first convert \( n \) into its binary form. Then, for each bit starting from the least significant: if the bit is 1, update your accumulator suitably, and move to the next bit."*
+
+\subsection*{Answer/Algorithm}
+Step-by-Step Explanation:
+--------------------------
+1. Initialization:
+   - Set x = 2 (the base), n = 10 (the exponent, which in binary is 1010), and y = 1 (the multiplicative identity).
+
+2. Process the exponent (n = 10) in binary (1010):
+   - Step 1:
+     - n = 10 (binary: 1010); the least significant bit (rightmost) is 0.
+     - Since the bit is 0, do not multiply y by x.
+     - Square x: 2^2 = 4.
+     - Shift n right: n becomes 10 // 2 = 5.
+   - Step 2:
+     - n = 5 (binary: 101); the least significant bit is 1.
+     - Since the bit is 1, multiply y by x: y becomes 1 * 4 = 4.
+     - Square x: 4^2 = 16.
+     - Shift n right: n becomes 5 // 2 = 2.
+   - Step 3:
+     - n = 2 (binary: 10); the least significant bit is 0.
+     - Since the bit is 0, do not multiply y.
+     - Square x: 16^2 = 256.
+     - Shift n right: n becomes 2 // 2 = 1.
+   - Step 4:
+     - n = 1 (binary: 1); the least significant bit is 1.
+     - Since the bit is 1, multiply y by x: y becomes 4 * 256 = 1024.
+     - Square x: 256^2 = 65536 (this value is not used further as n will now be 0).
+     - Shift n right: n becomes 1 // 2 = 0.
+
+3. Final Result:
+   When n becomes 0, the algorithm stops.
+   The final result is y = 1024, which confirms that 2^10 = 1024.

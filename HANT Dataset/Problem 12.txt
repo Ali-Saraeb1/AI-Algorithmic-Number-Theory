@@ -1,0 +1,73 @@
+\section{Euclidean Algorithm}
+\subsection*{Question}
+Given two positive integers \(a\) and \(b\), design an algorithm to compute their greatest common divisor (GCD) in a non-trivial way (avoid factoring \(a\) and \(b\)).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+- **Example 1: \(a = 48\), \(b = 18\)**
+  - **Hint:** Start with the pair \((48, 18)\). Imagine performing an operation on 48 that gives you a leftover after “taking out” as many 18s as possible. How might this leftover help create a simpler pair to work with?
+
+- **Example 2: \(a = 60\), \(b = 48\)**
+  - **Hint:** With 60 and 48, consider an operation that divides 60 by 48 and focuses on the part that doesn’t fit neatly. How can this leftover be used to reduce the problem further?
+
+- **Example 3: \(a = 105\), \(b = 30\)**
+  - **Hint:** Think about 105 and 30. Ponder on how breaking 105 into a whole number part and a leftover might yield a new pair of numbers. What does this suggest about the process of gradually isolating the common factors?
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+Consider the following thought process without exposing the exact mechanism:
+1. Start with your initial pair \((a, b)\).
+2. Identify an operation that breaks one number into a quotient and a leftover part.
+3. Use the leftover to form a new, simpler pair.
+4. Contemplate a natural condition under which this process stops, indicating that the common factors have been fully isolated.
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+Reflect on these steps:
+- Begin with two numbers.
+- Apply an operation that returns a key “leftover” value.
+- Update the pair using this leftover.
+- Recognize that when one of the numbers no longer contributes new information, you have found the GCD.
+
+\subsection*{Self-Consistency}
+Ask yourself:
+- How does the operation that produces a leftover ensure that you do not lose track of the shared factors?
+- What invariant remains unchanged throughout the process, even as the numbers become smaller?
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+Consider the logical underpinning:
+- Think about why the leftover from the division carries crucial information about the common factors.
+- Reflect on how maintaining this information through each transformation supports the eventual discovery of the GCD.
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+Visualize the idea abstractly:
+- Let the leftover be represented symbolically as a key element in the transformation from \((a, b)\) to a new pair.
+- How does this symbolic representation guide you toward an iterative method without revealing the precise arithmetic details?
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+Outline your strategy broadly:
+1. Represent the initial pair \((a, b)\).
+2. Define an operation that extracts a “leftover” from one of the numbers when compared to the other.
+3. Use this leftover to update the pair.
+4. Identify the point at which the process should naturally terminate, signaling that the remaining number is the GCD.
+
+\subsection*{ReAct Prompting}
+Alternate between taking action and reflecting:
+- **Action:** Begin with the pair \((a, b)\).
+- **Reflection:** Consider how dividing one number into a quotient and a leftover might simplify the pair.
+- **Action:** Update the pair using the leftover.
+- **Reflection:** Recognize when the updated pair indicates that the shared factors have been completely isolated.
+
+\subsection*{Clear and Specific Instructions}
+Develop your algorithm with these guiding ideas:
+1. Start with the pair \((a, b)\).
+2. Employ an operation that produces a quotient and a leftover from one number.
+3. Use the leftover to iteratively update the pair while ensuring the common factors are preserved.
+4. Continue until the process reaches a natural conclusion where one number is rendered trivial—revealing the GCD.
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+\end{lstlisting}

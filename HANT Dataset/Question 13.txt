@@ -1,0 +1,71 @@
+\section{Extended Euclidean Algorithm}
+\subsection*{Question}
+Find integers x and y such that 8x + 6y equals the greatest common divisor (gcd) of 8 and 6 (which is 2). Show all steps of your work.
+
+\subsection*{Hints}
+\subsection*{Few-Shot Hinting}
+Consider these examples:
+- **Example 1:** For \(a=30\) and \(b=12\), \(\gcd(30, 12)=6\). Apply the Euclidean algorithm recursively and back-substitute to find \(x\) and \(y\) such that \(30x + 12y = 6\).
+- **Example 2:** For \(a=101\) and \(b=23\), \(\gcd(101, 23)=1\). The same recursive process yields coefficients \(x\) and \(y\) satisfying \(101x + 23y = 1\).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Begin by applying the Euclidean algorithm to compute \(\gcd(a, b)\). At each recursive step, record the quotient and remainder. Then, use back-substitution."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Step-by-step, proceed as follows:
+1. Recursively compute \(\gcd(a, b)\) using the Euclidean algorithm until reaching the base case \(b = 0\).
+2. Record the quotient at each division step.
+3. As the recursion unwinds, substitute back the values.
+
+\subsection*{Self-Consistency}
+*"Ensure that:
+- The base case (\(b = 0\)) correctly returns \(x=1\) and \(y=0\).
+- Each recursive call properly computes the coefficients for back-substitution.
+- The final output satisfies the equation \(ax + by = \gcd(a, b)\) for all valid inputs."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Observe the logical progression:
+- The recursive division \(a = bq + r\) implies \(\gcd(a, b) = \gcd(b, r)\).
+- When \(b = 0\), the solution is immediate.
+- Reverse each recursive step."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Express the process symbolically:
+- Base case: if \(b=0\), then \(\gcd(a,0)=a\) with \(x=1, y=0\).
+- Recursive step: Write \(a = bq + r\). What if we know \(\gcd(b, r) = bx' + ry'\).
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Outline your strategy:
+1. **Recursive Computation:** Compute \(\gcd(a, b)\) using the Euclidean algorithm.
+2. **Back-Substitution:** Record the quotient at each step and back-substitute.
+3. **Verification:** Ensure that the computed coefficients \(x\) and \(y\) satisfy \(ax + by = \gcd(a, b)\).
+4. **Output:** Return the triplet \((\gcd(a, b), x, y)\)."*
+
+\subsection*{ReAct Prompting}
+*"Proceed with these actions and reasoning:
+- **Action:** Recursively compute \(\gcd(a, b)\) until the base case \(b=0\) is reached.
+- **Reasoning:** At each step, record the quotient to facilitate back-substitution.
+- **Action:** Back-substitute the recorded values to obtain \(x\) and \(y\).
+- **Reasoning:** Verify that the computed coefficients satisfy \(ax + by = \gcd(a, b)\).
+- **Conclusion:** Output the computed values \((\gcd(a, b), x, y)\)."*
+
+\subsection*{Clear and Specific Instructions}
+*"For given integers \(a\) and \(b\):
+1. Use the Euclidean algorithm recursively to compute \(\gcd(a, b)\).
+2. Record the necessary intermediate values (quotients and remainders) for back-substitution.
+3. Back-substitute to determine integers \(x\) and \(y\) such that \(ax + by = \gcd(a, b)\).
+4. Return the triple \((\gcd(a, b), x, y)\)."*
+
+\subsection*{Answer/Algorithm}
+Step 1: Compute gcd(8, 6)
+- Divide 8 by 6: 8 = 6×1 + 2.
+- Divide 6 by 2: 6 = 2×3 + 0.
+Thus, gcd(8, 6) = 2.
+
+Step 2: Back-Substitution to Find x and y
+- From the first division: 2 = 8 - 6×1.
+This equation directly shows that:
+    x = 1 and y = -1, because 8×1 + 6×(-1) = 8 - 6 = 2.
+
+Final Answer:
+The integers are x = 1 and y = -1, which satisfy 8(1) + 6(-1) = 2.

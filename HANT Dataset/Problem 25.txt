@@ -1,0 +1,130 @@
+\section{Computing the Discrete Logarithm Modulo a Prime}
+\subsection*{Question}
+Given a prime number \( p \), a primitive root \( g \) modulo \( p \) (i.e. an element whose successive powers generate all nonzero residues modulo \( p \)), and an integer \( h \) with \( 1 \le h < p \), determine the smallest nonnegative integer \( x \) satisfying:
+\[
+g^x \equiv h \pmod{p}.
+\]
+In this problem, \( x \) is known as the \emph{discrete logarithm} of \( h \) to the base \( g \) modulo \( p \).
+
+\vspace{1em}
+\textbf{Technical Definitions:}
+- **Primitive Root \(g\) Modulo \(p\):** An element \( g \) is a primitive root modulo \( p \) if the set \( \{g^0, g^1, \dots, g^{p-2}\} \) modulo \( p \) equals the set of all nonzero residues \(\{1, 2, \dots, p-1\}\).
+- **Discrete Logarithm:** For given \( g \) and \( h \) modulo \( p \), it is the exponent \( x \) such that \( g^x \equiv h \pmod{p} \).
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider these scenarios:
+- **Example 1:** With \( p = 23 \), \( g = 5 \), and \( h = 8 \), by examining successive powers, one finds an exponent \( x \) satisfying the congruence.
+- **Example 2:** For a different small prime, observe how expressing the unknown exponent in two parts (a “large jump” part and a “small offset” part) can simplify the search by balancing precomputation with iteration.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+\emph{"Notice that a direct brute-force search for \( x \) is computationally expensive. Think about expressing \( x \) as a sum of two numbers, \( x = i \cdot m + j \), where \( m \) is chosen to be roughly the square root of \( p-1 \). This insight allows you to precompute values for small exponents and then use a stepping procedure to cover larger exponents efficiently."}
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+\emph{"Step by step:
+1. Identify a parameter \( m \) that is approximately \(\lceil \sqrt{p-1} \rceil\).
+2. Precompute a collection of values corresponding to \( g^j \) for a limited range of small exponents \( j \).
+3. Use a clever modular arithmetic trick to jump in larger increments (think of these as “giant steps”) by manipulating \( h \) appropriately.
+4. Search for an overlap between the precomputed values and the iterated values from the large steps.
+5. Combine the indices of the match to recover \( x \)."}
+
+\subsection*{Self-Consistency}
+\emph{"Before finalizing your answer:
+- Confirm that \( p \) is prime and \( g \) is indeed a primitive root modulo \( p \).
+- Verify that your choice of \( m \) effectively splits the problem into manageable parts.
+- Always check your candidate \( x \) to ensure \( g^x \equiv h \pmod{p} \).
+- Use small examples to validate your reasoning."}
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+\emph{"Reflect on the problem structure:
+- Breaking \( x \) into two components \( i \) and \( j \) reduces the search space.
+- Precomputation of a small set of values allows you to leverage modular arithmetic properties.
+- The method relies on finding a match between two independently computed sets of values, guiding you to the correct exponent without exhaustive search."}
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+\emph{"Represent the strategy symbolically:
+- Define \( m = \lceil \sqrt{p-1} \rceil \) and express \( x \) as \( x = i \cdot m + j \).
+- Precompute \( B[j] \equiv g^j \pmod{p} \) for \( 0 \le j < m \).
+- Define a transformation using the modular inverse of \( g^m \) to compute values \( G[i] \) for \( i \ge 0 \).
+- Identify indices \( i \) and \( j \) for which \( G[i] \equiv B[j] \); then \( x = i \cdot m + j \)."}
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\emph{"Your outline should include:
+1. **Initialization:** Choose \( m \approx \lceil \sqrt{p-1} \rceil \).
+2. **Precomputation:** Create a lookup table for small exponent values \( g^j \pmod{p} \).
+3. **Iterative Steps:** Use modular arithmetic to progress in large steps by modifying \( h \) appropriately.
+4. **Matching Process:** Determine where the iterated value matches one from the lookup table.
+5. **Result Synthesis:** Combine the corresponding indices to form the final exponent \( x \).
+6. **Verification:** Ensure that the computed \( x \) satisfies the original congruence."}
+
+\subsection*{ReAct Prompting}
+\emph{"Proceed with the following actions:
+- **Action:** Determine a suitable parameter \( m \) based on \( p \).
+- **Reasoning:** Recognize that writing \( x \) as \( i \cdot m + j \) allows for a divide-and-conquer approach.
+- **Action:** Precompute values for small exponents and store them.
+- **Action:** Utilize a systematic method to advance in larger steps (using modular inverses or equivalent techniques).
+- **Reasoning:** A match between the precomputed set and the iterated values reveals the necessary indices to reconstruct \( x \).
+- **Action:** Verify the candidate solution by substitution."}
+
+\subsection*{Clear and Specific Instructions}
+\emph{"For the prime \( p \), primitive root \( g \), and integer \( h \):
+1. Choose \( m \approx \lceil \sqrt{p-1} \rceil \).
+2. Precompute the values \( g^j \mod p \) for \( j = 0, 1, \dots, m-1 \).
+3. Compute a stepping factor related to \( g^m \) using modular arithmetic properties.
+4. Iterate through a sequence of modified values of \( h \) using the stepping factor.
+5. When a precomputed value is encountered, express \( x \) as a combination of the two indices.
+6. Finally, confirm that your \( x \) satisfies \( g^x \equiv h \pmod{p} \)."}
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+import math
+
+def baby_step_giant_step(g, h, p):
+    """
+    Computes the discrete logarithm: find the smallest nonnegative integer x such that g^x ≡ h (mod p),
+    where p is prime and g is a primitive root modulo p.
+    
+    Parameters:
+      g: An integer, a primitive root modulo p.
+      h: An integer, the target value (1 <= h < p).
+      p: A prime number.
+      
+    Returns:
+      x: The discrete logarithm of h to the base g modulo p, or None if no solution is found.
+    """
+    # Step 1: Choose m ≈ ceil(sqrt(p-1))
+    m = math.ceil(math.sqrt(p - 1))
+    
+    # Step 2: Precompute and store values for small exponents (the "baby steps")
+    baby_steps = {}
+    for j in range(m):
+        value = pow(g, j, p)
+        baby_steps[value] = j
+    
+    # Step 3: Compute the stepping factor using modular arithmetic (hint: modular inverse may be useful)
+    inv_g = pow(g, p - 2, p)  # Using Fermat's Little Theorem for inversion
+    factor = pow(inv_g, m, p)
+    
+    # Step 4: Iteratively compute modified values of h (the "giant steps")
+    current = h
+    for i in range(m):
+        if current in baby_steps:
+            # Step 5: Combine the indices to recover x = i*m + j
+            return i * m + baby_steps[current]
+        current = (current * factor) % p
+        
+    return None  # No solution found
+
+# Example usage:
+if __name__ == "__main__":
+    # For instance, with p = 23, g = 5, and h = 8, the expected result is x = 6.
+    p = 23
+    g = 5
+    h = 8
+    x = baby_step_giant_step(g, h, p)
+    if x is not None:
+        print(f"Discrete logarithm x such that {g}^x ≡ {h} (mod {p}) is: x = {x}")
+    else:
+        print("No solution exists.")
+\end{lstlisting}

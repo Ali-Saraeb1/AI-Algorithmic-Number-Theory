@@ -1,0 +1,73 @@
+\section{Greedy Egyptian Fractions Algorithm}
+\subsection*{Question}
+Express the rational number 4/13 as a sum of distinct unit fractions (i.e., in Egyptian fraction form) using a greedy strategy.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Reflect on how some representations of rational numbers as sums of unit fractions can be constructed by repeatedly choosing a suitable candidate fraction. Consider which properties of a unit fraction might make it a natural choice at each stage.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+"Think about the structure of a positive rational number and the characteristics of unit fractions. Ask yourself: is there a way to choose one unit fraction that, when removed from the number, leaves a simpler rational number?"
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+"Step-by-step:
+1. Analyze the given rational number to identify a candidate unit fraction that is 'just right' for the current value.
+2. Update the remaining fraction after removing the chosen candidate.
+3. Repeat the process until the remainder is reduced to zero."
+
+\subsection*{Self-Consistency}
+"Ensure your method:
+- Chooses a candidate unit fraction based on a property intrinsic to the current fraction.
+- Always results in a remainder that is still positive and simplifies the problem.
+- Terminates in a finite number of steps."
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+"Ask: what condition must a unit fraction meet in order to be a valid candidate at each step? Consider whether a rounding strategy or a minimal threshold could naturally suggest a candidate without testing every possibility."
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+"Express the idea symbolically:
+- Identify a function of the current numerator and denominator that leads to a candidate denominator.
+- Use this candidate to define a new, smaller fraction.
+- Repeat until the entire fraction is decomposed."
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+"Outline your strategy:
+1. **Candidate Selection:** Devise a way to choose a unit fraction that is compatible with the current fraction.
+2. **Fraction Update:** Determine how to update the fraction after choosing the candidate.
+3. **Iteration:** Repeat these steps until the process is complete, ensuring each step moves you closer to a full representation."
+
+\subsection*{ReAct Prompting}
+"Proceed with these steps:
+- **Action:** Determine a condition or operation that singles out a candidate unit fraction.
+- **Reasoning:** Check that this candidate can be subtracted without making the remaining fraction negative.
+- **Action:** Update the fraction and simplify if needed.
+- **Outcome:** Continue until the full Egyptian fraction representation is achieved."
+
+\subsection*{Clear and Specific Instructions}
+"For a given positive rational number:
+1. Develop a method to identify a unit fraction candidate based on the current fraction.
+2. Update the fraction after subtracting this candidate.
+3. Continue this process until the fraction is completely expressed as a sum of unit fractions.
+4. Return the list of denominators corresponding to these unit fractions."
+
+\subsection*{Answer/Algorithm}
+We apply the greedy Egyptian fraction algorithm to the rational number 4/13.
+
+Step 1:
+Find the smallest integer x such that 1/x ≤ 4/13. We compute ceil(13/4) = 4. So, the first unit fraction is 1/4.
+
+Subtracting 1/4 from 4/13:
+4/13 - 1/4 = (4*4 - 13*1)/(13*4) = (16 - 13)/52 = 3/52
+
+Step 2:
+Now we apply the algorithm to 3/52.
+ceil(52/3) = 18 ⇒ next unit fraction is 1/18
+
+3/52 - 1/18 = (3*18 - 52*1)/(52*18) = (54 - 52)/936 = 2/936 = 1/468
+
+Step 3:
+Apply the algorithm to 1/468. This is already a unit fraction.
+
+Final Egyptian fraction representation:
+4/13 = 1/4 + 1/18 + 1/468

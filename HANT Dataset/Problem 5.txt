@@ -1,0 +1,129 @@
+\section{5. Lifting Cube Roots via Hensel’s Lemma}
+
+\subsection*{Question}
+Suppose you have a prime $p$ and an initial solution $a$ satisfying:
+\[
+f(a) \equiv 0 \pmod{p}.
+\]
+Assuming that the derivative $f'(a)$ is nonzero modulo $p$, design an algorithm to lift this solution to modulo $p^2$, i.e., find an integer $b$ such that:
+\[
+b \equiv a \pmod{p}.
+\]
+and
+\[
+f(b) \equiv 0 \pmod{p^2}.
+\]
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+Think of Hensel’s Lemma as a technique to “lift” a solution modulo a prime \( p \) to a more refined solution modulo \( p^2 \). Start with an initial solution \( a \) such that
+\[
+f(a) \equiv 0 \pmod{p},
+\]
+and then refine it to find \( b \) satisfying:
+\[
+b \equiv a \pmod{p} \quad \text{and} \quad f(b) \equiv 0 \pmod{p^2}.
+\]
+Notice that \( f(x) \) can be expanded as:
+\[
+f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+\]
+We can choose \( b \) so that the linear term \( f'(a)(b-a) \) cancels \(f(a) \) modulo \(p^2\). How about the terms \( (b-a)^k \) modulo \(p^2\) for \(k \ge 2\) ?
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+1. **Start:** Verify that \( a \) is a solution modulo \( p \) (i.e., \( f(a) \equiv 0 \pmod{p} \)).
+2. **Linearize:** Write the Taylor expansion:
+   \[
+   f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+   \]
+3. **Determine Correction:** Substitute \( x = b = a + h \) to obtain:
+   \[
+   f(b) \equiv f(a) + f'(a)h \pmod{p^2}.
+   \]
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+- **Extract:** Begin with \( a \) satisfying \( f(a) \equiv 0 \pmod{p} \).
+- **Approximate:** Use the linear term:
+  \[
+  f(a+h) \approx f(a) + f'(a)h.
+  \]
+- **Lift:** Ensuring \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Self-Consistency}
+
+Confirm your approach by:
+- Checking that \( f(a) \equiv 0 \pmod{p} \).
+- Verifying that \( f'(a) \) is invertible modulo \( p^2 \) (which it is if \( p \nmid f'(a) \)).
+- Ensuring that \( b \equiv a \pmod{p} \) satisfies \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+Reflect on:
+- How the expansion
+  \[
+  f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots
+  \]
+  approximates \( f(x) \) near \( a \).
+- How to choose \( h = b-a\) to cancel the linear error term.
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+Express the method symbolically:
+- Expand:
+  \[
+  f(x) = f(a) + f'(a)(x-a) + \cdots.
+  \]
+- And ponder what b should be
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+Break the algorithm into clear steps:
+- **Initialization:** Start with \( a \) such that \( f(a) \equiv 0 \pmod{p} \).
+- **Find Correction:** Solve the congruence:
+  \[
+  f(a) + f'(a)h \equiv 0 \pmod{p^2},
+  \]
+  to find \( h \).
+- **Final Step:** Find \(b\) so that \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{ReAct Prompting}
+
+Alternate between actions and reasoning:
+1. **Action:** Begin with \( a \) satisfying \( f(a) \equiv 0 \pmod{p} \).
+2. **Reasoning:** Use the Taylor series expansion to understand how \( f(x) \) behaves near \( a \). What does this tell you about b?
+
+\subsection*{Clear and Specific Instructions}
+
+Notice that \( f(x) \) can be written as:
+\[
+f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2 + \cdots.
+\]
+Given that:
+- \( f(a) \equiv 0 \pmod{p} \),
+- \( f'(a) \not\equiv 0 \pmod{p} \),
+
+we can choose the desired \( b \).
+This guarantees \( b \equiv a \pmod{p} \) and \( f(b) \equiv 0 \pmod{p^2} \).
+
+\subsection*{Answer/Algorithm}
+
+\begin{lstlisting}[language=Python]
+def lift_cube_root(a, x, p):
+    """
+    Lifts a root solution $a$ of $f(x) \equiv 0 \pmod{p}$ to a solution modulo p^2.
+    
+    Parameters:
+        q (int): An integer such that f(a) ≡ 0 (mod p).
+        p (int): A prime number with f'(a) invertible modulo p.
+    
+    Returns:
+        int: A lifted solution b such that f(b) ≡ a (mod p^2).
+    """
+    inv = pow(f'(a), -1, p **2)
+    b = (a - f(a) * inv) % (p**2)
+    return b
+\end{lstlisting}

@@ -1,0 +1,153 @@
+\section{Elliptic Curve Point Multiplication via Double-and-Add Algorithm}
+
+\subsection*{Question}
+Let \( E: y^2 = x^3 + 2x + 2 \) over \( \mathbb{F}_{17} \), and let \( P = (5, 1) \) be a point on \( E \).  
+Compute \( 5P \) using the double-and-add algorithm. Your solution should leverage the binary representation of \(5\) to determine the sequence of operations on \(P\) without exposing all internal computational details.
+
+\textbf{Technical Definitions:}
+- **Elliptic Curve \(E\):** The set of points \((x,y) \in \mathbb{F}_p^2\) satisfying \(y^2 = x^3 + ax + b\), along with an identity element \(\mathcal{O}\) (the point at infinity).
+- **Point Doubling:** An operation that computes \(2P\) for a given point \(P\) on \(E\) using a formula derived from the curve's tangent.
+- **Point Addition:** The operation that computes \(P + Q\) for two distinct points \(P\) and \(Q\) on \(E\) via the chord-and-tangent method.
+- **Scalar Multiplication:** The computation of \(nP\) by repeated application of point doubling and point addition.
+- **Double-and-Add Algorithm:** A method that expresses \(n\) in a form which guides an iterative process that combines operations in a systematic way, thus reducing the number of arithmetic steps.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Reflect on these observations:
+- When \(n\) is expressed in a compact numeral system (e.g., binary), it becomes apparent how the computation of \(nP\) may be decomposed into a series of smaller, repeatable operations.
+- An effective strategy minimizes redundant computations by determining at each step whether to combine an additional contribution from \(P\).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+\textit{Consider representing the scalar \(n\) in a structured numeral system to expose its intrinsic composition. Initialize an accumulator with the identity element of the elliptic curve. Then, iteratively update the accumulator using a fixed rule, conditionally incorporating the point \(P\) based on the structure of \(n\). Conclude by verifying that the resultant point lies on the curve \(E\).}
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+\textit{Proceed step by step:
+1. Express \(n\) in a numeral system that makes its structure explicit.
+2. Initialize a result variable with the identity element of \(E\).
+3. For each component of the numeral representation, update the result using a predefined operation.
+4. Under appropriate conditions (determined by the numeral structure), modify the result by incorporating \(P\).
+5. Validate that the final result satisfies the elliptic curve equation.}
+
+\subsection*{Self-Consistency}
+\textit{Ensure your method:
+- Utilizes a numeral representation of \(n\) that guides the iterative process efficiently.
+- Applies a consistent operation at each step, with a conditional modification that preserves correctness.
+- Verifies at every step that the intermediate result remains a valid point on \(E\).}
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+\textit{Reflect on the reasoning:
+- A numeral representation of \(n\) helps structure the computation into repeatable steps.
+- At each step, a fixed operation is applied, with a conditional modification guided by the numeral system.
+- The final result must be checked against the curve equation to ensure correctness.}
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+\textit{Express the approach symbolically:
+Let 
+\[
+n = (d_k d_{k-1} \dots d_0),
+\]
+where the digits \(d_i\) guide the process. Initialize \(R = \mathcal{O}\). For each digit \(d_i\), update \(R\) using a uniform rule and, when a specific condition is met by \(d_i\), further update \(R\) by combining it with \(P\). The final \(R\) represents \(nP\).}
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\textit{Outline your strategy:
+1. \textbf{Representation:} Convert \(n\) into a structured numeral form.
+2. \textbf{Initialization:} Set the accumulator \(R\) to the identity element \(\mathcal{O}\).
+3. \textbf{Iteration:} For each digit in the representation:
+   - Apply a standard update to \(R\).
+   - Conditionally modify \(R\) by incorporating \(P\) based on the digit.
+4. \textbf{Verification:} Confirm that the final point satisfies the curve equation \(y^2 = x^3 + ax + b\).
+5. \textbf{Output:} Return \(R\) as the computed \(nP\).}
+
+\subsection*{ReAct Prompting}
+\textit{Follow these steps:
+- \textbf{Action:} Represent \(n\) in a numeral system that clarifies its structure.
+- \textbf{Reasoning:} The structure of \(n\) indicates when to include an extra contribution from \(P\).
+- \textbf{Action:} Iteratively update an accumulator using a fixed operation.
+- \textbf{Action:} Conditionally modify the accumulator by incorporating \(P\) as dictated by the numeral system.
+- \textbf{Conclusion:} Verify that the final point lies on \(E\) before returning it.}
+
+\subsection*{Clear and Specific Instructions}
+\textit{For the elliptic curve \(E\) and the point \(P\):
+1. Express the scalar \(n\) in a structured numeral representation.
+2. Initialize an accumulator with the identity element \(\mathcal{O}\) of \(E\).
+3. For each digit in the numeral representation:
+   - Apply a consistent update to the accumulator.
+   - Conditionally combine the accumulator with \(P\) based on the digit.
+4. Verify that the final computed point satisfies \(y^2 = x^3 + ax + b\).
+5. Return the final point as \(nP\).}
+
+\subsection*{Answer/Algorithm}
+Step 1: Binary representation of \( n = 5 \):
+\[
+5 = (101)_2
+\]
+
+Step 2: Initialize result \( R = \mathcal{O} \) (identity)
+
+Step 3: Read bits of \( n \) from left to right:
+- Bit 1:  
+  - \( R = P = (5, 1) \)
+
+- Bit 0:  
+  - Double \( R \): compute \( 2P \)
+
+- Bit 1:  
+  - Double \( 2P \) to get \( 4P \)  
+  - Add \( P \) to \( 4P \) to get \( 5P \)
+
+Use intermediate results:
+We already know:
+\[
+2P = (6, 3)
+\]
+
+Now compute:
+\[
+4P = 2(2P) = 2(6, 3)
+\]
+
+Point Doubling on \( (6, 3) \):
+\[
+\lambda = \frac{3x^2 + a}{2y} = \frac{3 \cdot 36 + 2}{2 \cdot 3} = \frac{110}{6} \mod 17
+\]
+
+\( 110 \equiv 8 \mod 17 \), \( 6^{-1} \equiv 3 \mod 17 \)  
+So:
+\[
+\lambda = 8 \cdot 3 = 24 \equiv 7 \mod 17
+\]
+
+\[
+x_3 = 7^2 - 2 \cdot 6 = 49 - 12 = 37 \equiv 3 \mod 17
+\]
+\[
+y_3 = 7(6 - 3) - 3 = 21 - 3 = 18 \equiv 1 \mod 17
+\]
+
+So:
+\[
+4P = (3, 1)
+\]
+
+Now compute:
+\[
+5P = 4P + P = (3, 1) + (5, 1)
+\]
+
+Point Addition:
+\[
+\lambda = \frac{1 - 1}{3 - 5} = \frac{0}{-2} = 0 \mod 17
+\]
+
+\[
+x_3 = 0^2 - 3 - 5 = -8 \equiv 9 \mod 17
+\]
+\[
+y_3 = 0(3 - 9) - 1 = -1 \equiv 16 \mod 17
+\]
+
+Final result:
+\[
+5P = (9, 16)
+\]

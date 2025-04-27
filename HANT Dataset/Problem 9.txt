@@ -1,0 +1,70 @@
+\section{Primality Testing via Trial Division}
+\subsection*{Question}
+Given a positive integer \( n > 1 \), determine whether \( n \) is prime. The output should be “yes” if \( n \) is prime and “no” if it is composite.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider these cases to guide your thinking without revealing the full solution:
+- **Case 1:** For a very small number (e.g. the smallest prime), note that its uniqueness can be quickly verified.
+- **Case 2:** For a composite number such as one with an obvious small factor, think about how testing only a limited range of numbers can reveal its non-prime nature.
+- **Case 3:** For a number that is prime, observe that careful inspection within a bounded set of potential factors shows no divisor exists.
+
+The key idea is to limit your search for divisors to a range that is sufficient to capture any possible factors without checking every number.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Recognize that any nontrivial divisor of \( n \) must lie below a certain threshold. Reflect on why the structure of factors implies that a complete check need only cover numbers up to that limit, ensuring you can conclude primality without exhaustive testing."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Step by step, consider:
+1. Identify the logical bound beyond which no new factor information is necessary.
+2. Use this boundary to narrow down the set of potential divisors.
+3. Conclude about the primality of \( n \) based on whether a divisor is found within this restricted set."*
+
+\subsection*{Self-Consistency}
+*"Make sure your reasoning holds by:
+- Confirming that the chosen range of divisors is sufficient to conclude whether \( n \) is prime.
+- Checking your method on a variety of numbers (both prime and composite) to ensure consistent conclusions."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Ask yourself: If \( n \) had a factor beyond a certain point, what would that imply about the corresponding factor? Use this logical insight to limit your divisor search and thereby efficiently decide the primality of \( n \)."*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Express the insight symbolically:
+- Think of \( n \) as prime if there is no divisor \( d \) within a specific range (determined by the properties of \( n \)) for which \( n \mod d = 0 \).
+- The challenge is to identify this critical range without needing to test every candidate."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Outline your approach:
+1. Determine a theoretical limit based on the properties of factors.
+2. Restrict your testing to potential divisors within this boundary.
+3. Decide on the primality of \( n \) by checking whether any candidate within the range divides \( n \) evenly."*
+
+\subsection*{ReAct Prompting}
+*"Proceed with these actions and reasoning:
+- **Action:** Establish the range of numbers that must be examined.
+- **Reasoning:** The structure of factors means that if a divisor exists, it must be found within this limited set.
+- **Action:** Check for divisibility only within this range.
+- **Conclusion:** Conclude about the primality of \( n \) based on the outcome of these checks."*
+
+\subsection*{Clear and Specific Instructions}
+*"For a given integer \( n > 1 \):
+1. Determine a sufficient bound within which any nontrivial divisor of \( n \) must lie.
+2. Test \( n \) for divisibility by numbers in this restricted range.
+3. Return “yes” if no divisor is found, and “no” if a divisor is discovered."*
+
+\subsection*{Answer/Algorithm}
+\begin{verbatim}
+function isPrime(n):
+    # Special handling for the smallest prime
+    if n equals the unique smallest prime:
+        return "yes"
+    # Eliminate the obvious non-prime cases based on divisibility properties.
+    if n shows obvious composite traits:
+        return "no"
+    # Test divisibility only within the critical range determined by n.
+    for each candidate d in the critical range:
+        if n is divisible by d:
+            return "no"
+    return "yes"
+\end{verbatim}

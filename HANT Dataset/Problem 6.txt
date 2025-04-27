@@ -1,0 +1,111 @@
+\section{6. Primitive Root Modulo a Prime}
+\subsection*{Question}
+For an odd prime $p$, design an algorithm to find a primitive root modulo $p$. A primitive root $a$ generates all nonzero residues modulo $p$, meaning for every integer coprime to $p$, there exists an exponent $k$ such that:
+\[
+a^k \equiv x \pmod{p}.
+\]
+Equivalently an element $a$, less than $p-1$, is multiplicative iff its order is exactly $p-1$.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+
+- **Input:** An odd prime \(p\).
+- **Task:** Find an integer \(a\) (with \(1 < a < p\)) such that the multiplicative order of \(a\) modulo \(p\) is exactly \(p-1\). 
+**Worked Examples:**
+
+- **Example 1:**  
+  - **Given:** \(p = 11\)  
+  - **Observation:** \(p-1 = 10\) factors as \(2 \times 5\).  
+  - **Test:** Check candidate \(a = 2\). Compute \(2^{10/2} = 2^5\) and \(2^{10/5} = 2^2\) modulo 11.  
+  - **Result:** If neither is congruent to 1 modulo 11, then \(a = 2\) is a primitive root.
+
+- **Example 2:**  
+  - **Given:** \(p = 13\)  
+  - **Observation:** \(p-1 = 12\) factors as \(2^2 \times 3\).  
+  - **Test:** Check candidate \(a = 2\). Compute \(2^{12/2} = 2^6\) and \(2^{12/3} = 2^4\) modulo 13.  
+  - **Result:** If both results are not 1 modulo 13, then \(a = 2\) is a primitive root.
+
+---
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+
+1. **Recognize the Goal:** A primitive root must have order \(p-1\) modulo \(p\), meaning it cycles through all nonzero residues.
+2. **Factorize:** Factor \(p-1\) to reveal its structure.
+3. **Test Candidate:** For a candidate \(a\), consider powers \(a^d \pmod{p}\) for a proper divisor \(d\) of \(p-1\)
+4. **Conclude:** When no such smaller exponent restricts \(a\)’s behavior
+---
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+
+- **Step 1:** Start with an odd prime \(p\) and factorize \(p-1\) into its prime components.
+- **Step 2:** For each candidate \(a\) starting from 2, consider the consequences of the key observation on exponents.
+- **Step 3:** Evaluate whether the candidate’s powers are “long enough” before reaching 1, based on the factors of \(p-1\).
+- **Step 4:** Select the first candidate that appears to generate the entire multiplicative group modulo \(p\).
+
+---
+
+\subsection*{Self-Consistency}
+
+Confirm your method by:
+- Ensuring that \(p-1\) is correctly factorized.
+- For a candidate \(a\), consider \(a\) to the power of factor \( mod p\)
+- Testing your approach on small primes to build confidence in the general strategy.
+
+---
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+
+Reflect on these points:
+- What does the equation \(a^d \equiv 1 \pmod{p}\) imply?
+- How does knowing the prime factors of \(p-1\) help in checking that a candidate \(a\) does not “collapse” to 1 too soon?
+- Consider the contrapositive: if a candidate \(a\) does not show an early cycle 
+---
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+
+Express the idea symbolically:
+- Let the prime factorization of \(p-1\) be \(p-1 = \prod_i q_i^{e_i}\).
+- Keep in mind that if for any divisor \(d\) of \(p-1\), one can say something about the consequences of the congruence \(a^d \equiv 1 \pmod{p}\) 
+- Use this reasoning to guide you in eliminating candidates with too short cycles.
+
+---
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+
+Outline your approach as follows:
+- **Initialization:** Input the odd prime \(p\) and factorize \(p-1\).
+- **Iteration:** For each candidate \(a\) (starting from 2), assess the candidate’s behavior by relating its powers to the factors of \(p-1\).
+- **Termination:** When you identify a candidate whose cycle does not “shrink” prematurely (i.e., its order isn’t forced to be a proper divisor of \(p-1\)), conclude.
+---
+
+\subsection*{ReAct Prompting}
+
+1. **Action:** Factorize \(p-1\) to find its prime components.
+2. **Reasoning:** Remember what can we say about a candidate \(a\) with \(a^d \equiv 1 \pmod{p}\) for some \(d\) smaller than \(p-1\), 
+3. **Action:** Test candidate values for \(a\) by analyzing the implications of the key observation on exponentiation.
+4. **Reasoning:** What if a candidate’s cycle seems to cover all possible residues 
+---
+
+\subsection*{Clear and Specific Instructions}
+
+1. **Factorize \(p-1\):** Determine the prime factors of \(p-1\) to understand its divisor structure.
+2. **Choose a Candidate:** Start with the smallest candidate (typically \(a = 2\)).
+3. **Examine Exponent Behavior:** Consider \(a^d \pmod{p}\). What does this say about \(a\)?
+4. **Iterate:** What if a candidate shows signs of a restricted order.
+
+\subsection*{Answer/Algorithm}
+\begin{lstlisting}[language=Python]
+def find_primitive_root(p):
+    from sympy import factorint, mod_exp
+
+    # Factorize p - 1
+    factors = factorint(p - 1)
+    
+    # Test candidate values starting from 2
+    a = 2
+    while True:
+        if all(mod_exp(a, (p - 1) // q, p) != 1 for q in factors):
+            return a
+        a += 1
+\end{lstlisting}

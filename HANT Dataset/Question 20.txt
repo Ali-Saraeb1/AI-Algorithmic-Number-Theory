@@ -1,0 +1,64 @@
+\section{Fermat's Primality Test}
+
+\subsection*{Question}
+
+Use Fermat's Primality Test to determine whether 21 is likely prime. 
+
+\textbf{Fermat's Little Theorem:} If \( p \) is a prime number and \( a \) is an integer such that \(\gcd(a,p)=1\), then
+\[
+a^{p-1} \equiv 1 \pmod{p}.
+\]
+This property is the foundation of a probabilistic test for primality.
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Contemplate how this theorem can serve as a test: if for some integer \( a \) the congruence does not hold, then \( n \) cannot be prime. Use this idea to guide the selection of test values.
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+Reflect on the fact that for a prime \( n \) every integer \( a \) (coprime to \( n \)) will yield the same predictable result when raised to the \( n-1 \) power modulo \( n \). How might you leverage a violation of this behavior ?
+
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+Ask yourself: How can you systematically choose several candidates \( a \) from the interval \( [2, n-2] \) and efficiently check the required condition? What should you do if any candidate fails to produce the expected outcome?
+
+\subsection*{Self-Consistency}
+Ensure your procedure first validates that \( n > 3 \) and then selects appropriate candidates \( a \). Use a fast method to perform the necessary exponentiations, and decide what an even one deviation from the expected result implies.
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+What if you find a single instance where the invariant is violated?
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+Denote the candidate base \( a \) and the result of \( a^{n-1} \mod n \). How can you use the theorem to get a test of primarity?
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+1. One starts by choosing a base \( a \).
+2. Then one uses the theorem to devise a probabilistic test for primarity.
+
+\subsection*{ReAct Prompting}
+1. **Action**: Select \( a\)
+2. **Reasoning**: Consider what do we expect from \(a\) if it's prime or if it's composite.
+3. **Action**: Probabilistically decide. If no decision can be made, go back to step 1.
+
+\subsection*{Clear and Specific Instructions}
+Your algorithm should:
+\begin{enumerate}
+    \item Verify that \( n > 3 \).
+    \item Select several integers \( a \) from the range \( [2, n-2] \).
+    \item For each \( a \), compute \( a^{n-1} \) modulo \( n \) efficiently.
+    \item Conclude if \( n \) is composite or \( n \) is likely prime.
+\end{enumerate}
+
+\subsection*{Answer/Algorithm}
+We apply Fermat’s Little Theorem: if 21 is prime, then for any a with gcd(a, 21) = 1,
+    \( a^20 \equiv 1 mod 21 \)
+
+We'll test 5 random values of a between 2 and 19. For each, compute a^20 mod 21.
+
+Example test values:
+- \( a = 2: 2^20 mod 21 = 16 (\neq 1)\) → Test fails
+
+Since just one failure \( (2^20 \neq 1 mod 21) \) is enough to conclude that 21 is not prime, we stop here.
+
+Final conclusion:
+21 is composite.

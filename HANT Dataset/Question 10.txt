@@ -1,0 +1,109 @@
+\section{Primality Testing Using Euler’s Criterion}
+\subsection*{Question}
+Determine whether
+\[
+n = 101
+\]
+is prime using Euler’s criterion. You should use tests based on several selected bases and output whether \( n \) is “composite” or “likely prime.”
+
+Recall: For a prime \( p \) and an integer \( a \) coprime to \( p \), Euler’s criterion asserts:
+\[
+  a^{\frac{p-1}{2}} \equiv \left( \frac{a}{p} \right) \pmod{p}.
+\]
+
+\subsection*{Hints}
+
+\subsection*{Few-Shot Hinting}
+Consider these numerical examples that illustrate key ideas without revealing the solution:
+- **Example 1:** Suppose \( n = 7 \). Recall that certain congruences should hold for prime numbers when tested with an appropriate base, say \( a = 3 \). If the expected behavior holds, then \( n \) is behaving like a prime.
+- **Example 2:** Take \( n = 11 \). Testing with a well-chosen base (such as \( a = 2 \) or \( a = 5 \)) provides insight into whether the number follows the expected structure. If a discrepancy is found, \( n \) cannot be prime.
+- **Example 3:** Consider \( n = 19 \). Verifying multiple cases improves confidence in the outcome. This approach suggests that a single failure in the congruence test is enough to determine compositeness.
+
+These examples highlight the core idea: rather than exhaustively checking all cases, a well-chosen subset of tests can offer strong evidence about the nature of \( n \).
+
+\subsection*{Chain-of-Thought (CoT) Prompting}
+*"Recall that Euler’s criterion gives a necessary condition for a number to be prime. Think about how, if \( n \) is prime, then every valid test base should satisfy the relation. Instead of testing all possible bases, consider a probabilistic approach where you check multiple independent cases."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Step by step, consider:
+1. Handling trivial cases (such as even numbers or the smallest prime).
+2. Selecting a few candidate bases for testing.
+3. For each base, computing the relevant modular exponentiation and comparing it with the expected theoretical result.
+4. Using a failure in any test as a conclusive sign of compositeness."*
+
+\subsection*{Self-Consistency}
+*"Ensure that your approach aligns with number-theoretic results:
+- Verify that the chosen test bases are appropriate.
+- Recall that Euler’s criterion must hold for every base if \( n \) is prime.
+- Consider known results about probabilistic algorithms."*
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Think through the logic:
+- If \( n \) is prime, this must hold for all appropriate choices of \( a \).
+- What if it fails for even one such test"*
+
+\subsection*{Chain-of-Symbol (CoS) Prompting}
+*"Express the essential idea symbolically:
+- For a prime \( p \) and an integer \( a \) coprime to \( p \), Euler’s criterion asserts:
+  \[
+  a^{\frac{p-1}{2}} \equiv \left( \frac{a}{p} \right) \pmod{p}.
+  \]
+- This congruence serves as a test: consider probabilistic methods to achieve confidence in the result."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+*"Organize your approach:
+1. **Preliminary Checks:** Handle trivial cases (e.g., \( n = 2 \) or even \( n \)).
+2. **Selecting Candidate Bases:** Instead of iterating over all possibilities, recall how probabilistic algorithms operate by testing multiple independent cases.
+3. **Testing the Criterion:** For each selected base, compute the modular exponentiation and compare
+4. **Decision Process:** What iff any test fails? What if all tests pass ?"*
+
+\subsection*{ReAct Prompting}
+*"Proceed with these actions and reasoning:
+- **Action:** Begin by eliminating trivial non-prime cases.
+- **Action:** Select a small number of candidate bases and perform the modular exponentiation relevant to Euler’s criterion.
+- **Reasoning:** What if any violation of the relation happens?
+
+\subsection*{Clear and Specific Instructions}
+*"For a given integer \( n > 1 \):
+1. Handle trivial cases first (e.g., if \( n \) is even or equal to the smallest prime).
+2. Instead of testing every possible base, recall that probabilistic algorithms work by selecting multiple independent cases.
+3. For each selected base:
+   - Compute the modular exponentiation of \( a \) raised to \(\frac{n-1}{2}\) modulo \( n \).
+   - Compare the result with the expected value from Euler’s criterion.
+4. Decide what \(n \) is.
+
+\subsection*{Answer/Algorithm}
+Set \(n = 101\).  Then \(\frac{n-1}{2} = 50\).  For each base \(a\), compute
+\[
+\text{result} = a^{50} \bmod 101,
+\qquad
+\text{legendre} = \Bigl(\tfrac{a}{101}\Bigr),
+\]
+and check they agree (viewing \(-1\) as \(100\) mod 101).
+
+\textbf{Test \(a=2\):}
+\[
+2^{50} \bmod 101 = 100,
+\quad
+\Bigl(\tfrac{2}{101}\Bigr)
+= (-1)^{\frac{101^2-1}{8}}
+= (-1)^{1275}
+= -1
+\equiv 100 \pmod{101}.
+\]
+Pass.
+
+\textbf{Test \(a=5\):}
+\[
+5^{50} \bmod 101 = 1,
+\quad
+\Bigl(\tfrac{5}{101}\Bigr)
+= 1
+\pmod{101}.
+\]
+Pass.
+
+Since both tests yield the expected Legendre symbol values, we conclude
+\[
+\boxed{\text{likely prime}}.
+\]

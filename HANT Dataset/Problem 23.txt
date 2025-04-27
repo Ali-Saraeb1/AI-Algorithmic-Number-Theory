@@ -1,0 +1,116 @@
+\section{Computing the Binary GCD (Stein’s) Algorithm Using Even–Odd Properties}
+
+\subsection*{Question}
+Given two nonnegative integers \(a\) and \(b\), design an algorithm that computes their greatest common divisor (gcd) using only tests for even/odd, subtraction, and halving (shifts).  This Binary GCD (Stein’s) method relies on parity‑driven simplifications and a final recombination.
+
+\subsection*{Hints}
+
+\subsection*{Few‑Shot Hinting}
+Try these pairs by hand and look for a small, parity‑based move that reduces their size without changing their gcd:
+\[
+(4,2),\quad (9,3),\quad (5,12),\quad (15,6).
+\]
+What uniform transformation applies when both share parity?  When they differ?  When both are odd?
+
+\subsection*{Chain‑of‑Thought (CoT) Prompting}
+*"Begin with trivial endpoints (\(a=0\) or \(b=0\)).  Then at each step:
+1. Inspect whether \(a\) and \(b\) share the same parity or not.
+2. Choose a simple parity‑based update or a difference‑based move.
+3. Ensure each move strictly reduces \(\max(a,b)\) while preserving \(\gcd(a,b)\).
+Repeat until one value vanishes."*
+
+\subsection*{Automatic Chain-of-Thought (Auto-CoT) Prompting}
+*"Outline:
+1. Handle zeros.
+2. Loop:
+   - Use parity tests to select one of two reduction rules.
+   - Apply the rule that shrinks the larger argument.
+3. End when one argument is zero; return the other."*
+
+\subsection*{Self‑Consistency}
+Every transformation—whether a parity alignment or an odd‑odd subtraction—must keep the gcd invariant and strictly decrease a size measure, guaranteeing termination.
+
+\subsection*{Logical Chain-of-Thought (LogiCoT) Prompting}
+*"Reflect:
+- Which parity pattern triggers which reduction?
+- How does your chosen step guarantee the larger of \((a,b)\) decreases?
+- Why does this process always terminate with the correct gcd?"*
+
+\subsection*{Chain‑of‑Symbol (CoS) Prompting}
+*"Let \(\pi(x)\) denote parity.  Then define a map
+\[
+(a,b)\;\mapsto\;(a',b')
+\]
+so that  
+\[
+\pi(a'),\pi(b')\in\{\text{even},\text{odd}\},
+\quad
+\max(a',b')<\max(a,b),
+\quad
+\gcd(a',b')=\gcd(a,b).
+\]
+Iterate until one coordinate is zero."*
+
+\subsection*{Structured Chain-of-Thought (SCoT) Prompting}
+\begin{enumerate}
+  \item **Base:** if \(a=0\) or \(b=0\), return the other.
+  \item **Parity Phase:** if \(a,b\) share parity, apply a paired reduction.
+  \item **Alignment Phase:** otherwise, apply a parity‑alignment step.
+  \item **Reduction Phase:** when both are odd, apply a size‑reducing subtraction.
+  \item **Repeat** until one argument vanishes.
+\end{enumerate}
+
+\subsection*{ReAct Prompting}
+\begin{itemize}
+  \item **Action:** Check for zero arguments.  
+    **Reasoning:** Trivial gcd.
+  \item **Action:** Test parities of \(a\) and \(b\).  
+    **Reasoning:** Parity guides which reduction preserves gcd.
+  \item **Action:** Apply the selected parity‑driven or subtraction rule.  
+    **Reasoning:** Each rule reduces the larger argument.
+  \item **Conclusion:** When one argument is zero, the other is the gcd.
+\end{itemize}
+
+\subsection*{Clear and Specific Instructions}
+*"Iterate until one input is zero by alternating:
+- a parity‑alignment move when parities differ,
+- a paired reduction when they match,
+- and a subtraction‑based reduction when both are odd.
+Each move preserves the gcd and reduces the problem size.  The nonzero remainder is the gcd."*
+
+\subsection*{Answer/Algorithm}
+Below is an implementation of the Binary GCD (Stein’s) Algorithm in Python. The code uses even/odd tests, subtraction, and halving (via shifts) to compute the gcd.
+
+\begin{lstlisting}[language=Python]
+def binary_gcd(a, b):
+    # Base cases: if one number is zero, return the other.
+    if a == 0:
+        return b
+    if b == 0:
+        return a
+
+    # Step 1: Remove all common factors of 2.
+    # Count how many times both numbers are even.
+    factor = 0
+    while (a % 2 == 0) and (b % 2 == 0):
+        a //= 2  # Divide a by 2 (allowed because a is even)
+        b //= 2  # Divide b by 2 (allowed because b is even)
+        factor += 1
+
+    # Step 2: Make sure a is odd.
+    while a % 2 == 0:
+        a //= 2
+
+    # Step 3: Reduce the pair (both numbers now have at least one odd).
+    while b != 0:
+        # Ensure b is odd.
+        while b % 2 == 0:
+            b //= 2
+        # Now, both a and b are odd.
+        # Replace the larger with the absolute difference.
+        if a > b:
+            a, b = b, a  # Swap so that a is always the smaller.
+        b = b - a  # The difference is even.
+    
+    # Step 4: Reintroduce the common factors of 2.
+    return a * (2 ** factor)
