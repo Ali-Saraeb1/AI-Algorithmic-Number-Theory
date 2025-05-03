@@ -1,2 +1,6 @@
 Cite:
+
+Paper: @misc{saraeb2025artificial, title={Artificial Intelligence in Number Theory: LLMs for Algorithm Generation and Neural Networks for Conjecture Verification}, author={Ali Saraeb}, year={2025}, eprint={2504.19451}, archivePrefix={arXiv}, primaryClass={math.NT} }
+
+Code: 
 Ali Saraeb. (2025). Ali-Saraeb1/AI-Algorithmic-Number-Theory: Artificial Intelligence in Number Theory: LLMs for Algorithm Generation (v2.3.4). Zenodo. https://doi.org/10.5281/zenodo.15293187
